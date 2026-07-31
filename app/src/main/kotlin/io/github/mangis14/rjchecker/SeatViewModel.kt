@@ -49,10 +49,21 @@ data class UiState(
     val coach: Int? = null,
     val seat: Int? = null,
 
+    /**
+     * Obsadene miesto, na ktore uzivatel klikol - caka na potvrdenie.
+     *
+     * Vlastne zakupene miesto je z pohladu API obsadene (sedi na nom prave on),
+     * takze bez tohto sa hlavny scenar "sleduj susedov mojho miesta" neda
+     * vobec spustit.
+     */
+    val pendingOccupiedSeat: Int? = null,
+
     val analysis: SeatAnalysis? = null,
     val recommendations: List<SeatPick> = emptyList(),
     val seatClassTitles: Map<String, String> = emptyMap(),
     val watching: Boolean = false,
+    /** ulozeny sledovany spoj - da sa k nemu vratit jednym klepnutim */
+    val savedTrip: WatchedTrip? = null,
     /** true = plna analyza (vsetky zastavky) uz prebehla */
     val fullScanDone: Boolean = false,
 )
@@ -97,6 +108,7 @@ class SeatViewModel(app: Application) : AndroidViewModel(app) {
                         ?: stations.firstOrNull { s -> s.id == 1763018007L },
                     date = saved?.date ?: it.date,
                     watching = saved != null,
+                    savedTrip = saved,
                 )
             }
         }.onFailure { fail(it) }
@@ -210,6 +222,21 @@ class SeatViewModel(app: Application) : AndroidViewModel(app) {
     fun selectCoach(number: Int) = _state.update { it.copy(coach = number, seat = null) }
 
     /**
+     * Klik na obsadene miesto. Najcastejsie to je vlastne zakupene miesto -
+     * preto sa nezablokuje, ale spyta sa, ci ide o nego, a az potom sa spusti
+     * analyza susedov.
+     */
+    fun askAboutOccupiedSeat(seat: Int) = _state.update { it.copy(pendingOccupiedSeat = seat) }
+
+    fun dismissOccupiedSeat() = _state.update { it.copy(pendingOccupiedSeat = null) }
+
+    fun confirmOccupiedSeat() {
+        val seat = _state.value.pendingOccupiedSeat ?: return
+        _state.update { it.copy(pendingOccupiedSeat = null) }
+        selectSeat(seat)
+    }
+
+    /**
      * Pomala faza: prechod vsetkymi zastavkami, aby sa dalo povedat, od ktorej
      * stanice sa ktore susedne miesto uvolni.
      */
@@ -280,7 +307,7 @@ class SeatViewModel(app: Application) : AndroidViewModel(app) {
         if (s.watching) {
             WatchWorker.cancel(app)
             prefs.clear()
-            _state.update { it.copy(watching = false) }
+            _state.update { it.copy(watching = false, savedTrip = null) }
             return
         }
         val from = s.from ?: return
@@ -288,14 +315,14 @@ class SeatViewModel(app: Application) : AndroidViewModel(app) {
         val train = s.train ?: return
         val coach = s.coach ?: return
         val seat = s.seat ?: return
-        prefs.save(
-            WatchedTrip(
-                date = s.date, fromId = from.id, toId = to.id,
-                fromName = from.name, toName = to.name,
-                routeId = train.routeId, departure = train.departure,
-                coach = coach, seat = seat,
-            ),
+        val trip = WatchedTrip(
+            date = s.date, fromId = from.id, toId = to.id,
+            fromName = from.name, toName = to.name,
+            routeId = train.routeId, departure = train.departure,
+            coach = coach, seat = seat,
         )
+        prefs.save(trip)
+        _state.update { it.copy(savedTrip = trip) }
         val current = journey
         s.analysis?.let { if (current != null) prefs.saveSnapshot(snapshotOf(it, current, coach)) }
         WatchWorker.schedule(app)

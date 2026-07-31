@@ -33,6 +33,7 @@ import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
@@ -144,6 +145,36 @@ fun RjSeatApp(
     // Systemove tlacitko / gesto "spat" vracia o krok vzad. Na prvej obrazovke
     // sa nechava povodne chovanie, teda odchod z appky.
     BackHandler(enabled = state.step != Step.PICK_TRIP) { vm.back() }
+
+    state.pendingOccupiedSeat?.let { seat ->
+        AlertDialog(
+            onDismissRequest = { vm.dismissOccupiedSeat() },
+            title = { Text("Miesto $seat je obsadené") },
+            text = {
+                Text(
+                    "Je to tvoje už zakúpené miesto? Ak áno, môžem sledovať, kto sedí " +
+                        "okolo teba a od ktorej stanice sa susedné miesto uvoľní.",
+                    style = MaterialTheme.typography.bodyMedium,
+                )
+            },
+            confirmButton = {
+                Button(
+                    onClick = { vm.confirmOccupiedSeat() },
+                    modifier = Modifier.heightIn(min = TapTarget),
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = RjYellow,
+                        contentColor = RjInk,
+                    ),
+                ) { Text("Áno, je moje") }
+            },
+            dismissButton = {
+                TextButton(
+                    onClick = { vm.dismissOccupiedSeat() },
+                    modifier = Modifier.heightIn(min = TapTarget),
+                ) { Text("Zrušiť") }
+            },
+        )
+    }
 
     Scaffold(
         containerColor = MaterialTheme.colorScheme.background,
@@ -283,6 +314,39 @@ private fun PickTrip(state: UiState, vm: SeatViewModel) {
         contentPadding = PaddingValues(top = 12.dp, bottom = 24.dp),
         verticalArrangement = Arrangement.spacedBy(12.dp),
     ) {
+        // Sledovany spoj sa da otvorit jednym klepnutim - netreba znovu
+        // prechadzat vyber trasy, spoja a miesta.
+        state.savedTrip?.let { trip ->
+            item {
+                Card(
+                    Modifier
+                        .fillMaxWidth()
+                        .clickable { vm.openWatchedTrip(trip.coach, trip.seat) },
+                    shape = RoundedCornerShape(14.dp),
+                    colors = CardDefaults.cardColors(containerColor = RjYellow),
+                ) {
+                    Row(
+                        Modifier.padding(16.dp).fillMaxWidth(),
+                        verticalAlignment = Alignment.CenterVertically,
+                    ) {
+                        Column(Modifier.weight(1f)) {
+                            Text(
+                                "Sleduješ vozeň ${trip.coach}, miesto ${trip.seat}",
+                                style = MaterialTheme.typography.titleMedium,
+                                color = RjInk,
+                            )
+                            Text(
+                                "${trip.fromName} → ${trip.toName} · ${trip.date} ${trip.departure}",
+                                style = MaterialTheme.typography.bodySmall,
+                                color = RjInk.copy(alpha = 0.8f),
+                            )
+                        }
+                        Text("›", fontSize = 24.sp, color = RjInk)
+                    }
+                }
+            }
+        }
+
         item { StationPicker("Odkiaľ", state.from, state.stations) { vm.setFrom(it) } }
         item {
             Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.End) {
@@ -532,6 +596,12 @@ private fun PickSeat(state: UiState, vm: SeatViewModel) {
                         LegendDot(RjSeatFree, "voľné")
                         LegendDot(RjSeatTaken, "obsadené")
                     }
+                    Text(
+                        "Máš už kúpené miesto? Klepni na svoje – aj keď je obsadené.",
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        modifier = Modifier.padding(top = 6.dp),
+                    )
                 }
             }
             items(deck?.seats?.sortedBy { it.index } ?: emptyList()) { seat ->
@@ -543,7 +613,12 @@ private fun PickSeat(state: UiState, vm: SeatViewModel) {
                             if (seat.free) RjSeatFree else RjSeatTaken,
                             RoundedCornerShape(10.dp),
                         )
-                        .clickable(enabled = seat.free) { vm.selectSeat(seat.index) },
+                        // Obsadene miesto sa NEblokuje - typicky je to vlastne
+                        // zakupene miesto, len sa najprv spyta.
+                        .clickable {
+                            if (seat.free) vm.selectSeat(seat.index)
+                            else vm.askAboutOccupiedSeat(seat.index)
+                        },
                     contentAlignment = Alignment.Center,
                 ) {
                     Text(

@@ -101,7 +101,10 @@ Modul [app/](app) je tenká Compose vrstva nad `core`. Postup v appke:
 
 1. **Odkiaľ / kam / dátum** → nájde priame vlaky (default Praha hl.n. → Košice žst.)
 2. **Vyber spoj** → načíta súpravu jedným volaním
-3. **Vyber vozeň a svoje miesto** → mriežka miest, zelené voľné, sivé obsadené
+3. **Vyber vozeň a svoje miesto** → mriežka miest, zelené voľné, sivé obsadené.
+   Ak už máš lístok, klepni na **svoje miesto aj keď je obsadené** — appka sa
+   spýta, či je tvoje, a potom sleduje susedov. Vlastné zakúpené miesto je
+   z pohľadu API obsadené, takže bez toho by sa hlavný scenár nedal spustiť.
 4. **Výsledok** → kto je okolo teba, od ktorej stanice sa uvoľní, pokojnejšie miesta,
    a prepínač **Sledovať toto miesto**
 
@@ -177,6 +180,28 @@ python tools/validate_geom.py   # referenčná geometria, 10 layoutov vozňov
 
 Fixtures ([fixtures/](fixtures)) sú reálne odpovede API + SVG layouty, takže
 testy bežia bez siete. Obnoviť sa dajú cez `python tools/capture_fixtures.py`.
+
+## Prihlásenie RegioJet účtom — prečo tu nie je
+
+Automatický sync zakúpených lístkov by bol pohodlný a technicky to nie je slepá
+ulička: `GET /tickets` existuje a bez tokenu vracia `401 Bad credentials`, takže
+s prihlásením by zoznam lístkov šiel načítať.
+
+Naráža to ale na dve **zámerné** prekážky v ich prihlasovacom endpointe. Ich
+frontend pre `/users/login/registeredAccount` (a ďalšie login endpointy):
+
+- podpisuje telo požiadavky **HMAC SHA3-512** so tajným kľúčom zapečeným
+  v ich JS bundle (hlavička `X-Body-Hash`),
+- posiela **reCAPTCHA token** v hlavičke `X-ReCaptcha-Token`.
+
+Obísť to znamená vytiahnuť im podpisovací kľúč a poradiť si s reCAPTCHA, teda
+prelomiť opatrenia, ktoré tam dali práve preto, aby sa cudzí klient neprihlasoval.
+To sa tu robiť nebude. Sankcionovaná cesta k autentifikovanému prístupu je
+požiadať o affiliate údaje na `developers@studentagency.cz`.
+
+Namiesto toho appka spoj a miesto **zapamätá** — nastavíš to raz a odtiaľ sa
+kontroluje samo na pozadí. Na prvej obrazovke je karta „Sleduješ vozeň X,
+miesto Y", ktorá otvorí analýzu jedným klepnutím.
 
 ## Poznámka k API
 

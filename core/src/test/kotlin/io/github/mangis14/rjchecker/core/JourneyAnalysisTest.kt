@@ -74,6 +74,25 @@ class JourneyAnalysisTest {
     }
 
     @Test
+    fun `analyza funguje aj pre obsadene miesto`() {
+        // Na tomto stoji hlavny scenar: vlastne zakupene miesto je z pohladu API
+        // obsadene (sedi na nom prave uzivatel), takze analyza sa nesmie
+        // obmedzovat len na volne miesta.
+        val j = journey()
+        val deck = assertNotNull(j.stops.first().section.vehicle(6)).decks.first()
+        val occupied = deck.seats.firstOrNull { !it.free }?.index
+            ?: return   // vo fixture je vozen 6 cely volny, nie je co testovat
+
+        val analysis = assertNotNull(
+            j.analyseSeat(coach = 6, seat = occupied),
+            "obsadene miesto $occupied musi mat analyzu",
+        )
+        assertEquals(occupied, analysis.seat)
+        assertTrue(analysis.bay.contains(occupied), "oddiel ma obsahovat samo miesto")
+        assertTrue(analysis.neighbours.isNotEmpty(), "aj obsadene miesto ma susedov")
+    }
+
+    @Test
     fun `neexistujuci vozen alebo miesto vrati null`() {
         val j = journey()
         assertNull(j.analyseSeat(coach = 99, seat = 32))
