@@ -8,7 +8,9 @@ import io.github.mangis14.rjchecker.core.SeatWatcher
 import android.Manifest
 import android.app.NotificationChannel
 import android.app.NotificationManager
+import android.app.PendingIntent
 import android.content.Context
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Build
 import androidx.core.app.ActivityCompat
@@ -38,7 +40,7 @@ class WatchWorker(context: Context, params: WorkerParameters) : CoroutineWorker(
         val prefs = TripPrefs(applicationContext)
         val trip = prefs.load() ?: return Result.success()   // sledovanie vypnute
 
-        val analysis = try {
+        val loaded = try {
             withContext(Dispatchers.IO) {
                 val client = RjClient()
                 // Na upozornenie staci obsadenost pre usek z nastupnej stanice do
@@ -55,45 +57,63 @@ class WatchWorker(context: Context, params: WorkerParameters) : CoroutineWorker(
                     departure = trip.departure,
                     firstStopOnly = true,
                 )
-                journey.analyseSeat(trip.coach, trip.seat)
+                val analysis = journey.analyseSeat(trip.coach, trip.seat)
+                val coachFree = journey.stops.firstOrNull()
+                    ?.section?.vehicle(trip.coach)?.decks?.firstOrNull()
+                    ?.freeSeats?.toSet() ?: emptySet()
+                analysis?.let { it to coachFree }
             }
         } catch (e: Exception) {
             return Result.retry()
         } ?: return Result.success()
 
-        val current = SeatSnapshot(
-            seats = analysis.neighbours.associate { it.seat to it.freeWholeWay },
-            freeInCoach = analysis.freeInCoach,
-        )
-        val saved = prefs.loadSnapshot()
-        val previous = saved?.let { SeatSnapshot(it.first, it.second) }
+        val (analysis, coachFree) = loaded
+        val current = SeatSnapshot.of(analysis, coachFree)
+        val previous = prefs.loadSnapshot()
 
         val alerts = SeatWatcher.diff(previous, current)
-        val soldOutOpened = previous != null && SeatWatcher.soldOutOpenedUp(previous, current)
+        val freedInCoach = SeatWatcher.coachFreed(previous, current)
 
+        // Susedne miesta maju prednost - to je to, na co sa uzivatel pyta.
+        // Az potom zvysok vozna, a vzdy s cislami miest: samotny pocet
+        // volnych cloveku nepovie, kam si ma sadnut.
         if (alerts.isNotEmpty()) {
             val freed = alerts.filter { it.change == SeatChange.FREED }.map { it.seat }
             val taken = alerts.filter { it.change == SeatChange.TAKEN }.map { it.seat }
             val parts = buildList {
-                if (freed.isNotEmpty()) add("uvolnilo sa ${freed.joinToString(", ")}")
-                if (taken.isNotEmpty()) add("obsadilo sa ${taken.joinToString(", ")}")
+                if (freed.isNotEmpty()) {
+                    add("uvoľnilo sa miesto ${SeatWatcher.describeSeats(freed)}")
+                }
+                if (taken.isNotEmpty()) {
+                    add("obsadilo sa ${SeatWatcher.describeSeats(taken)}")
+                }
             }
             notify(
-                title = "Vozen ${trip.coach}, miesto ${trip.seat}",
-                text = parts.joinToString("; "),
+                title = "Vedľa teba sa niečo zmenilo",
+                text = "Vozeň ${trip.coach}, tvoje miesto ${trip.seat}: " +
+                    parts.joinToString("; ") + ". Klepni pre analýzu.",
+                coach = trip.coach,
+                seat = trip.seat,
             )
-        } else if (soldOutOpened) {
+        } else if (freedInCoach.isNotEmpty()) {
             notify(
-                title = "Vo vozni ${trip.coach} sa uvolnilo miesto",
-                text = "volnych ${current.freeInCoach} - vypredany spoj sa otvoril",
+                title = "Vo vozni ${trip.coach} sa uvoľnilo miesto",
+                text = "Voľné je teraz miesto ${SeatWatcher.describeSeats(freedInCoach)} " +
+                    "(vo vozni spolu ${current.freeInCoach}). Klepni pre analýzu.",
+                coach = trip.coach,
+                seat = trip.seat,
             )
         }
 
-        prefs.saveSnapshot(current.seats, current.freeInCoach)
+        prefs.saveSnapshot(current)
         return Result.success()
     }
 
-    private fun notify(title: String, text: String) {
+    /**
+     * Notifikacia otvara appku priamo na analyze sledovaneho miesta - bez
+     * PendingIntent by klepnutie nerobilo nic.
+     */
+    private fun notify(title: String, text: String, coach: Int, seat: Int) {
         val manager = applicationContext.getSystemService(NotificationManager::class.java)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             manager.createNotificationChannel(
@@ -106,11 +126,24 @@ class WatchWorker(context: Context, params: WorkerParameters) : CoroutineWorker(
         ) {
             return                                    // bez povolenia notifikovat nemozeme
         }
+        val intent = Intent(applicationContext, MainActivity::class.java).apply {
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
+            putExtra(EXTRA_COACH, coach)
+            putExtra(EXTRA_SEAT, seat)
+        }
+        val pending = PendingIntent.getActivity(
+            applicationContext,
+            0,
+            intent,
+            PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE,
+        )
+
         val notification = NotificationCompat.Builder(applicationContext, CHANNEL)
             .setSmallIcon(android.R.drawable.ic_dialog_info)
             .setContentTitle(title)
             .setContentText(text)
             .setStyle(NotificationCompat.BigTextStyle().bigText(text))
+            .setContentIntent(pending)
             .setAutoCancel(true)
             .build()
         NotificationManagerCompat.from(applicationContext).notify(NOTIFICATION_ID, notification)
@@ -120,6 +153,10 @@ class WatchWorker(context: Context, params: WorkerParameters) : CoroutineWorker(
         private const val CHANNEL = "seat-changes"
         private const val NOTIFICATION_ID = 1001
         private const val WORK_NAME = "rjseat-watch"
+
+        /** Klepnutie na notifikaciu otvori analyzu tohto vozna a miesta. */
+        const val EXTRA_COACH = "rjseat.coach"
+        const val EXTRA_SEAT = "rjseat.seat"
 
         /**
          * 15 minut je minimum, ktore WorkManager pre periodicku pracu povoluje.

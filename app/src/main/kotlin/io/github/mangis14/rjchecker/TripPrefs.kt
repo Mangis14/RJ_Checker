@@ -1,6 +1,7 @@
 package io.github.mangis14.rjchecker
 
 import android.content.Context
+import io.github.mangis14.rjchecker.core.SeatSnapshot
 
 /** Spoj a miesto, ktore chce uzivatel sledovat. */
 data class WatchedTrip(
@@ -57,22 +58,35 @@ class TripPrefs(context: Context) {
 
     fun clear() = prefs.edit().clear().apply()
 
-    /** Posledny znamy stav susedov ako "31=false,33=true". */
-    fun saveSnapshot(seats: Map<Int, Boolean>, freeInCoach: Int) {
+    /** Posledny znamy stav - bez neho by notifikacia isla pri kazdom kole. */
+    fun saveSnapshot(snapshot: SeatSnapshot) {
         prefs.edit()
-            .putString("snapshot", seats.entries.joinToString(",") { "${it.key}=${it.value}" })
-            .putInt("snapshotFreeInCoach", freeInCoach)
+            .putString(
+                "snapshot",
+                snapshot.seats.entries.joinToString(",") { "${it.key}=${it.value}" },
+            )
+            .putInt("snapshotFreeInCoach", snapshot.freeInCoach)
+            .putString("snapshotCoachFree", snapshot.coachFreeSeats.sorted().joinToString(","))
             .putBoolean("hasSnapshot", true)
             .apply()
     }
 
-    fun loadSnapshot(): Pair<Map<Int, Boolean>, Int>? {
+    fun loadSnapshot(): SeatSnapshot? {
         if (!prefs.getBoolean("hasSnapshot", false)) return null
-        val raw = prefs.getString("snapshot", "") ?: ""
-        val seats = raw.split(",").mapNotNull { part ->
-            val (k, v) = part.split("=").takeIf { it.size == 2 } ?: return@mapNotNull null
-            k.toIntOrNull()?.let { it to (v == "true") }
-        }.toMap()
-        return seats to prefs.getInt("snapshotFreeInCoach", 0)
+        val seats = (prefs.getString("snapshot", "") ?: "")
+            .split(",")
+            .mapNotNull { part ->
+                val kv = part.split("=").takeIf { it.size == 2 } ?: return@mapNotNull null
+                kv[0].toIntOrNull()?.let { it to (kv[1] == "true") }
+            }.toMap()
+        val coachFree = (prefs.getString("snapshotCoachFree", "") ?: "")
+            .split(",")
+            .mapNotNull { it.trim().toIntOrNull() }
+            .toSet()
+        return SeatSnapshot(
+            seats = seats,
+            freeInCoach = prefs.getInt("snapshotFreeInCoach", 0),
+            coachFreeSeats = coachFree,
+        )
     }
 }

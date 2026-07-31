@@ -1,6 +1,7 @@
 package io.github.mangis14.rjchecker
 
 import android.Manifest
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -55,6 +56,7 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -82,29 +84,62 @@ class MainActivity : ComponentActivity() {
         ActivityResultContracts.RequestPermission(),
     ) { /* bez povolenia appka funguje, len nenotifikuje */ }
 
+    /**
+     * Vozen a miesto z notifikacie. Drzi sa v state, aby to fungovalo aj ked uz
+     * appka bezi - vtedy pride intent do onNewIntent, nie do onCreate.
+     */
+    private var fromNotification by mutableStateOf<Pair<Int, Int>?>(null)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             askNotifications.launch(Manifest.permission.POST_NOTIFICATIONS)
         }
+        fromNotification = readNotificationTarget(intent)
         setContent {
             RjSeatTheme {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background,
                 ) {
-                    RjSeatApp()
+                    RjSeatApp(
+                        openFromNotification = fromNotification,
+                        onNotificationHandled = { fromNotification = null },
+                    )
                 }
             }
         }
+    }
+
+    override fun onNewIntent(intent: Intent) {
+        super.onNewIntent(intent)
+        readNotificationTarget(intent)?.let { fromNotification = it }
+    }
+
+    private fun readNotificationTarget(intent: Intent?): Pair<Int, Int>? {
+        val coach = intent?.getIntExtra(WatchWorker.EXTRA_COACH, -1) ?: -1
+        val seat = intent?.getIntExtra(WatchWorker.EXTRA_SEAT, -1) ?: -1
+        return if (coach > 0 && seat > 0) coach to seat else null
     }
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun RjSeatApp(vm: SeatViewModel = viewModel()) {
+fun RjSeatApp(
+    vm: SeatViewModel = viewModel(),
+    openFromNotification: Pair<Int, Int>? = null,
+    onNotificationHandled: () -> Unit = {},
+) {
     val state by vm.state.collectAsState()
+
+    // Klepnutie na notifikaciu skoci priamo na analyzu sledovaneho miesta.
+    LaunchedEffect(openFromNotification) {
+        openFromNotification?.let { (coach, seat) ->
+            vm.openWatchedTrip(coach, seat)
+            onNotificationHandled()
+        }
+    }
 
     // Systemove tlacitko / gesto "spat" vracia o krok vzad. Na prvej obrazovke
     // sa nechava povodne chovanie, teda odchod z appky.

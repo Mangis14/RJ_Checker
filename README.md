@@ -114,6 +114,14 @@ Sledovanie beží cez WorkManager každých 15 minút (to je minimum, ktoré And
 pre periodickú prácu povoľuje) a notifikuje **len pri skutočnej zmene** voči
 poslednému uloženému stavu.
 
+Notifikácia vždy uvádza **čísla miest**, nie len počet — samotné „uvoľnilo sa
+miesto vo vozni 7" človeku nepovie, kam si má sadnúť. Preto si snapshot pamätá
+celý zoznam voľných miest vo vozni, nie len ich počet. Klepnutie otvorí appku
+priamo na analýze sledovaného miesta.
+
+Priorita je: zmena na **susedných** miestach (to je to, na čo sa používateľ pýta),
+až potom ostatné miesta vo vozni.
+
 ### Build APK
 
 Android SDK **nie je nainštalovaný na hostovi** — celé build prostredie žije

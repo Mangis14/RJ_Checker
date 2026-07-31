@@ -9,6 +9,7 @@ import io.github.mangis14.rjchecker.core.JourneyStop
 import io.github.mangis14.rjchecker.core.RjClient
 import io.github.mangis14.rjchecker.core.SeatAnalysis
 import io.github.mangis14.rjchecker.core.SeatPick
+import io.github.mangis14.rjchecker.core.SeatSnapshot
 import io.github.mangis14.rjchecker.core.StationRef
 import io.github.mangis14.rjchecker.core.TrainOption
 import android.app.Application
@@ -257,14 +258,21 @@ class SeatViewModel(app: Application) : AndroidViewModel(app) {
                     recommendations = picks, fullScanDone = true,
                 )
             }
-            analysis?.let {
-                prefs.saveSnapshot(
-                    it.neighbours.associate { n -> n.seat to n.freeWholeWay },
-                    it.freeInCoach,
-                )
-            }
+            analysis?.let { prefs.saveSnapshot(snapshotOf(it, full, coach)) }
         }.onFailure { fail(it) }
     }
+
+    /**
+     * Stav na porovnanie v dalsom kole sledovania. Drzi aj cely zoznam volnych
+     * miest vo vozni, aby notifikacia vedela povedat, KTORE miesto sa uvolnilo.
+     */
+    private fun snapshotOf(analysis: SeatAnalysis, journey: Journey, coach: Int): SeatSnapshot =
+        SeatSnapshot.of(
+            analysis = analysis,
+            coachFreeSeats = journey.stops.firstOrNull()
+                ?.section?.vehicle(coach)?.decks?.firstOrNull()
+                ?.freeSeats?.toSet() ?: emptySet(),
+        )
 
     fun toggleWatching() {
         val s = _state.value
@@ -288,11 +296,41 @@ class SeatViewModel(app: Application) : AndroidViewModel(app) {
                 coach = coach, seat = seat,
             ),
         )
-        s.analysis?.let {
-            prefs.saveSnapshot(it.neighbours.associate { n -> n.seat to n.freeWholeWay }, it.freeInCoach)
-        }
+        val current = journey
+        s.analysis?.let { if (current != null) prefs.saveSnapshot(snapshotOf(it, current, coach)) }
         WatchWorker.schedule(app)
         _state.update { it.copy(watching = true) }
+    }
+
+    /**
+     * Otvori sledovany spoj a miesto - vola sa po kliknuti na notifikaciu.
+     *
+     * Spoj netreba znovu vyhladavat, routeId aj cas su ulozene, takze sa
+     * poskladaju priamo a ide sa hned na analyzu miesta.
+     */
+    fun openWatchedTrip(coach: Int, seat: Int) {
+        val trip = prefs.load() ?: return
+        _state.update {
+            it.copy(
+                date = trip.date,
+                from = StationRef(trip.fromId, trip.fromName.ifBlank { "odkiaľ" }),
+                to = StationRef(trip.toId, trip.toName.ifBlank { "kam" }),
+                train = TrainOption(
+                    routeId = trip.routeId,
+                    departure = trip.departure,
+                    arrival = "",
+                    departureIso = "",
+                    freeSeats = 0,
+                ),
+                coach = coach,
+                trains = emptyList(),
+                quickSection = null,
+                watching = true,
+                error = null,
+            )
+        }
+        journey = null              // stary spoj by dal nespravnu analyzu
+        selectSeat(seat)
     }
 
     fun decksOf(coach: Int): Deck? =
