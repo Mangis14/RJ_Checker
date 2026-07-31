@@ -43,6 +43,21 @@ data class SeatPick(
 )
 
 /**
+ * Zhrnutie pohodlia pre cely vlak - pouziva sa uz pri vybere spoja.
+ *
+ * Vystaci s obsadenostou jedneho useku, teda s jednym volanim API, takze sa da
+ * ukazat hned v zozname spojov bez cakania na prechod zastavkami.
+ */
+data class ComfortSummary(
+    val freeSeats: Int,
+    /** kupe, v ktorych je volne kazde miesto */
+    val emptyCompartments: Int,
+    /** dvojice vo velkopriestorovom vozni, kde su volne obe miesta */
+    val emptyPairs: Int,
+    val best: SeatPick?,
+)
+
+/**
  * Cesta = zastavky v geografickom poradi, kazda s obsadenostou pre usek do ciela.
  *
  * Kluc k spravnemu citaniu dat: obsadenost plati pre USEK. Miesto volne pre usek
@@ -54,6 +69,34 @@ class Journey(val stops: List<JourneyStop>) {
 
     /** Layouty voznov dodava volajuci - core modul sam po sieti nesiaha. */
     var layoutProvider: (Deck) -> CoachLayout? = { null }
+
+    /**
+     * Kolko pokoja vlak nabizi. Ratane zo stavu na zaciatku, takze staci jedno
+     * volanie API - miesto volne pre usek <vychodzia> -> ciel je volne po celu
+     * cestu.
+     */
+    fun comfortSummary(seatClass: String?): ComfortSummary {
+        val start = firstStop() ?: return ComfortSummary(0, 0, 0, null)
+        var free = 0
+        var compartments = 0
+        var pairs = 0
+        val seen = HashSet<Pair<Int, Set<Int>>>()
+
+        for (vehicle in start.section.vehicles) {
+            if (seatClass != null && seatClass !in vehicle.seatClasses) continue
+            val deck = vehicle.decks.firstOrNull() ?: continue
+            free += deck.seats.count { it.free }
+            val layout = layoutOf(deck) ?: continue
+            for (seat in deck.seats.filter { it.free }.map { it.index }) {
+                val n = layout.neighboursOrNull(seat) ?: continue
+                if (!seen.add(vehicle.number to n.bay.toSet())) continue
+                if (n.bay.all { deck.seat(it)?.free == true }) {
+                    if (layout.seatBay[seat] != null) compartments++ else pairs++
+                }
+            }
+        }
+        return ComfortSummary(free, compartments, pairs, recommend(seatClass, limit = 1).firstOrNull())
+    }
 
     private val layoutCache = HashMap<String, CoachLayout?>()
 

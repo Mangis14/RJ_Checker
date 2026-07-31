@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tmave okno pred prvym vykreslenim Compose - inak v dark mode blikne biela. -->
+    <style name="Theme.RjSeat" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">#141413</item>
+    </style>
+</resources>

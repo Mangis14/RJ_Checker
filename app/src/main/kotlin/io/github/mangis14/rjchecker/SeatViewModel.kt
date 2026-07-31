@@ -1,5 +1,6 @@
 package io.github.mangis14.rjchecker
 
+import io.github.mangis14.rjchecker.core.ComfortSummary
 import io.github.mangis14.rjchecker.core.Deck
 import io.github.mangis14.rjchecker.core.FreeSeatsSection
 import io.github.mangis14.rjchecker.core.Journey
@@ -38,6 +39,9 @@ data class UiState(
 
     val trains: List<TrainOption> = emptyList(),
     val train: TrainOption? = null,
+    /** pohodlie pre kazdy spoj, kluc je routeId - dopluje sa postupne */
+    val comfort: Map<String, ComfortSummary> = emptyMap(),
+    val comfortLoading: Boolean = false,
 
     /** Obsadenost pre cely usek - staci na vyber vozna a miesta (1 volanie). */
     val quickSection: FreeSeatsSection? = null,
@@ -100,6 +104,13 @@ class SeatViewModel(app: Application) : AndroidViewModel(app) {
     fun setDate(date: String) = _state.update { it.copy(date = date) }
     fun setFrom(station: StationRef) = _state.update { it.copy(from = station) }
     fun setTo(station: StationRef) = _state.update { it.copy(to = station) }
+    fun swapStations() = _state.update { it.copy(from = it.to, to = it.from) }
+
+    /** Presun na odporucene miesto - z vysledku sa da rovno skocit na iny navrh. */
+    fun jumpToSeat(coach: Int, seat: Int) {
+        _state.update { it.copy(coach = coach) }
+        selectSeat(seat)
+    }
     fun back() = _state.update {
         when (it.step) {
             Step.RESULT -> it.copy(step = Step.PICK_SEAT, analysis = null, recommendations = emptyList())
@@ -121,11 +132,42 @@ class SeatViewModel(app: Application) : AndroidViewModel(app) {
                 if (trains.isEmpty()) {
                     it.copy(busy = false, progress = null, error = "V ten den nejde priamy vlak.")
                 } else {
-                    it.copy(busy = false, progress = null, trains = trains, step = Step.PICK_TRAIN)
+                    it.copy(
+                        busy = false, progress = null, trains = trains,
+                        step = Step.PICK_TRAIN, comfort = emptyMap(),
+                    )
                 }
             }
+            if (trains.isNotEmpty()) loadComfort(trains, from.id, to.id, s.date)
         }.onFailure { fail(it) }
     }
+
+    /**
+     * Dopocita ku kazdemu spoju, kolko pokoja nabizi, aby sa uzivatel mohol
+     * rozhodnut uz pri vybere casu.
+     *
+     * Bezi na pozadi a vysledky prichadzaju po jednom - zoznam spojov je
+     * zobrazeny hned a nezdrzuje sa cakanim. Na jeden spoj staci jedno volanie
+     * obsadenosti, layouty voznov sa medzi spojmi zdielaju z cache klienta.
+     */
+    private fun loadComfort(trains: List<TrainOption>, fromId: Long, toId: Long, date: String) =
+        viewModelScope.launch {
+            _state.update { it.copy(comfortLoading = true) }
+            for (train in trains) {
+                val summary = withContext(Dispatchers.IO) {
+                    runCatching {
+                        JourneyLoader(client, stationNames).load(
+                            routeId = train.routeId,
+                            fromStationId = fromId, toStationId = toId,
+                            date = date, departure = train.departure,
+                            pauseMillis = 0, firstStopOnly = true,
+                        ).comfortSummary(seatClass = null)
+                    }.getOrNull()
+                } ?: continue
+                _state.update { it.copy(comfort = it.comfort + (train.routeId to summary)) }
+            }
+            _state.update { it.copy(comfortLoading = false) }
+        }
 
     /**
      * Rychla faza: obsadenost pre cely usek (1 volanie). Staci na vyber vozna
