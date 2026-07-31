@@ -1,0 +1,209 @@
+[
+ {
+  "description": "Počas cesty si môžete jednoducho objednať občerstvenie pomocou mobilnej aplikácie alebo sa osviežiť bezplatnou vodou Rajec.",
+  "galleryUrl": "https://regiojet.sk/sluzby/sluzby-vo-vlaku/low-cost",
+  "imageUrl": "https://brn-ybus-pubapi.sa.cz/resources/seat_class/low-cost.jpg",
+  "key": "TRAIN_LOW_COST",
+  "shortDescription": "Najlacnejšie cestovanie v otvorenom vozni alebo v kupé.",
+  "title": "Low cost (2. tr.) ",
+  "vehicleClass": "2"
+ },
+ {
+  "description": "Trieda Štandard, to je výber miesta v otvorenom priestore veľkopriestorového vozňa ASTRA, alebo v uzatvorenom 6-miestnom kupé. Káva značky Illy a voda Rajec zadarmo, k dispozícii denná tlač a ponuka nášho palubného menu za výhodné ceny. Sedačky sú vybavené LCD obrazovkami so širokou ponukou. Cestujúci s malými deťmi ocenia špeciálne detské kupé určené pre hry a zábavu tých najmenších.",
+  "galleryUrl": "https://regiojet.sk/sluzby/sluzby-vo-vlaku/standard",
+  "imageUrl": "https://brn-ybus-pubapi.sa.cz/resources/seat_class/standard.jpg",
+  "key": "C0",
+  "shortDescription": "Otvorený priestor vozňa ASTRA, alebo 6-miestne kupé. Káva značky Illy a voda Rajec zadarmo. Špeciálne detské kupé.",
+  "title": "Standard (2. tr.)",
+  "vehicleClass": "2"
+ },
+ {
+  "description": "V triede Štandard si môžete vybrať miesto vo veľkopriestorovom vozni alebo v 6-miestnom kupé. Na vašej ceste vás čaká bezplatná voda Rajec, denná tlač, a navyše ponúkame raňajky a večerné občerstvenie zadarmo. Využite tiež ponuku nášho palubného menu za výhodné ceny.",
+  "galleryUrl": "https://regiojet.sk/sluzby/sluzby-vo-vlaku/standard",
+  "imageUrl": "https://brn-ybus-pubapi.sa.cz/resources/seat_class/standard.jpg",
+  "key": "TRAIN_STANDARD_PL",
+  "shortDescription": "Veľkopriestorový sedačkový vozeň alebo 6-miestne kupé s vodou Rajec, raňajkami a večerným občerstvením zadarmo.",
+  "title": "Standard (2. tr.)",
+  "vehicleClass": "2"
+ },
+ {
+  "description": null,
+  "galleryUrl": "https://regiojet.sk/sluzby/sluzby-vo-vlaku/astra",
+  "imageUrl": "https://brn-ybus-pubapi.sa.cz/resources/seat_class/standard-couchette.jpg",
+  "key": "TRAIN_STANDARD_PLUS",
+  "shortDescription": null,
+  "title": "Standard PLUS",
+  "vehicleClass": "2"
+ },
+ {
+  "description": "Trieda Relax, to je relax. Výber miesta v otvorenom priestore veľkopriestorového vozňa s pohodlnými koženými sedačkami, zábavným portálom a Wi-Fi. Starostlivosť stevardov počas trvania cesty, káva značky Illy a voda Rajec zadarmo. K dispozícii denná tlač a ponuka nášho palubného menu za výhodné ceny.",
+  "galleryUrl": "https://regiojet.sk/sluzby/sluzby-vo-vlaku/relax",
+  "imageUrl": "https://brn-ybus-pubapi.sa.cz/resources/seat_class/relax.jpg",
+  "key": "C1",
+  "shortDescription": "Veľkopriestorový vozeň s koženými sedačkami. Káva značky Illy a voda Rajec zadarmo. K dispozícii zábavný portál a Wi-Fi.",
+  "title": "Relax (2. tr.)",
+  "vehicleClass": "2"
+ },
+ {
+  "description": "Trieda Business, to je prémiový servis a maximálne pohodlie. Nadštandardne vybavený vozeň s koženými sedadlami, zábavným portálom, Wi-Fi a prednostným servisom nášho palubného personálu. Zadarmo k dispozícii voda Rajec, káva značky Illy, džús alebo prosecco. Samozrejmosťou je denná tlač a ponuka nášho palubného menu. Komfort business triedy ocení každy, kto chce čas počas trvania cesty využiť k práci, či odpočinku s dostupným nadštandardným servisom.",
+  "galleryUrl": "https://regiojet.sk/sluzby/sluzby-vo-vlaku/business",
+  "imageUrl": "https://brn-ybus-pubapi.sa.cz/resources/seat_class/business.jpg",
+  "key": "C2",
+  "shortDescription": "Prémiový servis, maximálne pohodlie. Nadštandardné vybavenie, kožené sedadlá. Prednostný servis palubného personálu. Voda Rajec, káva značky Illy, džús alebo prosecco zadarmo.",
+  "title": "Business (1. tr.)",
+  "vehicleClass": "1"
+ },
+ {
+  "description": "Klimatizácia, zásuvky 230 V, Wi-Fi pripojenie, balená voda Rajec, zábavný portál na vlastnom zariadení a časopisy na samoobslužných policiach.",
+  "galleryUrl": "https://regiojet.cz/sluzby/servis-ve-vlaku/r8-business",
+  "imageUrl": "https://brn-ybus-pubapi.sa.cz/resources/seat_class/1st-class.jpg",
+  "key": "TRAIN_1ST_CLASS",
+  "shortDescription": "Cestujte 1. triedou vo veľkopriestorovom vozni alebo v kupé pre 6 osôb.",
+  "title": "Business (1. tr.)",
+  "vehicleClass": "1"
+ },
+ {
+  "description": "Na cestu si môžete objednať aj bicykel, kočík alebo prepravu psíka. Ak cestujete s deťmi mladšími ako 10 rokov, máme pre vás vyhradené samostatné kupé.",
+  "galleryUrl": "https://regiojet.cz/sluzby/servis-ve-vlaku/r8-low-cost",
+  "imageUrl": "https://brn-ybus-pubapi.sa.cz/resources/seat_class/2nd-class.jpg",
+  "key": "TRAIN_2ND_CLASS",
+  "shortDescription": "Cestujte najlacnejšie v otvorenom vozni alebo v kupé.",
+  "title": "Low cost (2. tr.) ",
+  "vehicleClass": "2"
+ },
+ {
+  "description": "Užite si plnohodnotný spánok a pohodlie v súkromí svojho kupé. Vo vozni nájdete prestieradlá, vankúš a prikrývku. Ráno vám spríjemníme lahodnými raňajkami a čerstvou kávou.",
+  "galleryUrl": "https://regiojet.sk/sluzby/sluzby-vo-vlaku/spacie-vozne",
+  "imageUrl": "https://brn-ybus-pubapi.sa.cz/resources/seat_class/business-couchette.jpg",
+  "key": "TRAIN_COUCHETTE_BUSINESS_4",
+  "shortDescription": "Cestujte vo vlastnom lôžkovom kupé až pre 4 osoby.",
+  "title": "Lôžko – vlastné kupé",
+  "vehicleClass": "undefined"
+ },
+ {
+  "description": "Vydajte sa na cestu nočným vozňom. Vo vozni nájdete posteľnú bielizeň, vankúš a prikrývku. Ráno vás zobudíme croissantom a kávou. <br>Naša bezpečnostná služba sa postará o váš nerušený spánok.</br>",
+  "galleryUrl": "https://regiojet.sk/sluzby/sluzby-vo-vlaku/spacie-vozne",
+  "imageUrl": "https://brn-ybus-pubapi.sa.cz/resources/seat_class/standard-couchette.jpg",
+  "key": "TRAIN_COUCHETTE_STANDARD",
+  "shortDescription": "Cestujte pohodlne v lôžkovom kupé pre 6 osôb.",
+  "title": "Ležadlo",
+  "vehicleClass": "undefined"
+ },
+ {
+  "description": "Doprajte si pohodlný spánok, vo vozni pre vás pripravíme posteľnú bielizeň, vankúš a prikrývku. A pretože ráno robí deň, pripravíme vám chutné raňajky a čerstvú kávu.",
+  "galleryUrl": "https://regiojet.sk/sluzby/sluzby-vo-vlaku/spacie-vozne",
+  "imageUrl": "https://brn-ybus-pubapi.sa.cz/resources/seat_class/relax-couchette.jpg",
+  "key": "TRAIN_COUCHETTE_RELAX",
+  "shortDescription": "Vyrazte na cestu v priestrannom lôžkovom kupé pre 3 alebo 4 osoby.",
+  "title": "Lôžko",
+  "vehicleClass": "undefined"
+ },
+ {
+  "description": "Vo vozni vám pripravíme posteľnú bielizeň, vankúš a prikrývku pre vaše pohodlie. A pretože ráno robí deň, pripravíme vám chutné raňajky a čerstvú kávu.",
+  "galleryUrl": "https://regiojet.sk/sluzby/sluzby-vo-vlaku/spacie-vozne",
+  "imageUrl": "https://brn-ybus-pubapi.sa.cz/resources/seat_class/relax-couchette.jpg",
+  "key": "TRAIN_COUCHETTE_RELAX_FOR_WOMEN",
+  "shortDescription": "Zarezervujte si lôžko v kupé, ktoré je určené len pre ženy a ženy s deťmi do 10 rokov.",
+  "title": "Lôžko len ženy",
+  "vehicleClass": "undefined"
+ },
+ {
+  "description": "Užite si plnohodnotný spánok a pohodlie v súkromí svojho kupé. Vo vozni nájdete prestieradlá, vankúš a prikrývku. Ráno vám spríjemníme lahodnými raňajkami a čerstvou kávou. Naša bezpečnostná služba sa postará o váš pokojný spánok.",
+  "galleryUrl": "https://regiojet.sk/sluzby/sluzby-vo-vlaku/spacie-vozne",
+  "imageUrl": "https://brn-ybus-pubapi.sa.cz/resources/seat_class/business-couchette.jpg",
+  "key": "TRAIN_COUCHETTE_BUSINESS",
+  "shortDescription": "Cestujte vo vlastnom lôžkovom kupé až pre 3 osoby.",
+  "title": "Lôžko – vlastné kupé",
+  "vehicleClass": "undefined"
+ },
+ {
+  "description": "V triede Štandard na prízemí autobusu si môžete vychutnať pohodlné sedadlá, kupé pre štyri osoby, dotykové obrazovky so zábavným portálom, Wi-Fi a elektrické zásuvky pre mobilné telefóny a notebooky.",
+  "galleryUrl": "https://regiojet.com/services-on-board-of-buses/fun-relax-plus",
+  "imageUrl": null,
+  "key": "BUS_STANDARD",
+  "shortDescription": "Pohodlné sedadlá alebo štvormiestny oddiel na prízemí nášho najmodernejšieho dvojposchodového autobusu za skvelú cenu. Bezplatné Wi-Fi, zábavný portál, elektrické zásuvky a toaleta.",
+  "title": "Standard (bus)",
+  "vehicleClass": "undefined"
+ },
+ {
+  "description": "Vychutnajte si jedinečný panoramatický výhľad a rozšírený priestor na nohy pre maximálne pohodlie. Samozrejmosťou je bezplatné Wi-Fi, elektrické zásuvky pre vaše mobilné telefóny a notebooky a možnosť rezervovať si samostatné sedadlo.",
+  "galleryUrl": "https://regiojet.com/services-on-board-of-buses/fun-relax-plus",
+  "imageUrl": null,
+  "key": "BUS_RELAX",
+  "shortDescription": "Pohodlné ergonomické sedadlá alebo samostatné sedadlá na podlahe nášho najmodernejšieho poschodového autobusu. Bezplatné Wi-Fi, zábavný portál, elektrické zásuvky a toalety.",
+  "title": "Relax (bus)",
+  "vehicleClass": "undefined"
+ },
+ {
+  "description": "K jazde si môžete zarezervovať aj prepravu bicykla, kočíka alebo psíka. Ak cestujete s deťmi do 10 rokov, máme pre vás vyhradený samostatný oddiel.",
+  "galleryUrl": "https://regiojet.cz/sluzby/servis-ve-vlaku/r23-low-cost",
+  "imageUrl": "https://brn-ybus-pubapi.sa.cz/resources/seat_class/r23-low-cost.jpg",
+  "key": "TRAIN_R23_LOW_COST",
+  "shortDescription": "Cestujte pohodlne za najvýhodnejšiu cenu.",
+  "title": "Low cost (2. tr.) ",
+  "vehicleClass": "2"
+ },
+ {
+  "description": "Možnosť objednať si teplé a studené nápoje, drobné občerstvenie, zásuvky 230 V, Wi-Fi pripojenie a časopisy na samoobslužných policiach.",
+  "galleryUrl": "https://regiojet.cz/kam-jezdime/r23",
+  "imageUrl": "https://brn-ybus-pubapi.sa.cz/resources/seat_class/r23_standard.jpg",
+  "key": "TRAIN_R23_STANDARD",
+  "shortDescription": "Pohodlie za skvelú cenu s možnosťou objednania občerstvenia. ",
+  "title": "Standard (2. tr.)",
+  "vehicleClass": "2"
+ },
+ {
+  "description": "K dispozícii je klimatizácia, zásuvky 230 V, Wi-Fi pripojenie a časopisy na samoobslužných policiach.",
+  "galleryUrl": "https://regiojet.cz/kam-jezdime/r23",
+  "imageUrl": "https://brn-ybus-pubapi.sa.cz/resources/seat_class/r23-relax.jpg",
+  "key": "TRAIN_R23_RELAX",
+  "shortDescription": "Pohodlie prvej triedy, ale bez možnosti objednania občerstvenia.",
+  "title": "Relax (2. tr.)",
+  "vehicleClass": "2"
+ },
+ {
+  "description": "Užite si prvotriedne pohodlie v otvorenom priestore s najpohodlnejšími priestrannými sedadlami, ktoré poskytujú maximálny komfort počas jazdy. Tento priestorový koncept vám zaručí pokojný zážitok z cesty a dostatok miesta na prácu aj oddych. Nechýba ani klimatizácia, zásuvky 230 V, Wi-Fi pripojenie a balená voda Rajec alebo pomarančový džús zdarma, prípadne občerstvenie z palubného menu.",
+  "galleryUrl": "https://regiojet.cz/sluzby/servis-ve-vlaku/r23-business",
+  "imageUrl": "https://brn-ybus-pubapi.sa.cz/resources/seat_class/r23_business.jpg",
+  "key": "TRAIN_R23_BUSINESS",
+  "shortDescription": "Prvá trieda s extra priestorom a samostatnými sedadlami pre maximálny komfort, nápojmi zdarma a možnosťou objednania občerstvenia.",
+  "title": "Business (1. tr.)",
+  "vehicleClass": "1"
+ },
+ {
+  "description": "Pohodlné látkové sedadlá s opierkami hlavy, Wi-Fi a zásuvka 230 V. Cestu vám spríjemnia denné tlače alebo náš zábavný portál, ku ktorému sa jednoducho pripojíte zo svojho zariadenia. Občerstvenie si môžete ľahko objednať u palubného personálu alebo prostredníctvom mobilnej aplikácie a osviežiť sa balenou vodou Rajec či kávou Illy zdarma.",
+  "galleryUrl": "https://regiojet.cz/sluzby/servis-ve-vlaku/r23-low-cost",
+  "imageUrl": "https://brn-ybus-pubapi.sa.cz/resources/seat_class/standard.jpg",
+  "key": "TRAIN_R8_STANDARD",
+  "shortDescription": "Usaďte sa v pohodlnom 6-miestnom kupé a vychutnajte si počas jazdy kávu zdarma. ",
+  "title": "Standard (2. tr.)",
+  "vehicleClass": "2"
+ },
+ {
+  "description": "Pre vaše pohodlie vám pripravíme ustlané lôžka s posteľnou bielizňou, vankúšom a prikrývkou. A pretože ráno robí deň, pripravíme pre vás chutné raňajky a čerstvú kávu.",
+  "galleryUrl": "https://regiojet.sk/sluzby/sluzby-vo-vlaku/spacie-vozne",
+  "imageUrl": "https://brn-ybus-pubapi.sa.cz/resources/seat_class/relax-couchette-3.jpg",
+  "key": "TRAIN_COUCHETTE_RELAX_3",
+  "shortDescription": "Vydajte sa na cestu v priestrannom lôžkovom kupé pre 3 osoby. ",
+  "title": "Lôžko muži a ženy",
+  "vehicleClass": "undefined"
+ },
+ {
+  "description": "Pre vaše pohodlie vám pripravíme ustlané lôžka s posteľnou bielizňou, vankúšom a prikrývkou. A pretože ráno robí deň, pripravíme pre vás chutné raňajky a čerstvú kávu.",
+  "galleryUrl": "https://regiojet.sk/sluzby/sluzby-vo-vlaku/spacie-vozne",
+  "imageUrl": "https://brn-ybus-pubapi.sa.cz/resources/seat_class/relax-couchette-3.jpg",
+  "key": "TRAIN_COUCHETTE_RELAX_3_WOMEN",
+  "shortDescription": "Zarezervujte si lôžko v trojmiestnom kupé, ktoré je určené len pre ženy a ženy s deťmi do 10 rokov.",
+  "title": "Lôžko ženy",
+  "vehicleClass": "undefined"
+ },
+ {
+  "description": "- no seat class -",
+  "galleryUrl": "https://regiojet.cz/sluzby/servis-v-autobusu",
+  "imageUrl": null,
+  "key": "NO",
+  "shortDescription": "- no seat class -",
+  "title": "- no seat class -",
+  "vehicleClass": "undefined"
+ }
+]

@@ -1,0 +1,367 @@
+[
+ {
+  "country": "CZ",
+  "fullname": "Blansko - žst.",
+  "id": 3741302001
+ },
+ {
+  "country": "CZ",
+  "fullname": "Bohumín - žst.",
+  "id": 4961583004
+ },
+ {
+  "country": "CZ",
+  "fullname": "Brno - Královo Pole",
+  "id": 4987881000
+ },
+ {
+  "country": "CZ",
+  "fullname": "Brno - hl.n.",
+  "id": 3088864001
+ },
+ {
+  "country": "CZ",
+  "fullname": "Brno - Židenice",
+  "id": 3398241000
+ },
+ {
+  "country": "CZ",
+  "fullname": "Bystřice (Třinec) - žst.",
+  "id": 1313142002
+ },
+ {
+  "country": "CZ",
+  "fullname": "Břeclav - žst.",
+  "id": 3088864003
+ },
+ {
+  "country": "CZ",
+  "fullname": "Havlíčkův Brod - žst.",
+  "id": 5845193002
+ },
+ {
+  "country": "CZ",
+  "fullname": "Havířov - žst.",
+  "id": 372825010
+ },
+ {
+  "country": "CZ",
+  "fullname": "Hranice na M. - žst.",
+  "id": 372825006
+ },
+ {
+  "country": "CZ",
+  "fullname": "Hulín - nádr.",
+  "id": 2370298002
+ },
+ {
+  "country": "CZ",
+  "fullname": "Jistebník - Jistebník",
+  "id": 5095524063
+ },
+ {
+  "country": "CZ",
+  "fullname": "Kojetín - žst.",
+  "id": 4961583001
+ },
+ {
+  "country": "CZ",
+  "fullname": "Kolín - hl.n.",
+  "id": 3088864000
+ },
+ {
+  "country": "CZ",
+  "fullname": "Letovice - žst.",
+  "id": 3741302002
+ },
+ {
+  "country": "CZ",
+  "fullname": "Lipník nad Bečvou - žst.",
+  "id": 7063331002
+ },
+ {
+  "country": "CZ",
+  "fullname": "Litoměřice - město",
+  "id": 5812866009
+ },
+ {
+  "country": "CZ",
+  "fullname": "Lysá nad Labem - žel.st.",
+  "id": 5812866004
+ },
+ {
+  "country": "CZ",
+  "fullname": "Mělník - žel.st.",
+  "id": 5812866007
+ },
+ {
+  "country": "CZ",
+  "fullname": "Nezamyslice - žst.",
+  "id": 5009212000
+ },
+ {
+  "country": "CZ",
+  "fullname": "Nymburk - hl.nádr.",
+  "id": 5812866003
+ },
+ {
+  "country": "CZ",
+  "fullname": "Návsí (Jablunkov) - žst.",
+  "id": 1558071000
+ },
+ {
+  "country": "CZ",
+  "fullname": "Olomouc - žst.",
+  "id": 372825005
+ },
+ {
+  "country": "CZ",
+  "fullname": "Opava východ - nádr.",
+  "id": 3741302004
+ },
+ {
+  "country": "CZ",
+  "fullname": "Ostrava - Kunčice",
+  "id": 7425455002
+ },
+ {
+  "country": "CZ",
+  "fullname": "Ostrava - Stodolní",
+  "id": 372825009
+ },
+ {
+  "country": "CZ",
+  "fullname": "Ostrava - Svinov",
+  "id": 372825007
+ },
+ {
+  "country": "CZ",
+  "fullname": "Ostrava - Vítkovice",
+  "id": 7425455001
+ },
+ {
+  "country": "CZ",
+  "fullname": "Ostrava - žst.",
+  "id": 372825008
+ },
+ {
+  "country": "CZ",
+  "fullname": "Pardubice - hl.n.",
+  "id": 372825002
+ },
+ {
+  "country": "CZ",
+  "fullname": "Poděbrady - žel.st.",
+  "id": 5812866002
+ },
+ {
+  "country": "CZ",
+  "fullname": "Praha - Zahradní Město",
+  "id": 7434585001
+ },
+ {
+  "country": "CZ",
+  "fullname": "Praha - hl.n.",
+  "id": 372825000
+ },
+ {
+  "country": "CZ",
+  "fullname": "Přerov - žst.",
+  "id": 2370298003
+ },
+ {
+  "country": "CZ",
+  "fullname": "Skalice nad Svitavou - žst.",
+  "id": 4406938000
+ },
+ {
+  "country": "CZ",
+  "fullname": "Stará Boleslav - žel.st.",
+  "id": 5812866005
+ },
+ {
+  "country": "CZ",
+  "fullname": "Studénka - žst.",
+  "id": 5095524027
+ },
+ {
+  "country": "CZ",
+  "fullname": "Suchdol n.Odrou - žst.",
+  "id": 5095524133
+ },
+ {
+  "country": "CZ",
+  "fullname": "Svitavy - žst.",
+  "id": 3741302003
+ },
+ {
+  "country": "CZ",
+  "fullname": "Třinec centrum - žst.",
+  "id": 1313142001
+ },
+ {
+  "country": "CZ",
+  "fullname": "Velký Osek - nádr.",
+  "id": 5812866001
+ },
+ {
+  "country": "CZ",
+  "fullname": "Vyškov na Moravě - žst.",
+  "id": 4961583000
+ },
+ {
+  "country": "CZ",
+  "fullname": "Všetaty - žel.st.",
+  "id": 5812866006
+ },
+ {
+  "country": "CZ",
+  "fullname": "Zábřeh na Moravě - žst.",
+  "id": 372825004
+ },
+ {
+  "country": "CZ",
+  "fullname": "Ústí n.L. - Střekov",
+  "id": 5145776001
+ },
+ {
+  "country": "CZ",
+  "fullname": "Ústí n.L. - hl.nádr.",
+  "id": 5010256458
+ },
+ {
+  "country": "CZ",
+  "fullname": "Ústí n.L. - západ",
+  "id": 5812866010
+ },
+ {
+  "country": "CZ",
+  "fullname": "Česká Třebová - žst.",
+  "id": 1313142000
+ },
+ {
+  "country": "CZ",
+  "fullname": "Český Těšín - žst.",
+  "id": 508812001
+ },
+ {
+  "country": "CZ",
+  "fullname": "Štětí - žel.st.",
+  "id": 5812866008
+ },
+ {
+  "country": "CZ",
+  "fullname": "Žďár nad Sázavou - žst.",
+  "id": 5845193001
+ },
+ {
+  "country": "SK",
+  "fullname": "Bratislava - Vinohrady",
+  "id": 6553511001
+ },
+ {
+  "country": "SK",
+  "fullname": "Bratislava - hl.st.",
+  "id": 1841058000
+ },
+ {
+  "country": "SK",
+  "fullname": "Bánovce nad Ondavou - žel. st.",
+  "id": 3741302005
+ },
+ {
+  "country": "SK",
+  "fullname": "Košice - žst.",
+  "id": 1763018007
+ },
+ {
+  "country": "SK",
+  "fullname": "Kysak (pri meste Prešov) - žst.",
+  "id": 1763018006
+ },
+ {
+  "country": "SK",
+  "fullname": "Liptovský Mikuláš - žst.",
+  "id": 1763018002
+ },
+ {
+  "country": "SK",
+  "fullname": "Margecany - žel. st.",
+  "id": 2317717000
+ },
+ {
+  "country": "SK",
+  "fullname": "Nové Mesto nad Váhom - žst.",
+  "id": 5118565002
+ },
+ {
+  "country": "SK",
+  "fullname": "Piešťany - žst.",
+  "id": 5118565001
+ },
+ {
+  "country": "SK",
+  "fullname": "Poprad - Tatry",
+  "id": 1763018004
+ },
+ {
+  "country": "SK",
+  "fullname": "Považská Bystrica - žst.",
+  "id": 1841058003
+ },
+ {
+  "country": "SK",
+  "fullname": "Púchov - žst.",
+  "id": 5118565004
+ },
+ {
+  "country": "SK",
+  "fullname": "Ružomberok - žst.",
+  "id": 1763018001
+ },
+ {
+  "country": "SK",
+  "fullname": "Spišská Nová Ves - žst.",
+  "id": 1763018005
+ },
+ {
+  "country": "SK",
+  "fullname": "Strážske - žel. st.",
+  "id": 3741302007
+ },
+ {
+  "country": "SK",
+  "fullname": "Trenčianska Teplá - žst.",
+  "id": 5118565003
+ },
+ {
+  "country": "SK",
+  "fullname": "Trenčín - žst.",
+  "id": 1841058002
+ },
+ {
+  "country": "SK",
+  "fullname": "Trnava - žst.",
+  "id": 1841058001
+ },
+ {
+  "country": "SK",
+  "fullname": "Vrútky - žst.",
+  "id": 1763018000
+ },
+ {
+  "country": "SK",
+  "fullname": "Čadca - žst.",
+  "id": 508812003
+ },
+ {
+  "country": "SK",
+  "fullname": "Štrba - žst.",
+  "id": 1763018003
+ },
+ {
+  "country": "SK",
+  "fullname": "Žilina - žst.",
+  "id": 508812004
+ }
+]

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- notifikacie o uvolnenom mieste, od Androidu 13 sa pyta za behu -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application
+        android:allowBackup="true"
+        android:label="RJ Seat"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.RjSeat">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="RJ Seat">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

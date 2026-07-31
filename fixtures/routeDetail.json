@@ -1,0 +1,316 @@
+{
+ "arrivalCityId": 10202033,
+ "arrivalCityName": "Košice",
+ "arrivalStationId": 1763018007,
+ "arrivalStationName": "žst.",
+ "arrivalTime": "2026-08-02T06:12:00.000+02:00",
+ "bookable": true,
+ "carbonOffset": {
+  "amount": 0.4,
+  "currency": "EUR"
+ },
+ "creditPriceFrom": 24.7,
+ "creditPriceTo": 50.7,
+ "delay": null,
+ "departureCityId": 10202003,
+ "departureCityName": "Praha",
+ "departureStationId": 372825000,
+ "departureStationName": "hl.n.",
+ "departureTime": "2026-08-01T21:45:00.000+02:00",
+ "freeSeatsCount": 129,
+ "id": "8551447269",
+ "mainSectionId": 8551447269,
+ "nationalTrip": false,
+ "notices": false,
+ "priceClasses": [
+  {
+   "actionPrice": null,
+   "bookable": true,
+   "conditions": {
+    "cancelCharge": null,
+    "cancelCharges": [],
+    "code": null,
+    "descriptions": {
+     "cancel": "viac než 15 minút do odchodu: 0 %, menej než 15 minút: nie je možné stornovať",
+     "cancelShort": "> 15 minút: 0 %, < 15 minút: nie je možné stornovať",
+     "expiration": "24 minút (31. 7. 2026 8:59 SELČ)",
+     "rebook": "viac než 15 minút do odchodu: stornom za 0 EUR, menej než 15 minút: nie je možné prerezervovať",
+     "rebookShort": null
+    },
+    "refundToOriginalSourcePossible": false
+   },
+   "creditPrice": 24.7,
+   "customerNotifications": [
+    "UPOZORNENIE: pre zvýšenie bezpečnosti a kultúry cestovania je vo vlakoch RegioJet zákaz konzumácie vlastných alkoholických nápojov. Ďakujeme za pochopenie."
+   ],
+   "freeSeatsCount": 8,
+   "price": 24.9,
+   "priceSource": "8730917159<372825000-1763018007-8708079624>",
+   "seatClassKey": "TRAIN_LOW_COST",
+   "services": [
+    "typy_vozidel_chlazene_napoje",
+    "typy_vozidel_wifi_ano",
+    "typy_vozidel_imobilni_rampa",
+    "typy_vozidel_online_catering",
+    "typy_vozidel_klimatizace",
+    "typy_vozidel_zastuvka_ne"
+   ],
+   "tariffNotifications": null,
+   "tariffs": [
+    "REGULAR"
+   ]
+  },
+  {
+   "actionPrice": null,
+   "bookable": true,
+   "conditions": {
+    "cancelCharge": null,
+    "cancelCharges": [],
+    "code": null,
+    "descriptions": {
+     "cancel": "viac než 15 minút do odchodu: 0 %, menej než 15 minút: nie je možné stornovať",
+     "cancelShort": "> 15 minút: 0 %, < 15 minút: nie je možné stornovať",
+     "expiration": "24 minút (31. 7. 2026 8:59 SELČ)",
+     "rebook": "viac než 15 minút do odchodu: stornom za 0 EUR, menej než 15 minút: nie je možné prerezervovať",
+     "rebookShort": null
+    },
+    "refundToOriginalSourcePossible": false
+   },
+   "creditPrice": 31.7,
+   "customerNotifications": [
+    "UPOZORNENIE: pre zvýšenie bezpečnosti a kultúry cestovania je vo vlakoch RegioJet zákaz konzumácie vlastných alkoholických nápojov. Ďakujeme za pochopenie."
+   ],
+   "freeSeatsCount": 76,
+   "price": 31.9,
+   "priceSource": "8730917159<372825000-1763018007-8708079624>",
+   "seatClassKey": "C0",
+   "services": [
+    "typy_vozidel_detske_kupe",
+    "typy_vozidel_online_catering",
+    "typy_vozidel_obcerstveni",
+    "typy_vozidel_chlazene_napoje",
+    "typy_vozidel_klimatizace",
+    "typy_vozidel_denni_tisk",
+    "typy_vozidel_zabavni_portal_ano",
+    "typy_vozidel_wifi_ano",
+    "typy_vozidel_teple_napoje_zdarma",
+    "typy_vozidel_stevardka",
+    "typy_vozidel_zasuvka",
+    "typy_vozidel_dotykova_obrazovka",
+    "typy_vozidel_kocarky"
+   ],
+   "tariffNotifications": null,
+   "tariffs": [
+    "REGULAR"
+   ]
+  },
+  {
+   "actionPrice": null,
+   "bookable": true,
+   "conditions": {
+    "cancelCharge": null,
+    "cancelCharges": [],
+    "code": null,
+    "descriptions": {
+     "cancel": "viac než 15 minút do odchodu: 0 %, menej než 15 minút: nie je možné stornovať",
+     "cancelShort": "> 15 minút: 0 %, < 15 minút: nie je možné stornovať",
+     "expiration": "24 minút (31. 7. 2026 8:59 SELČ)",
+     "rebook": "viac než 15 minút do odchodu: stornom za 0 EUR, menej než 15 minút: nie je možné prerezervovať",
+     "rebookShort": null
+    },
+    "refundToOriginalSourcePossible": false
+   },
+   "creditPrice": 35.7,
+   "customerNotifications": [
+    "UPOZORNENIE: pre zvýšenie bezpečnosti a kultúry cestovania je vo vlakoch RegioJet zákaz konzumácie vlastných alkoholických nápojov. Ďakujeme za pochopenie."
+   ],
+   "freeSeatsCount": 30,
+   "price": 35.9,
+   "priceSource": "8730917159<372825000-1763018007-8708079624>",
+   "seatClassKey": "C1",
+   "services": [
+    "typy_vozidel_chlazene_napoje",
+    "typy_vozidel_prednostni_servis",
+    "typy_vozidel_wifi_ano",
+    "typy_vozidel_zasuvka",
+    "typy_vozidel_stevardka",
+    "typy_vozidel_obcerstveni",
+    "typy_vozidel_teple_napoje_zdarma",
+    "typy_vozidel_klimatizace"
+   ],
+   "tariffNotifications": null,
+   "tariffs": [
+    "REGULAR"
+   ]
+  },
+  {
+   "actionPrice": null,
+   "bookable": true,
+   "conditions": {
+    "cancelCharge": null,
+    "cancelCharges": [],
+    "code": null,
+    "descriptions": {
+     "cancel": "viac než 15 minút do odchodu: 0 %, menej než 15 minút: nie je možné stornovať",
+     "cancelShort": "> 15 minút: 0 %, < 15 minút: nie je možné stornovať",
+     "expiration": "24 minút (31. 7. 2026 8:59 SELČ)",
+     "rebook": "viac než 15 minút do odchodu: stornom za 0 EUR, menej než 15 minút: nie je možné prerezervovať",
+     "rebookShort": null
+    },
+    "refundToOriginalSourcePossible": false
+   },
+   "creditPrice": 42.7,
+   "customerNotifications": [
+    "UPOZORNENIE: pre zvýšenie bezpečnosti a kultúry cestovania je vo vlakoch RegioJet zákaz konzumácie vlastných alkoholických nápojov. Ďakujeme za pochopenie."
+   ],
+   "freeSeatsCount": 8,
+   "price": 42.9,
+   "priceSource": "8730917159<372825000-1763018007-8708079624>",
+   "seatClassKey": "C2",
+   "services": [
+    "typy_vozidel_tiche_kupe",
+    "typy_vozidel_obcerstveni",
+    "typy_vozidel_klimatizace",
+    "typy_vozidel_chlazene_napoje",
+    "typy_vozidel_teple_napoje_zdarma",
+    "typy_vozidel_zasuvka",
+    "typy_vozidel_dzus",
+    "typy_vozidel_stevardka",
+    "typy_vozidel_wifi_ano",
+    "typy_vozidel_prednostni_servis"
+   ],
+   "tariffNotifications": null,
+   "tariffs": [
+    "REGULAR"
+   ]
+  },
+  {
+   "actionPrice": {
+    "code": null,
+    "description": "Spací vozeň",
+    "id": 2500397000,
+    "name": "rj_spaci_vozy",
+    "showIcon": false,
+    "url": "https://regiojet.sk/sluzby/servis-vo-vlaku/spacie-vozne"
+   },
+   "bookable": true,
+   "conditions": {
+    "cancelCharge": null,
+    "cancelCharges": [],
+    "code": null,
+    "descriptions": {
+     "cancel": "viac než 6 hodín do odchodu: 0 %, menej než 6 hodín: nie je možné stornovať",
+     "cancelShort": "> 6 hodín: 0 %, < 6 hodín: nie je možné stornovať",
+     "expiration": "24 minút (31. 7. 2026 8:59 SELČ)",
+     "rebook": "viac než 6 hodín do odchodu: stornom za 0 EUR, menej než 6 hodín: nie je možné prerezervovať",
+     "rebookShort": null
+    },
+    "refundToOriginalSourcePossible": false
+   },
+   "creditPrice": 50.7,
+   "customerNotifications": [],
+   "freeSeatsCount": 2,
+   "price": 50.9,
+   "priceSource": "8730917159<372825000-1763018007-8708079644>",
+   "seatClassKey": "TRAIN_COUCHETTE_RELAX_3",
+   "services": [],
+   "tariffNotifications": null,
+   "tariffs": [
+    "REGULAR"
+   ]
+  },
+  {
+   "actionPrice": {
+    "code": null,
+    "description": "Spací vozeň",
+    "id": 2500397000,
+    "name": "rj_spaci_vozy",
+    "showIcon": false,
+    "url": "https://regiojet.sk/sluzby/servis-vo-vlaku/spacie-vozne"
+   },
+   "bookable": true,
+   "conditions": {
+    "cancelCharge": null,
+    "cancelCharges": [],
+    "code": null,
+    "descriptions": {
+     "cancel": "viac než 6 hodín do odchodu: 0 %, menej než 6 hodín: nie je možné stornovať",
+     "cancelShort": "> 6 hodín: 0 %, < 6 hodín: nie je možné stornovať",
+     "expiration": "24 minút (31. 7. 2026 8:59 SELČ)",
+     "rebook": "viac než 6 hodín do odchodu: stornom za 0 EUR, menej než 6 hodín: nie je možné prerezervovať",
+     "rebookShort": null
+    },
+    "refundToOriginalSourcePossible": false
+   },
+   "creditPrice": 50.7,
+   "customerNotifications": [],
+   "freeSeatsCount": 5,
+   "price": 50.9,
+   "priceSource": "8730917159<372825000-1763018007-8708079644>",
+   "seatClassKey": "TRAIN_COUCHETTE_RELAX_3_WOMEN",
+   "services": [],
+   "tariffNotifications": null,
+   "tariffs": [
+    "REGULAR"
+   ]
+  }
+ ],
+ "priceFrom": 24.9,
+ "priceTo": 50.9,
+ "sections": [
+  {
+   "arrivalCityId": 10202033,
+   "arrivalCityName": "Košice",
+   "arrivalPlatform": null,
+   "arrivalStationId": 1763018007,
+   "arrivalStationName": "žst.",
+   "arrivalTime": "2026-08-02T06:12:00.000+02:00",
+   "carrierId": 5044895002,
+   "delay": null,
+   "departureCityId": 10202003,
+   "departureCityName": "Praha",
+   "departurePlatform": null,
+   "departureStationId": 372825000,
+   "departureStationName": "hl.n.",
+   "departureTime": "2026-08-01T21:45:00.000+02:00",
+   "estimatedArrivalTime": "2026-08-02T06:12:00.000+02:00",
+   "fixedSeatReservation": true,
+   "freeSeatsCount": 129,
+   "id": 8551447269,
+   "line": {
+    "code": "RJ 1021",
+    "from": "Praha",
+    "id": 8075174225,
+    "lineGroupCode": "VLAK",
+    "lineNumber": 270,
+    "to": "Košice"
+   },
+   "notices": [],
+   "services": [
+    "typy_vozidel_stevardka",
+    "typy_vozidel_wifi_ano",
+    "typy_vozidel_klimatizace",
+    "typy_vozidel_denni_tisk",
+    "typy_vozidel_teple_napoje_zdarma",
+    "typy_vozidel_obcerstveni",
+    "typy_vozidel_tiche_kupe",
+    "typy_vozidel_zabavni_portal_ano",
+    "typy_vozidel_zasuvka",
+    "typy_vozidel_sluchatka",
+    "typy_vozidel_detske_kupe",
+    "typy_vozidel_imobilni_rampa"
+   ],
+   "support": false,
+   "supportCode": "",
+   "travelTime": "08:27 h",
+   "vehicleStandardKey": "YELLOW",
+   "vehicleType": "TRAIN"
+  }
+ ],
+ "surcharge": null,
+ "transfersInfo": null,
+ "travelTime": "08:27 h",
+ "vehicleTypes": [
+  "TRAIN"
+ ]
+}

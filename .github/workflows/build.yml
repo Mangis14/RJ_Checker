@@ -1,0 +1,51 @@
+name: build
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      # Testy gatuju build: ked spadne logika, APK sa ani nezacne stavat.
+      # `core` je cisty Kotlin/JVM, takze na testy netreba Android SDK.
+      - name: Test core
+        run: ./gradlew :core:test --no-daemon
+
+      - name: Upload test report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: core-test-report
+          path: |
+            core/build/reports/tests/test
+            core/build/test-results/test
+          if-no-files-found: warn
+
+      - name: Build debug APK
+        run: ./gradlew :app:assembleDebug --no-daemon
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: rjseat-debug-apk
+          path: app/build/outputs/apk/debug/*.apk
+          if-no-files-found: error

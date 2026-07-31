@@ -1,0 +1,5507 @@
+[
+ {
+  "fixedSeatReservation": true,
+  "sectionId": 8551447269,
+  "selectedSeats": [],
+  "vehicles": [
+   {
+    "cateringEnabled": true,
+    "code": null,
+    "decks": [
+     {
+      "freeSeats": [],
+      "horizontalLayoutURL": "https://brn-ybus-pubapi.sa.cz/resources/vehicle_layout/vlak_horizontalni_vuz-bc-luzka-10-30_flipped.svg",
+      "layoutURL": "https://brn-ybus-pubapi.sa.cz/resources/vehicle_layout/vlak_vuz-bc-luzka-30_flipped.svg",
+      "name": "Vůz Bc1xx (30) lůžka NOVE",
+      "number": 1,
+      "occupiedSeats": [
+       {
+        "index": 1,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 3,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 5,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 11,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 13,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 15,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 21,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 23,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 25,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 31,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 33,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 35,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 41,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 43,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 45,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 51,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 53,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 55,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 61,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 63,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 65,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 71,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 73,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 75,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 81,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 83,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 85,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 91,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 93,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 95,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       }
+      ],
+      "seatMap": null
+     }
+    ],
+    "id": 8551471250,
+    "notifications": [],
+    "number": 19,
+    "seatClasses": [
+     {
+      "name": "TRAIN_COUCHETTE_RELAX_3",
+      "services": []
+     }
+    ],
+    "standard": "YELLOW",
+    "type": "TRAIN"
+   },
+   {
+    "cateringEnabled": true,
+    "code": null,
+    "decks": [
+     {
+      "freeSeats": [
+       {
+        "index": 3,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 5,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       }
+      ],
+      "horizontalLayoutURL": "https://brn-ybus-pubapi.sa.cz/resources/vehicle_layout/vlak_horizontalni_vuz-bc-luzka-10-30_flipped.svg",
+      "layoutURL": "https://brn-ybus-pubapi.sa.cz/resources/vehicle_layout/vlak_vuz-bc-luzka-30_flipped.svg",
+      "name": "Vůz Bc1xx (30) lůžka NOVE",
+      "number": 1,
+      "occupiedSeats": [
+       {
+        "index": 1,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 11,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 13,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 15,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 21,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 23,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 25,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 31,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 33,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 35,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 41,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 43,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 45,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 51,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 53,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 55,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 61,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 63,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 65,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 71,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 73,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 75,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 81,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 83,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 85,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 91,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 93,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 95,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       }
+      ],
+      "seatMap": null
+     }
+    ],
+    "id": 8551471251,
+    "notifications": [],
+    "number": 18,
+    "seatClasses": [
+     {
+      "name": "TRAIN_COUCHETTE_RELAX_3",
+      "services": []
+     }
+    ],
+    "standard": "YELLOW",
+    "type": "TRAIN"
+   },
+   {
+    "cateringEnabled": true,
+    "code": null,
+    "decks": [
+     {
+      "freeSeats": [],
+      "horizontalLayoutURL": "https://brn-ybus-pubapi.sa.cz/resources/vehicle_layout/vlak_horizontalni_vuz-bc-luzka-10-30_flipped.svg",
+      "layoutURL": "https://brn-ybus-pubapi.sa.cz/resources/vehicle_layout/vlak_vuz-bc-luzka-30_flipped.svg",
+      "name": "Vůz Bc1xx (30) vlastní kupé NOVE",
+      "number": 1,
+      "occupiedSeats": [
+       {
+        "index": 1,
+        "seatClass": "TRAIN_COUCHETTE_BUSINESS",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 3,
+        "seatClass": "TRAIN_COUCHETTE_BUSINESS",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 5,
+        "seatClass": "TRAIN_COUCHETTE_BUSINESS",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 11,
+        "seatClass": "TRAIN_COUCHETTE_BUSINESS",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 13,
+        "seatClass": "TRAIN_COUCHETTE_BUSINESS",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 15,
+        "seatClass": "TRAIN_COUCHETTE_BUSINESS",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 21,
+        "seatClass": "TRAIN_COUCHETTE_BUSINESS",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 23,
+        "seatClass": "TRAIN_COUCHETTE_BUSINESS",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 25,
+        "seatClass": "TRAIN_COUCHETTE_BUSINESS",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 31,
+        "seatClass": "TRAIN_COUCHETTE_BUSINESS",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 33,
+        "seatClass": "TRAIN_COUCHETTE_BUSINESS",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 35,
+        "seatClass": "TRAIN_COUCHETTE_BUSINESS",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 41,
+        "seatClass": "TRAIN_COUCHETTE_BUSINESS",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 43,
+        "seatClass": "TRAIN_COUCHETTE_BUSINESS",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 45,
+        "seatClass": "TRAIN_COUCHETTE_BUSINESS",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 51,
+        "seatClass": "TRAIN_COUCHETTE_BUSINESS",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 53,
+        "seatClass": "TRAIN_COUCHETTE_BUSINESS",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 55,
+        "seatClass": "TRAIN_COUCHETTE_BUSINESS",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 61,
+        "seatClass": "TRAIN_COUCHETTE_BUSINESS",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 63,
+        "seatClass": "TRAIN_COUCHETTE_BUSINESS",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 65,
+        "seatClass": "TRAIN_COUCHETTE_BUSINESS",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 71,
+        "seatClass": "TRAIN_COUCHETTE_BUSINESS",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 73,
+        "seatClass": "TRAIN_COUCHETTE_BUSINESS",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 75,
+        "seatClass": "TRAIN_COUCHETTE_BUSINESS",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 81,
+        "seatClass": "TRAIN_COUCHETTE_BUSINESS",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 83,
+        "seatClass": "TRAIN_COUCHETTE_BUSINESS",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 85,
+        "seatClass": "TRAIN_COUCHETTE_BUSINESS",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 91,
+        "seatClass": "TRAIN_COUCHETTE_BUSINESS",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 93,
+        "seatClass": "TRAIN_COUCHETTE_BUSINESS",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 95,
+        "seatClass": "TRAIN_COUCHETTE_BUSINESS",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       }
+      ],
+      "seatMap": null
+     }
+    ],
+    "id": 8551471252,
+    "notifications": [],
+    "number": 17,
+    "seatClasses": [
+     {
+      "name": "TRAIN_COUCHETTE_BUSINESS",
+      "services": []
+     }
+    ],
+    "standard": "YELLOW",
+    "type": "TRAIN"
+   },
+   {
+    "cateringEnabled": true,
+    "code": null,
+    "decks": [
+     {
+      "freeSeats": [
+       {
+        "index": 15,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3_WOMEN",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 25,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3_WOMEN",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 35,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3_WOMEN",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 65,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3_WOMEN",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 85,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3_WOMEN",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       }
+      ],
+      "horizontalLayoutURL": "https://brn-ybus-pubapi.sa.cz/resources/vehicle_layout/vlak_horizontalni_vuz-bc-luzka-10-30_flipped.svg",
+      "layoutURL": "https://brn-ybus-pubapi.sa.cz/resources/vehicle_layout/vlak_vuz-bc-luzka-30_flipped.svg",
+      "name": "Vůz Bc1xx (30) ženy NOVE",
+      "number": 1,
+      "occupiedSeats": [
+       {
+        "index": 1,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3_WOMEN",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 3,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3_WOMEN",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 5,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3_WOMEN",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 11,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3_WOMEN",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 13,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3_WOMEN",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 21,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3_WOMEN",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 23,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3_WOMEN",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 31,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3_WOMEN",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 33,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3_WOMEN",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 41,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3_WOMEN",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 43,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3_WOMEN",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 45,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3_WOMEN",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 51,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3_WOMEN",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 53,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3_WOMEN",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 55,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3_WOMEN",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 61,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3_WOMEN",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 63,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3_WOMEN",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 71,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3_WOMEN",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 73,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3_WOMEN",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 75,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3_WOMEN",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 81,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3_WOMEN",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 83,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3_WOMEN",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 91,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3_WOMEN",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 93,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3_WOMEN",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 95,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_3_WOMEN",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       }
+      ],
+      "seatMap": null
+     }
+    ],
+    "id": 8551471253,
+    "notifications": [],
+    "number": 16,
+    "seatClasses": [
+     {
+      "name": "TRAIN_COUCHETTE_RELAX_3_WOMEN",
+      "services": []
+     }
+    ],
+    "standard": "YELLOW",
+    "type": "TRAIN"
+   },
+   {
+    "cateringEnabled": true,
+    "code": null,
+    "decks": [
+     {
+      "freeSeats": [],
+      "horizontalLayoutURL": "https://brn-ybus-pubapi.sa.cz/resources/vehicle_layout/2020_vlak_horizontalni_vuz-am-54_flipped.svg",
+      "layoutURL": "https://brn-ybus-pubapi.sa.cz/resources/vehicle_layout/vlak_vuz-am-54_flipped.svg",
+      "name": "Vuz AM (54)",
+      "number": 1,
+      "occupiedSeats": [
+       {
+        "index": 1,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 2,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 3,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 4,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 5,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 6,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 11,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 12,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 13,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 14,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 15,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 16,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 21,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 22,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 23,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 24,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 25,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 26,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 31,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 32,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 33,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 34,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 35,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 36,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 41,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 42,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 43,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 44,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 45,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 46,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 51,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 52,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 53,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 54,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 55,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 56,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 61,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 62,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 63,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 64,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 65,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 66,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 71,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 72,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 73,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 74,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 75,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 76,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 81,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 82,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 83,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 84,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 85,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 86,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       }
+      ],
+      "seatMap": null
+     }
+    ],
+    "id": 8551471254,
+    "notifications": [],
+    "number": 14,
+    "seatClasses": [
+     {
+      "name": "C0",
+      "services": [
+       {
+        "code": "Vuz AM (54)-C0-teplé nápoje zdarma",
+        "imageCode": "typy_vozidel_teple_napoje_zdarma",
+        "name": "teplé nápoje zdarma"
+       },
+       {
+        "code": "Vuz AM (54)-C0-Wi-Fi",
+        "imageCode": "typy_vozidel_wifi_ano",
+        "name": "Wi-Fi"
+       },
+       {
+        "code": "Vuz AM (54)-C0-stevard/ka",
+        "imageCode": "typy_vozidel_stevardka",
+        "name": "stevard/ka"
+       },
+       {
+        "code": "Vuz AM (54)-C0-Voda zdarma",
+        "imageCode": "typy_vozidel_chlazene_napoje",
+        "name": "Voda zdarma"
+       },
+       {
+        "code": "Vuz AM (54)-C0-Klimatizace",
+        "imageCode": "typy_vozidel_klimatizace",
+        "name": "Klimatizace"
+       },
+       {
+        "code": "Vuz AM (54)-C0-Občerstvení",
+        "imageCode": "typy_vozidel_obcerstveni",
+        "name": "Občerstvení"
+       },
+       {
+        "code": "Vuz AM (54)-C0-Zásuvka 230 V",
+        "imageCode": "typy_vozidel_zasuvka",
+        "name": "Zásuvka 230 V"
+       },
+       {
+        "code": "Vuz AM (54)-C0-Zdarma denní tisk a časopisy",
+        "imageCode": "typy_vozidel_denni_tisk",
+        "name": "Zdarma denní tisk a časopisy"
+       }
+      ]
+     }
+    ],
+    "standard": "YELLOW",
+    "type": "TRAIN"
+   },
+   {
+    "cateringEnabled": true,
+    "code": null,
+    "decks": [
+     {
+      "freeSeats": [],
+      "horizontalLayoutURL": "https://brn-ybus-pubapi.sa.cz/resources/vehicle_layout/vlak_vuz-bc_jadran_luzka_hor_flipped.svg",
+      "layoutURL": "https://brn-ybus-pubapi.sa.cz/resources/vehicle_layout/vlak_vuz-bc_jadran_luzka_ver_flipped.svg",
+      "name": "Vůz Bc1xx (40) Čop ženy",
+      "number": 1,
+      "occupiedSeats": [
+       {
+        "index": 1,
+        "seatClass": "TRAIN_COUCHETTE_BUSINESS_4",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 2,
+        "seatClass": "TRAIN_COUCHETTE_BUSINESS_4",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 3,
+        "seatClass": "TRAIN_COUCHETTE_BUSINESS_4",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 4,
+        "seatClass": "TRAIN_COUCHETTE_BUSINESS_4",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 11,
+        "seatClass": "TRAIN_COUCHETTE_BUSINESS_4",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 12,
+        "seatClass": "TRAIN_COUCHETTE_BUSINESS_4",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 13,
+        "seatClass": "TRAIN_COUCHETTE_BUSINESS_4",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 14,
+        "seatClass": "TRAIN_COUCHETTE_BUSINESS_4",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 21,
+        "seatClass": "TRAIN_COUCHETTE_BUSINESS_4",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 22,
+        "seatClass": "TRAIN_COUCHETTE_BUSINESS_4",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 23,
+        "seatClass": "TRAIN_COUCHETTE_BUSINESS_4",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 24,
+        "seatClass": "TRAIN_COUCHETTE_BUSINESS_4",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 31,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_FOR_WOMEN",
+        "seatConstraint": "Tento vozeň je určený len pre ženy a ženy s deťmi do 10 rokov.",
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 32,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_FOR_WOMEN",
+        "seatConstraint": "Tento vozeň je určený len pre ženy a ženy s deťmi do 10 rokov.",
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 33,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_FOR_WOMEN",
+        "seatConstraint": "Tento vozeň je určený len pre ženy a ženy s deťmi do 10 rokov.",
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 34,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_FOR_WOMEN",
+        "seatConstraint": "Tento vozeň je určený len pre ženy a ženy s deťmi do 10 rokov.",
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 41,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_FOR_WOMEN",
+        "seatConstraint": "Tento vozeň je určený len pre ženy a ženy s deťmi do 10 rokov.",
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 42,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_FOR_WOMEN",
+        "seatConstraint": "Tento vozeň je určený len pre ženy a ženy s deťmi do 10 rokov.",
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 43,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_FOR_WOMEN",
+        "seatConstraint": "Tento vozeň je určený len pre ženy a ženy s deťmi do 10 rokov.",
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 44,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_FOR_WOMEN",
+        "seatConstraint": "Tento vozeň je určený len pre ženy a ženy s deťmi do 10 rokov.",
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 51,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_FOR_WOMEN",
+        "seatConstraint": "Tento vozeň je určený len pre ženy a ženy s deťmi do 10 rokov.",
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 52,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_FOR_WOMEN",
+        "seatConstraint": "Tento vozeň je určený len pre ženy a ženy s deťmi do 10 rokov.",
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 53,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_FOR_WOMEN",
+        "seatConstraint": "Tento vozeň je určený len pre ženy a ženy s deťmi do 10 rokov.",
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 54,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_FOR_WOMEN",
+        "seatConstraint": "Tento vozeň je určený len pre ženy a ženy s deťmi do 10 rokov.",
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 61,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_FOR_WOMEN",
+        "seatConstraint": "Tento vozeň je určený len pre ženy a ženy s deťmi do 10 rokov.",
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 62,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_FOR_WOMEN",
+        "seatConstraint": "Tento vozeň je určený len pre ženy a ženy s deťmi do 10 rokov.",
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 63,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_FOR_WOMEN",
+        "seatConstraint": "Tento vozeň je určený len pre ženy a ženy s deťmi do 10 rokov.",
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 64,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_FOR_WOMEN",
+        "seatConstraint": "Tento vozeň je určený len pre ženy a ženy s deťmi do 10 rokov.",
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 71,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_FOR_WOMEN",
+        "seatConstraint": "Tento vozeň je určený len pre ženy a ženy s deťmi do 10 rokov.",
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 72,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_FOR_WOMEN",
+        "seatConstraint": "Tento vozeň je určený len pre ženy a ženy s deťmi do 10 rokov.",
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 73,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_FOR_WOMEN",
+        "seatConstraint": "Tento vozeň je určený len pre ženy a ženy s deťmi do 10 rokov.",
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 74,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_FOR_WOMEN",
+        "seatConstraint": "Tento vozeň je určený len pre ženy a ženy s deťmi do 10 rokov.",
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 81,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_FOR_WOMEN",
+        "seatConstraint": "Tento vozeň je určený len pre ženy a ženy s deťmi do 10 rokov.",
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 82,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_FOR_WOMEN",
+        "seatConstraint": "Tento vozeň je určený len pre ženy a ženy s deťmi do 10 rokov.",
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 83,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_FOR_WOMEN",
+        "seatConstraint": "Tento vozeň je určený len pre ženy a ženy s deťmi do 10 rokov.",
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 84,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_FOR_WOMEN",
+        "seatConstraint": "Tento vozeň je určený len pre ženy a ženy s deťmi do 10 rokov.",
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 91,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_FOR_WOMEN",
+        "seatConstraint": "Tento vozeň je určený len pre ženy a ženy s deťmi do 10 rokov.",
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 92,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_FOR_WOMEN",
+        "seatConstraint": "Tento vozeň je určený len pre ženy a ženy s deťmi do 10 rokov.",
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 93,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_FOR_WOMEN",
+        "seatConstraint": "Tento vozeň je určený len pre ženy a ženy s deťmi do 10 rokov.",
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 94,
+        "seatClass": "TRAIN_COUCHETTE_RELAX_FOR_WOMEN",
+        "seatConstraint": "Tento vozeň je určený len pre ženy a ženy s deťmi do 10 rokov.",
+        "seatNotes": [],
+        "selectable": false
+       }
+      ],
+      "seatMap": null
+     }
+    ],
+    "id": 8551471255,
+    "notifications": [],
+    "number": 13,
+    "seatClasses": [
+     {
+      "name": "TRAIN_COUCHETTE_RELAX_FOR_WOMEN",
+      "services": []
+     },
+     {
+      "name": "TRAIN_COUCHETTE_BUSINESS_4",
+      "services": []
+     }
+    ],
+    "standard": "YELLOW",
+    "type": "TRAIN"
+   },
+   {
+    "cateringEnabled": true,
+    "code": null,
+    "decks": [
+     {
+      "freeSeats": [],
+      "horizontalLayoutURL": "https://brn-ybus-pubapi.sa.cz/resources/vehicle_layout/vlak_vuz-bc_jadran_luzka_tiche_hor_flipped.svg",
+      "layoutURL": "https://brn-ybus-pubapi.sa.cz/resources/vehicle_layout/vlak_vuz-bc_jadran_luzka_ver_flipped.svg",
+      "name": "Vůz Bc1xx (40) Čop mix",
+      "number": 1,
+      "occupiedSeats": [
+       {
+        "index": 1,
+        "seatClass": "TRAIN_COUCHETTE_BUSINESS_4",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 2,
+        "seatClass": "TRAIN_COUCHETTE_BUSINESS_4",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 3,
+        "seatClass": "TRAIN_COUCHETTE_BUSINESS_4",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 4,
+        "seatClass": "TRAIN_COUCHETTE_BUSINESS_4",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 11,
+        "seatClass": "TRAIN_COUCHETTE_BUSINESS_4",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 12,
+        "seatClass": "TRAIN_COUCHETTE_BUSINESS_4",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 13,
+        "seatClass": "TRAIN_COUCHETTE_BUSINESS_4",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 14,
+        "seatClass": "TRAIN_COUCHETTE_BUSINESS_4",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 21,
+        "seatClass": "TRAIN_COUCHETTE_BUSINESS_4",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 22,
+        "seatClass": "TRAIN_COUCHETTE_BUSINESS_4",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 23,
+        "seatClass": "TRAIN_COUCHETTE_BUSINESS_4",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 24,
+        "seatClass": "TRAIN_COUCHETTE_BUSINESS_4",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 31,
+        "seatClass": "TRAIN_COUCHETTE_RELAX",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 32,
+        "seatClass": "TRAIN_COUCHETTE_RELAX",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 33,
+        "seatClass": "TRAIN_COUCHETTE_RELAX",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 34,
+        "seatClass": "TRAIN_COUCHETTE_RELAX",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 41,
+        "seatClass": "TRAIN_COUCHETTE_RELAX",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 42,
+        "seatClass": "TRAIN_COUCHETTE_RELAX",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 43,
+        "seatClass": "TRAIN_COUCHETTE_RELAX",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 44,
+        "seatClass": "TRAIN_COUCHETTE_RELAX",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 51,
+        "seatClass": "TRAIN_COUCHETTE_RELAX",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 52,
+        "seatClass": "TRAIN_COUCHETTE_RELAX",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 53,
+        "seatClass": "TRAIN_COUCHETTE_RELAX",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 54,
+        "seatClass": "TRAIN_COUCHETTE_RELAX",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 61,
+        "seatClass": "TRAIN_COUCHETTE_RELAX",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 62,
+        "seatClass": "TRAIN_COUCHETTE_RELAX",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 63,
+        "seatClass": "TRAIN_COUCHETTE_RELAX",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 64,
+        "seatClass": "TRAIN_COUCHETTE_RELAX",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 71,
+        "seatClass": "TRAIN_COUCHETTE_RELAX",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 72,
+        "seatClass": "TRAIN_COUCHETTE_RELAX",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 73,
+        "seatClass": "TRAIN_COUCHETTE_RELAX",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 74,
+        "seatClass": "TRAIN_COUCHETTE_RELAX",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 81,
+        "seatClass": "TRAIN_COUCHETTE_RELAX",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 82,
+        "seatClass": "TRAIN_COUCHETTE_RELAX",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 83,
+        "seatClass": "TRAIN_COUCHETTE_RELAX",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 84,
+        "seatClass": "TRAIN_COUCHETTE_RELAX",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 91,
+        "seatClass": "TRAIN_COUCHETTE_RELAX",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 92,
+        "seatClass": "TRAIN_COUCHETTE_RELAX",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 93,
+        "seatClass": "TRAIN_COUCHETTE_RELAX",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 94,
+        "seatClass": "TRAIN_COUCHETTE_RELAX",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       }
+      ],
+      "seatMap": null
+     }
+    ],
+    "id": 8551471256,
+    "notifications": [],
+    "number": 12,
+    "seatClasses": [
+     {
+      "name": "TRAIN_COUCHETTE_RELAX",
+      "services": []
+     },
+     {
+      "name": "TRAIN_COUCHETTE_BUSINESS_4",
+      "services": []
+     }
+    ],
+    "standard": "YELLOW",
+    "type": "TRAIN"
+   },
+   {
+    "cateringEnabled": true,
+    "code": null,
+    "decks": [
+     {
+      "freeSeats": [],
+      "horizontalLayoutURL": "https://brn-ybus-pubapi.sa.cz/resources/vehicle_layout/2020_vlak_horizontalni_vuz-am-54_flipped.svg",
+      "layoutURL": "https://brn-ybus-pubapi.sa.cz/resources/vehicle_layout/vlak_vuz-am-54_flipped.svg",
+      "name": "Vuz AM (54)",
+      "number": 1,
+      "occupiedSeats": [
+       {
+        "index": 1,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 2,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 3,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 4,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 5,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 6,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 11,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 12,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 13,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 14,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 15,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 16,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 21,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 22,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 23,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 24,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 25,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 26,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 31,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 32,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 33,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 34,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 35,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 36,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 41,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 42,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 43,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 44,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 45,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 46,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 51,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 52,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 53,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 54,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 55,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 56,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 61,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 62,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 63,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 64,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 65,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 66,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 71,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 72,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 73,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 74,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 75,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 76,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 81,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 82,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 83,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 84,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 85,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 86,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       }
+      ],
+      "seatMap": null
+     }
+    ],
+    "id": 8551471257,
+    "notifications": [],
+    "number": 11,
+    "seatClasses": [
+     {
+      "name": "C0",
+      "services": [
+       {
+        "code": "Vuz AM (54)-C0-teplé nápoje zdarma",
+        "imageCode": "typy_vozidel_teple_napoje_zdarma",
+        "name": "teplé nápoje zdarma"
+       },
+       {
+        "code": "Vuz AM (54)-C0-Wi-Fi",
+        "imageCode": "typy_vozidel_wifi_ano",
+        "name": "Wi-Fi"
+       },
+       {
+        "code": "Vuz AM (54)-C0-stevard/ka",
+        "imageCode": "typy_vozidel_stevardka",
+        "name": "stevard/ka"
+       },
+       {
+        "code": "Vuz AM (54)-C0-Voda zdarma",
+        "imageCode": "typy_vozidel_chlazene_napoje",
+        "name": "Voda zdarma"
+       },
+       {
+        "code": "Vuz AM (54)-C0-Klimatizace",
+        "imageCode": "typy_vozidel_klimatizace",
+        "name": "Klimatizace"
+       },
+       {
+        "code": "Vuz AM (54)-C0-Občerstvení",
+        "imageCode": "typy_vozidel_obcerstveni",
+        "name": "Občerstvení"
+       },
+       {
+        "code": "Vuz AM (54)-C0-Zásuvka 230 V",
+        "imageCode": "typy_vozidel_zasuvka",
+        "name": "Zásuvka 230 V"
+       },
+       {
+        "code": "Vuz AM (54)-C0-Zdarma denní tisk a časopisy",
+        "imageCode": "typy_vozidel_denni_tisk",
+        "name": "Zdarma denní tisk a časopisy"
+       }
+      ]
+     }
+    ],
+    "standard": "YELLOW",
+    "type": "TRAIN"
+   },
+   {
+    "cateringEnabled": true,
+    "code": null,
+    "decks": [
+     {
+      "freeSeats": [
+       {
+        "index": 3,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 4,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 11,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 15,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 16,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 41,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 46,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 52,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 53,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       }
+      ],
+      "horizontalLayoutURL": "https://brn-ybus-pubapi.sa.cz/resources/vehicle_layout/2020_vlak_horizontalni_vuz-bk-42_flipped.svg",
+      "layoutURL": "https://brn-ybus-pubapi.sa.cz/resources/vehicle_layout/vlak_vuz-bk-42_flipped.svg",
+      "name": "Vuz Bk (42)",
+      "number": 1,
+      "occupiedSeats": [
+       {
+        "index": 1,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 2,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 5,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 6,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 12,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 13,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 14,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 21,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 22,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 23,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 24,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 25,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 26,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 31,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 32,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 33,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 34,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 35,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 36,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 42,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 43,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 44,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 45,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 51,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 54,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 55,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 56,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 61,
+        "seatClass": "C0",
+        "seatConstraint": "Detské kupé je primárne určené pre rodičov s deťmi a je vybavené hracou plochou.",
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 62,
+        "seatClass": "C0",
+        "seatConstraint": "Detské kupé je primárne určené pre rodičov s deťmi a je vybavené hracou plochou.",
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 63,
+        "seatClass": "C0",
+        "seatConstraint": "Detské kupé je primárne určené pre rodičov s deťmi a je vybavené hracou plochou.",
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 64,
+        "seatClass": "C0",
+        "seatConstraint": "Detské kupé je primárne určené pre rodičov s deťmi a je vybavené hracou plochou.",
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 65,
+        "seatClass": "C0",
+        "seatConstraint": "Detské kupé je primárne určené pre rodičov s deťmi a je vybavené hracou plochou.",
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 66,
+        "seatClass": "C0",
+        "seatConstraint": "Detské kupé je primárne určené pre rodičov s deťmi a je vybavené hracou plochou.",
+        "seatNotes": [],
+        "selectable": false
+       }
+      ],
+      "seatMap": null
+     }
+    ],
+    "id": 8551471258,
+    "notifications": [],
+    "number": 6,
+    "seatClasses": [
+     {
+      "name": "C0",
+      "services": [
+       {
+        "code": "Vuz Bk (42)-C0-dětské kupé",
+        "imageCode": "typy_vozidel_detske_kupe",
+        "name": "dětské kupé"
+       },
+       {
+        "code": "Vuz Bk (42)-C0-Zdarma denní tisk a časopisy",
+        "imageCode": "typy_vozidel_denni_tisk",
+        "name": "Zdarma denní tisk a časopisy"
+       },
+       {
+        "code": "Vuz Bk (42)-C0-Občerstvení",
+        "imageCode": "typy_vozidel_obcerstveni",
+        "name": "Občerstvení"
+       },
+       {
+        "code": "Vuz Bk (42)-C0-Zásuvka 230 V",
+        "imageCode": "typy_vozidel_zasuvka",
+        "name": "Zásuvka 230 V"
+       },
+       {
+        "code": "Vuz Bk (42)-C0-teplé nápoje zdarma",
+        "imageCode": "typy_vozidel_teple_napoje_zdarma",
+        "name": "teplé nápoje zdarma"
+       },
+       {
+        "code": "Vuz Bk (42)-C0-Klimatizace",
+        "imageCode": "typy_vozidel_klimatizace",
+        "name": "Klimatizace"
+       },
+       {
+        "code": "Vuz Bk (42)-C0-Kočárek",
+        "imageCode": "typy_vozidel_kocarky",
+        "name": "Kočárek"
+       },
+       {
+        "code": "Vuz Bk (42)-C0-Wi-Fi",
+        "imageCode": "typy_vozidel_wifi_ano",
+        "name": "Wi-Fi"
+       },
+       {
+        "code": "Vuz Bk (42)-C0-Voda zdarma",
+        "imageCode": "typy_vozidel_chlazene_napoje",
+        "name": "Voda zdarma"
+       },
+       {
+        "code": "Vuz Bk (42)-C0-stevard/ka",
+        "imageCode": "typy_vozidel_stevardka",
+        "name": "stevard/ka"
+       }
+      ]
+     }
+    ],
+    "standard": "YELLOW",
+    "type": "TRAIN"
+   },
+   {
+    "cateringEnabled": true,
+    "code": null,
+    "decks": [
+     {
+      "freeSeats": [
+       {
+        "index": 1,
+        "seatClass": "C2",
+        "seatConstraint": "V kupé je obmedzené používanie rušivých zariadení (mobilný telefón, hlasné počúvanie hudby, sledovanie filmov...) a nie je vhodné pre deti do 15 rokov.",
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 11,
+        "seatClass": "C2",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 14,
+        "seatClass": "C2",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 21,
+        "seatClass": "C2",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 24,
+        "seatClass": "C2",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 31,
+        "seatClass": "C2",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 41,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 42,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 45,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 51,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 52,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 54,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 56,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 81,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 82,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 83,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 84,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 85,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 94,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       }
+      ],
+      "horizontalLayoutURL": "https://brn-ybus-pubapi.sa.cz/resources/vehicle_layout/2020_vlak_horizontalni_vuz-a-48_flipped.svg",
+      "layoutURL": "https://brn-ybus-pubapi.sa.cz/resources/vehicle_layout/vlak_vuz-a-48_flipped.svg",
+      "name": "Vuz A (48)",
+      "number": 1,
+      "occupiedSeats": [
+       {
+        "index": 2,
+        "seatClass": "C2",
+        "seatConstraint": "V kupé je obmedzené používanie rušivých zariadení (mobilný telefón, hlasné počúvanie hudby, sledovanie filmov...) a nie je vhodné pre deti do 15 rokov.",
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 3,
+        "seatClass": "C2",
+        "seatConstraint": "V kupé je obmedzené používanie rušivých zariadení (mobilný telefón, hlasné počúvanie hudby, sledovanie filmov...) a nie je vhodné pre deti do 15 rokov.",
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 4,
+        "seatClass": "C2",
+        "seatConstraint": "V kupé je obmedzené používanie rušivých zariadení (mobilný telefón, hlasné počúvanie hudby, sledovanie filmov...) a nie je vhodné pre deti do 15 rokov.",
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 12,
+        "seatClass": "C2",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 13,
+        "seatClass": "C2",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 22,
+        "seatClass": "C2",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 23,
+        "seatClass": "C2",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 32,
+        "seatClass": "C2",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 33,
+        "seatClass": "C2",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 34,
+        "seatClass": "C2",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 53,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 55,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 61,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 62,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 63,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 64,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 65,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 66,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 71,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 72,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 73,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 74,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 75,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 76,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 86,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 91,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 92,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 93,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 95,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       }
+      ],
+      "seatMap": null
+     }
+    ],
+    "id": 8551471261,
+    "notifications": [],
+    "number": 5,
+    "seatClasses": [
+     {
+      "name": "C2",
+      "services": [
+       {
+        "code": "Vuz A (48)-C2-Džus",
+        "imageCode": "typy_vozidel_dzus",
+        "name": "Džus"
+       },
+       {
+        "code": "Vuz A (48)-C2-tiché kupé",
+        "imageCode": "typy_vozidel_tiche_kupe",
+        "name": "tiché kupé"
+       },
+       {
+        "code": "Vuz A (48)-C2-Zásuvka 230 V",
+        "imageCode": "typy_vozidel_zasuvka",
+        "name": "Zásuvka 230 V"
+       },
+       {
+        "code": "Vuz A (48)-C2-stevard/ka",
+        "imageCode": "typy_vozidel_stevardka",
+        "name": "stevard/ka"
+       },
+       {
+        "code": "Vuz A (48)-C2-Klimatizace",
+        "imageCode": "typy_vozidel_klimatizace",
+        "name": "Klimatizace"
+       },
+       {
+        "code": "Vuz A (48)-C2-Voda zdarma",
+        "imageCode": "typy_vozidel_chlazene_napoje",
+        "name": "Voda zdarma"
+       },
+       {
+        "code": "Vuz A (48)-C2-Občerstvení",
+        "imageCode": "typy_vozidel_obcerstveni",
+        "name": "Občerstvení"
+       },
+       {
+        "code": "Vuz A (48)-C2-teplé nápoje zdarma",
+        "imageCode": "typy_vozidel_teple_napoje_zdarma",
+        "name": "teplé nápoje zdarma"
+       },
+       {
+        "code": "Vuz A (48)-C2-Přednostní servis",
+        "imageCode": "typy_vozidel_prednostni_servis",
+        "name": "Přednostní servis"
+       },
+       {
+        "code": "Vuz A (48)-C2-Wi-Fi",
+        "imageCode": "typy_vozidel_wifi_ano",
+        "name": "Wi-Fi"
+       }
+      ]
+     },
+     {
+      "name": "C1",
+      "services": [
+       {
+        "code": "Vuz A (48)-C1-teplé nápoje zdarma",
+        "imageCode": "typy_vozidel_teple_napoje_zdarma",
+        "name": "teplé nápoje zdarma"
+       },
+       {
+        "code": "Vuz A (48)-C1-stevard/ka",
+        "imageCode": "typy_vozidel_stevardka",
+        "name": "stevard/ka"
+       },
+       {
+        "code": "Vuz A (48)-C1-Wi-Fi",
+        "imageCode": "typy_vozidel_wifi_ano",
+        "name": "Wi-Fi"
+       },
+       {
+        "code": "Vuz A (48)-C1-Občerstvení",
+        "imageCode": "typy_vozidel_obcerstveni",
+        "name": "Občerstvení"
+       },
+       {
+        "code": "Vuz A (48)-C1-Voda zdarma",
+        "imageCode": "typy_vozidel_chlazene_napoje",
+        "name": "Voda zdarma"
+       },
+       {
+        "code": "Vuz A (48)-C1-Přednostní servis",
+        "imageCode": "typy_vozidel_prednostni_servis",
+        "name": "Přednostní servis"
+       },
+       {
+        "code": "Vuz A (48)-C1-Klimatizace",
+        "imageCode": "typy_vozidel_klimatizace",
+        "name": "Klimatizace"
+       },
+       {
+        "code": "Vuz A (48)-C1-Zásuvka 230 V",
+        "imageCode": "typy_vozidel_zasuvka",
+        "name": "Zásuvka 230 V"
+       }
+      ]
+     }
+    ],
+    "standard": "YELLOW",
+    "type": "TRAIN"
+   },
+   {
+    "cateringEnabled": true,
+    "code": null,
+    "decks": [
+     {
+      "freeSeats": [
+       {
+        "index": 14,
+        "seatClass": "C2",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 34,
+        "seatClass": "C2",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 41,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 42,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 45,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 53,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 54,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 61,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 62,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 63,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 64,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 71,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 72,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 73,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 76,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 81,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 82,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 83,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 84,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       }
+      ],
+      "horizontalLayoutURL": "https://brn-ybus-pubapi.sa.cz/resources/vehicle_layout/2020_vlak_horizontalni_vuz-a-48_flipped.svg",
+      "layoutURL": "https://brn-ybus-pubapi.sa.cz/resources/vehicle_layout/vlak_vuz-a-48_flipped.svg",
+      "name": "Vuz A (48)",
+      "number": 1,
+      "occupiedSeats": [
+       {
+        "index": 1,
+        "seatClass": "C2",
+        "seatConstraint": "V kupé je obmedzené používanie rušivých zariadení (mobilný telefón, hlasné počúvanie hudby, sledovanie filmov...) a nie je vhodné pre deti do 15 rokov.",
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 2,
+        "seatClass": "C2",
+        "seatConstraint": "V kupé je obmedzené používanie rušivých zariadení (mobilný telefón, hlasné počúvanie hudby, sledovanie filmov...) a nie je vhodné pre deti do 15 rokov.",
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 3,
+        "seatClass": "C2",
+        "seatConstraint": "V kupé je obmedzené používanie rušivých zariadení (mobilný telefón, hlasné počúvanie hudby, sledovanie filmov...) a nie je vhodné pre deti do 15 rokov.",
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 4,
+        "seatClass": "C2",
+        "seatConstraint": "V kupé je obmedzené používanie rušivých zariadení (mobilný telefón, hlasné počúvanie hudby, sledovanie filmov...) a nie je vhodné pre deti do 15 rokov.",
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 11,
+        "seatClass": "C2",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 12,
+        "seatClass": "C2",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 13,
+        "seatClass": "C2",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 21,
+        "seatClass": "C2",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 22,
+        "seatClass": "C2",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 23,
+        "seatClass": "C2",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 24,
+        "seatClass": "C2",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 31,
+        "seatClass": "C2",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 32,
+        "seatClass": "C2",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 33,
+        "seatClass": "C2",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 51,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 52,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 55,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 56,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 65,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 66,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 74,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 75,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 85,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 86,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 91,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 92,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 93,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 94,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 95,
+        "seatClass": "C1",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       }
+      ],
+      "seatMap": null
+     }
+    ],
+    "id": 8551471262,
+    "notifications": [],
+    "number": 4,
+    "seatClasses": [
+     {
+      "name": "C2",
+      "services": [
+       {
+        "code": "Vuz A (48)-C2-Džus",
+        "imageCode": "typy_vozidel_dzus",
+        "name": "Džus"
+       },
+       {
+        "code": "Vuz A (48)-C2-tiché kupé",
+        "imageCode": "typy_vozidel_tiche_kupe",
+        "name": "tiché kupé"
+       },
+       {
+        "code": "Vuz A (48)-C2-Zásuvka 230 V",
+        "imageCode": "typy_vozidel_zasuvka",
+        "name": "Zásuvka 230 V"
+       },
+       {
+        "code": "Vuz A (48)-C2-stevard/ka",
+        "imageCode": "typy_vozidel_stevardka",
+        "name": "stevard/ka"
+       },
+       {
+        "code": "Vuz A (48)-C2-Klimatizace",
+        "imageCode": "typy_vozidel_klimatizace",
+        "name": "Klimatizace"
+       },
+       {
+        "code": "Vuz A (48)-C2-Voda zdarma",
+        "imageCode": "typy_vozidel_chlazene_napoje",
+        "name": "Voda zdarma"
+       },
+       {
+        "code": "Vuz A (48)-C2-Občerstvení",
+        "imageCode": "typy_vozidel_obcerstveni",
+        "name": "Občerstvení"
+       },
+       {
+        "code": "Vuz A (48)-C2-teplé nápoje zdarma",
+        "imageCode": "typy_vozidel_teple_napoje_zdarma",
+        "name": "teplé nápoje zdarma"
+       },
+       {
+        "code": "Vuz A (48)-C2-Přednostní servis",
+        "imageCode": "typy_vozidel_prednostni_servis",
+        "name": "Přednostní servis"
+       },
+       {
+        "code": "Vuz A (48)-C2-Wi-Fi",
+        "imageCode": "typy_vozidel_wifi_ano",
+        "name": "Wi-Fi"
+       }
+      ]
+     },
+     {
+      "name": "C1",
+      "services": [
+       {
+        "code": "Vuz A (48)-C1-teplé nápoje zdarma",
+        "imageCode": "typy_vozidel_teple_napoje_zdarma",
+        "name": "teplé nápoje zdarma"
+       },
+       {
+        "code": "Vuz A (48)-C1-stevard/ka",
+        "imageCode": "typy_vozidel_stevardka",
+        "name": "stevard/ka"
+       },
+       {
+        "code": "Vuz A (48)-C1-Wi-Fi",
+        "imageCode": "typy_vozidel_wifi_ano",
+        "name": "Wi-Fi"
+       },
+       {
+        "code": "Vuz A (48)-C1-Občerstvení",
+        "imageCode": "typy_vozidel_obcerstveni",
+        "name": "Občerstvení"
+       },
+       {
+        "code": "Vuz A (48)-C1-Voda zdarma",
+        "imageCode": "typy_vozidel_chlazene_napoje",
+        "name": "Voda zdarma"
+       },
+       {
+        "code": "Vuz A (48)-C1-Přednostní servis",
+        "imageCode": "typy_vozidel_prednostni_servis",
+        "name": "Přednostní servis"
+       },
+       {
+        "code": "Vuz A (48)-C1-Klimatizace",
+        "imageCode": "typy_vozidel_klimatizace",
+        "name": "Klimatizace"
+       },
+       {
+        "code": "Vuz A (48)-C1-Zásuvka 230 V",
+        "imageCode": "typy_vozidel_zasuvka",
+        "name": "Zásuvka 230 V"
+       }
+      ]
+     }
+    ],
+    "standard": "YELLOW",
+    "type": "TRAIN"
+   },
+   {
+    "cateringEnabled": true,
+    "code": null,
+    "decks": [
+     {
+      "freeSeats": [
+       {
+        "index": 11,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 12,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 15,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 16,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 21,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 22,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 23,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 26,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 31,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 32,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 34,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 35,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 36,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       }
+      ],
+      "horizontalLayoutURL": "https://brn-ybus-pubapi.sa.cz/resources/vehicle_layout/2020_vlak_horizontalni_vuz-bk-42_flipped.svg",
+      "layoutURL": "https://brn-ybus-pubapi.sa.cz/resources/vehicle_layout/vlak_vuz-bk-42_flipped.svg",
+      "name": "Vuz Bk (42)",
+      "number": 1,
+      "occupiedSeats": [
+       {
+        "index": 1,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 2,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 3,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 4,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 5,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 6,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 13,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 14,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 24,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 25,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 33,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 41,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 42,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 43,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 44,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 45,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 46,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 51,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 52,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 53,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 54,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 55,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 56,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 61,
+        "seatClass": "C0",
+        "seatConstraint": "Detské kupé je primárne určené pre rodičov s deťmi a je vybavené hracou plochou.",
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 62,
+        "seatClass": "C0",
+        "seatConstraint": "Detské kupé je primárne určené pre rodičov s deťmi a je vybavené hracou plochou.",
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 63,
+        "seatClass": "C0",
+        "seatConstraint": "Detské kupé je primárne určené pre rodičov s deťmi a je vybavené hracou plochou.",
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 64,
+        "seatClass": "C0",
+        "seatConstraint": "Detské kupé je primárne určené pre rodičov s deťmi a je vybavené hracou plochou.",
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 65,
+        "seatClass": "C0",
+        "seatConstraint": "Detské kupé je primárne určené pre rodičov s deťmi a je vybavené hracou plochou.",
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 66,
+        "seatClass": "C0",
+        "seatConstraint": "Detské kupé je primárne určené pre rodičov s deťmi a je vybavené hracou plochou.",
+        "seatNotes": [],
+        "selectable": false
+       }
+      ],
+      "seatMap": null
+     }
+    ],
+    "id": 8551471263,
+    "notifications": [],
+    "number": 3,
+    "seatClasses": [
+     {
+      "name": "C0",
+      "services": [
+       {
+        "code": "Vuz Bk (42)-C0-dětské kupé",
+        "imageCode": "typy_vozidel_detske_kupe",
+        "name": "dětské kupé"
+       },
+       {
+        "code": "Vuz Bk (42)-C0-Zdarma denní tisk a časopisy",
+        "imageCode": "typy_vozidel_denni_tisk",
+        "name": "Zdarma denní tisk a časopisy"
+       },
+       {
+        "code": "Vuz Bk (42)-C0-Občerstvení",
+        "imageCode": "typy_vozidel_obcerstveni",
+        "name": "Občerstvení"
+       },
+       {
+        "code": "Vuz Bk (42)-C0-Zásuvka 230 V",
+        "imageCode": "typy_vozidel_zasuvka",
+        "name": "Zásuvka 230 V"
+       },
+       {
+        "code": "Vuz Bk (42)-C0-teplé nápoje zdarma",
+        "imageCode": "typy_vozidel_teple_napoje_zdarma",
+        "name": "teplé nápoje zdarma"
+       },
+       {
+        "code": "Vuz Bk (42)-C0-Klimatizace",
+        "imageCode": "typy_vozidel_klimatizace",
+        "name": "Klimatizace"
+       },
+       {
+        "code": "Vuz Bk (42)-C0-Kočárek",
+        "imageCode": "typy_vozidel_kocarky",
+        "name": "Kočárek"
+       },
+       {
+        "code": "Vuz Bk (42)-C0-Wi-Fi",
+        "imageCode": "typy_vozidel_wifi_ano",
+        "name": "Wi-Fi"
+       },
+       {
+        "code": "Vuz Bk (42)-C0-Voda zdarma",
+        "imageCode": "typy_vozidel_chlazene_napoje",
+        "name": "Voda zdarma"
+       },
+       {
+        "code": "Vuz Bk (42)-C0-stevard/ka",
+        "imageCode": "typy_vozidel_stevardka",
+        "name": "stevard/ka"
+       }
+      ]
+     }
+    ],
+    "standard": "YELLOW",
+    "type": "TRAIN"
+   },
+   {
+    "cateringEnabled": true,
+    "code": null,
+    "decks": [
+     {
+      "freeSeats": [
+       {
+        "index": 1,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 2,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 3,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 4,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 5,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 6,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 11,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 12,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 13,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 14,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 15,
+        "seatClass": "C0",
+        "seatConstraint": "Vybrali ste si miesto pri stolíku, kde nie je k dispozícii multimediálna obrazovka.",
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 16,
+        "seatClass": "C0",
+        "seatConstraint": "Vybrali ste si miesto pri stolíku, kde nie je k dispozícii multimediálna obrazovka.",
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 18,
+        "seatClass": "C0",
+        "seatConstraint": "Vybrali ste si miesto pri stolíku, kde nie je k dispozícii multimediálna obrazovka.",
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 21,
+        "seatClass": "C0",
+        "seatConstraint": "Vybrali ste si miesto pri stolíku, kde nie je k dispozícii multimediálna obrazovka.",
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 22,
+        "seatClass": "C0",
+        "seatConstraint": "Vybrali ste si miesto pri stolíku, kde nie je k dispozícii multimediálna obrazovka.",
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 23,
+        "seatClass": "C0",
+        "seatConstraint": "Vybrali ste si miesto pri stolíku, kde nie je k dispozícii multimediálna obrazovka.",
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 24,
+        "seatClass": "C0",
+        "seatConstraint": "Vybrali ste si miesto pri stolíku, kde nie je k dispozícii multimediálna obrazovka.",
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 31,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 32,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 33,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 37,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 38,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 41,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 42,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 45,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 46,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 47,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 48,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 52,
+        "seatClass": "C0",
+        "seatConstraint": "Vybrali ste si miesto pri stolíku, kde nie je k dispozícii multimediálna obrazovka.",
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 54,
+        "seatClass": "C0",
+        "seatConstraint": "Vybrali ste si miesto pri stolíku, kde nie je k dispozícii multimediálna obrazovka.",
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 55,
+        "seatClass": "C0",
+        "seatConstraint": "Vybrali ste si miesto pri stolíku, kde nie je k dispozícii multimediálna obrazovka.",
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 56,
+        "seatClass": "C0",
+        "seatConstraint": "Vybrali ste si miesto pri stolíku, kde nie je k dispozícii multimediálna obrazovka.",
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 57,
+        "seatClass": "C0",
+        "seatConstraint": "Vybrali ste si miesto pri stolíku, kde nie je k dispozícii multimediálna obrazovka.",
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 58,
+        "seatClass": "C0",
+        "seatConstraint": "Vybrali ste si miesto pri stolíku, kde nie je k dispozícii multimediálna obrazovka.",
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 61,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 62,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 71,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 72,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 73,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 74,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 75,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 76,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 77,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 78,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 82,
+        "seatClass": "C0",
+        "seatConstraint": "Vybrali ste si miesto pri stolíku, kde nie je k dispozícii multimediálna obrazovka.",
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 84,
+        "seatClass": "C0",
+        "seatConstraint": "Vybrali ste si miesto pri stolíku, kde nie je k dispozícii multimediálna obrazovka.",
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 85,
+        "seatClass": "C0",
+        "seatConstraint": "Vybrali ste si miesto pri stolíku, kde nie je k dispozícii multimediálna obrazovka.",
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 86,
+        "seatClass": "C0",
+        "seatConstraint": "Vybrali ste si miesto pri stolíku, kde nie je k dispozícii multimediálna obrazovka.",
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 87,
+        "seatClass": "C0",
+        "seatConstraint": "Vybrali ste si miesto pri stolíku, kde nie je k dispozícii multimediálna obrazovka.",
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 91,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 92,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 93,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 95,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       },
+       {
+        "index": 96,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": true
+       }
+      ],
+      "horizontalLayoutURL": "https://brn-ybus-pubapi.sa.cz/resources/vehicle_layout/vlak_horizontalni_vuz-bm-astra-80_nova_flipped.svg",
+      "layoutURL": "https://brn-ybus-pubapi.sa.cz/resources/vehicle_layout/vlak_vuz-bm-astra-80_nova_flipped.svg",
+      "name": "Vuz Bm Astra (80)",
+      "number": 1,
+      "occupiedSeats": [
+       {
+        "index": 7,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 8,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 17,
+        "seatClass": "C0",
+        "seatConstraint": "Vybrali ste si miesto pri stolíku, kde nie je k dispozícii multimediálna obrazovka.",
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 34,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 35,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 36,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 43,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 44,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 51,
+        "seatClass": "C0",
+        "seatConstraint": "Vybrali ste si miesto pri stolíku, kde nie je k dispozícii multimediálna obrazovka.",
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 53,
+        "seatClass": "C0",
+        "seatConstraint": "Vybrali ste si miesto pri stolíku, kde nie je k dispozícii multimediálna obrazovka.",
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 63,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 64,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 65,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 66,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 67,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 68,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 81,
+        "seatClass": "C0",
+        "seatConstraint": "Vybrali ste si miesto pri stolíku, kde nie je k dispozícii multimediálna obrazovka.",
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 83,
+        "seatClass": "C0",
+        "seatConstraint": "Vybrali ste si miesto pri stolíku, kde nie je k dispozícii multimediálna obrazovka.",
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 88,
+        "seatClass": "C0",
+        "seatConstraint": "Vybrali ste si miesto pri stolíku, kde nie je k dispozícii multimediálna obrazovka.",
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 94,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 97,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 98,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 101,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 102,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 103,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       },
+       {
+        "index": 104,
+        "seatClass": "C0",
+        "seatConstraint": null,
+        "seatNotes": [],
+        "selectable": false
+       }
+      ],
+      "seatMap": null
+     }
+    ],
+    "id": 8551471259,
+    "notifications": [],
+    "number": 2,
+    "seatClasses": [
+     {
+      "name": "C0",
+      "services": [
+       {
+        "code": "Vuz Bm Astra (80) nová v provozu od 14.6.-C0-Zásuvka 230 V",
+        "imageCode": "typy_vozidel_zasuvka",
+        "name": "Zásuvka 230 V"
+       },
+       {
+        "code": "Vuz Bm Astra (80) nová v provozu od 14.6.-C0-Dotyková obrazovka",
+        "imageCode": "typy_vozidel_dotykova_obrazovka",
+        "name": "Dotyková obrazovka"
+       },
+       {
+        "code": "Vuz Bm Astra (80) nová v provozu od 14.6.-C0-teplé nápoje zdarma",
+        "imageCode": "typy_vozidel_teple_napoje_zdarma",
+        "name": "teplé nápoje zdarma"
+       },
+       {
+        "code": "Vuz Bm Astra (80) nová v provozu od 14.6.-C0-stevard/ka",
+        "imageCode": "typy_vozidel_stevardka",
+        "name": "stevard/ka"
+       },
+       {
+        "code": "Vuz Bm Astra (80) nová v provozu od 14.6.-C0-Voda zdarma",
+        "imageCode": "typy_vozidel_chlazene_napoje",
+        "name": "Voda zdarma"
+       },
+       {
+        "code": "Vuz Bm Astra (80) nová v provozu od 14.6.-C0-Online občerstvení",
+        "imageCode": "typy_vozidel_online_catering",
+        "name": "Online občerstvení"
+       },
+       {
+        "code": "Vuz Bm Astra (80) nová v provozu od 14.6.-C0-Klimatizace",
+        "imageCode": "typy_vozidel_klimatizace",
+        "name": "Klimatizace"
+       },
+       {
+        "code": "Vuz Bm Astra (80) nová v provozu od 14.6.-C0-Wi-Fi",
+        "imageCode": "typy_vozidel_wifi_ano",
+        "name": "Wi-Fi"
+       },
+       {
+        "code": "Vuz Bm Astra (80) nová v provozu od 14.6.-C0-zábavní portál",
+        "imageCode": "typy_vozidel_zabavni_portal_ano",
+        "name": "zábavní portál"
+       }
+      ]
+     }
+    ],
+    "standard": "YELLOW",
+    "type": "TRAIN"
+   },
+   {
+    "cateringEnabled": true,
+    "code": null,
+    "decks": [
+     {
+      "freeSeats": [
+       {
+        "index": 66,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": true
+       },
+       {
+        "index": 67,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": true
+       },
+       {
+        "index": 72,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": true
+       },
+       {
+        "index": 73,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": true
+       },
+       {
+        "index": 92,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": true
+       },
+       {
+        "index": 93,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": true
+       },
+       {
+        "index": 102,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": true
+       },
+       {
+        "index": 103,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": true
+       }
+      ],
+      "horizontalLayoutURL": "https://brn-ybus-pubapi.sa.cz/resources/vehicle_layout/vlak_vuz-Bp1_hor_flipped.svg",
+      "layoutURL": "https://brn-ybus-pubapi.sa.cz/resources/vehicle_layout/vlak_vuz-Bp1_ver_flipped.svg",
+      "name": "Vuz Bp1xx (75) LOW cost",
+      "number": 1,
+      "occupiedSeats": [
+       {
+        "index": 2,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 3,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 4,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 5,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 11,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 13,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 14,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 15,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 16,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 17,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 18,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 21,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 22,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 23,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 24,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 31,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 32,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 33,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 34,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 35,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 36,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 37,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 38,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 41,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 42,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 43,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 44,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 45,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 46,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 47,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 48,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 51,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 52,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 53,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 54,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 55,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 56,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 57,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 58,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 61,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 62,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 63,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 64,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 65,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 68,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 71,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 74,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 75,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 76,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 77,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 78,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 81,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 82,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 83,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 84,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 85,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 86,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 87,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 88,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 91,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 94,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 95,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 96,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 97,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 98,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 101,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       },
+       {
+        "index": 104,
+        "seatClass": "TRAIN_LOW_COST",
+        "seatConstraint": null,
+        "seatNotes": [
+         "Vybrali ste si sedadlo v triede LOW COST. V tejto triede na vás čaká balená voda Rajec zadarmo a občerstvenie z plnej palubnej ponuky, ktoré si môžete zakúpiť prostredníctvom mobilnej aplikácie. Na predstavcoch je k dispozícii denná tlač a časopisy. Užite si ničím nerušenú jazdu (cestu) s možnosťou sledovania viac než 50 filmov, počúvaním hudby a hraním hier z palubného portálu, ku ktorému sa pripojíte vo vlastnom zariadení na stránke portal.regiojet.cz"
+        ],
+        "selectable": false
+       }
+      ],
+      "seatMap": null
+     }
+    ],
+    "id": 8551471260,
+    "notifications": [],
+    "number": 1,
+    "seatClasses": [
+     {
+      "name": "TRAIN_LOW_COST",
+      "services": [
+       {
+        "code": "Vuz Bp1xx (75) LOW cost-TRAIN_LOW_COST-imobilní cestující",
+        "imageCode": "typy_vozidel_imobilni_rampa",
+        "name": "imobilní cestující"
+       },
+       {
+        "code": "Vuz Bp1xx (75) LOW cost-TRAIN_LOW_COST-Klimatizace",
+        "imageCode": "typy_vozidel_klimatizace",
+        "name": "Klimatizace"
+       },
+       {
+        "code": "Vuz Bp1xx (75) LOW cost-TRAIN_LOW_COST-Voda zdarma",
+        "imageCode": "typy_vozidel_chlazene_napoje",
+        "name": "Voda zdarma"
+       },
+       {
+        "code": "Vuz Bp1xx (75) LOW cost-TRAIN_LOW_COST-Wifi",
+        "imageCode": "typy_vozidel_wifi_ano",
+        "name": "Wifi"
+       },
+       {
+        "code": "Vuz Bp1xx (75) LOW cost-TRAIN_LOW_COST-Bez zásuvky",
+        "imageCode": "typy_vozidel_zastuvka_ne",
+        "name": "Bez zásuvky"
+       },
+       {
+        "code": "Vuz Bp1xx (75) LOW cost-TRAIN_LOW_COST-Online catering",
+        "imageCode": "typy_vozidel_online_catering",
+        "name": "Online catering"
+       }
+      ]
+     }
+    ],
+    "standard": "YELLOW",
+    "type": "TRAIN"
+   }
+  ]
+ }
+]

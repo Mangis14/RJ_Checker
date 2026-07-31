@@ -1,0 +1,7 @@
+# Normalizacia koncov riadkov. Podstatne pre gradlew: s CRLF sa shell skript
+# na Linuxovom CI nespusti ("bad interpreter").
+* text=auto eol=lf
+gradlew text eol=lf
+*.bat text eol=crlf
+*.jar binary
+*.png binary

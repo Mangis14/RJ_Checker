@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="BK-42" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="185.991px" height="1324.434px" viewBox="63.698 61.086 185.991 1324.434"
+	 enable-background="new 63.698 61.086 185.991 1324.434" xml:space="preserve" preserveAspectRatio="xMidYMin meet">
+<symbol  id="bumper" viewBox="-14.884 -6.906 29.768 13.812">
+	<path fill="#4F4E4D" d="M-12.999,2.016h8.467v-8.921h9.063v8.921h8.468c1.041,0,1.885,0.854,1.885,1.909v1.073
+		c0,1.055-0.844,1.908-1.885,1.908h-25.998c-1.041,0-1.885-0.854-1.885-1.908V3.925C-14.884,2.87-14.04,2.016-12.999,2.016z"/>
+</symbol>
+<symbol  id="coupe-blue" viewBox="-64.269 -47.468 128.855 95.035">
+	
+		<use xlink:href="#seat-blue"  width="40" height="30" x="-20" y="-15" transform="matrix(-1 0 0 -1.0011 39.0615 -28.4668)" overflow="visible"/>
+	
+		<use xlink:href="#seat-blue"  width="40" height="30" x="-20" y="-15" transform="matrix(-1 0 0 -1.0011 -0.9375 -28.4668)" overflow="visible"/>
+	
+		<use xlink:href="#seat-blue"  width="40" height="30" x="-20" y="-15" transform="matrix(-1 0 0 -1.0011 -40.9995 -28.1855)" overflow="visible"/>
+	
+		<use xlink:href="#seat-blue"  width="40" height="30" x="-20" y="-15" transform="matrix(-1 0 0 -1.0011 -40.9365 -28.4668)" overflow="visible"/>
+	
+		<use xlink:href="#seat-blue"  width="40" height="30" x="-20" y="-15" transform="matrix(1 0 0 1.0011 -0.9375 28.4629)" overflow="visible"/>
+	
+		<use xlink:href="#seat-blue"  width="40" height="30" id="XMLID_15_" x="-20" y="-15" transform="matrix(1 0 0 1.0011 39.0615 28.4629)" overflow="visible"/>
+	
+		<use xlink:href="#seat-blue"  width="40" height="30" x="-20" y="-15" transform="matrix(1 0 0 1.0011 -40.9365 28.4629)" overflow="visible"/>
+	<path fill="#4F4E4E" d="M64.587,12.288h-2v33.311l-126.675-0.033v2.002c1.285,0,127.331-0.002,127.673-0.002l1.002,0.002V12.288z"
+		/>
+	<polygon fill="#4F4E4E" points="64.587,-47.468 -64.088,-47.468 -64.088,-45.466 62.587,-45.466 62.587,-12.005 64.587,-12.005 	
+		"/>
+	<path fill="#B07F48" d="M-64.269-0.649h11.594c1.786,0,3.233-1.466,3.233-3.277v-5.45c0-1.812-1.447-3.279-3.233-3.279h-11.594
+		V-0.649z"/>
+	<path fill="#B07F48" d="M-64.269,12.821h11.594c1.786,0,3.233-1.468,3.233-3.278V4.091c0-1.811-1.447-3.276-3.233-3.276h-11.594
+		V12.821z"/>
+</symbol>
+<symbol  id="coupe-childrens" viewBox="-64.338 -143.539 128.676 280.999">
+	<polygon fill="#F5A858" points="62.396,-142.664 -64.273,-142.664 -64.273,136.375 62.396,136.375 	"/>
+	
+		<use xlink:href="#seat-blue"  width="40" height="30" x="-20" y="-15" transform="matrix(1 0 0 1 -0.9375 118.5859)" overflow="visible"/>
+	
+		<use xlink:href="#seat-blue"  width="40" height="30" id="XMLID_13_" x="-20" y="-15" transform="matrix(1 0 0 1 39.0625 118.5859)" overflow="visible"/>
+	
+		<use xlink:href="#seat-blue"  width="40" height="30" x="-20" y="-15" transform="matrix(1 0 0 1 -40.9365 118.5859)" overflow="visible"/>
+	<path fill="#4F4E4E" d="M64.338,102.219h-2v33.274l-126.676-0.033v2c1.285,0,127.332-0.002,127.674-0.001l1.002,0.001V102.219z"/>
+	
+		<use xlink:href="#seat-blue"  width="40" height="30" x="-20" y="-15" transform="matrix(-1 0 0 -1 39.0625 -124.2891)" overflow="visible"/>
+	
+		<use xlink:href="#seat-blue"  width="40" height="30" x="-20" y="-15" transform="matrix(-1 0 0 -1 -0.9375 -124.2891)" overflow="visible"/>
+	
+		<use xlink:href="#seat-blue"  width="40" height="30" x="-20" y="-15" transform="matrix(-1 0 0 -1 -41 -124.2813)" overflow="visible"/>
+	<polygon fill="#4F4E4E" points="62.338,77.914 62.338,-0.305 62.338,-0.5 62.338,-5.748 62.338,-83.81 64.338,-83.81 
+		64.338,-5.191 64.338,-0.562 64.338,77.914 	"/>
+	<polygon fill="#4F4E4E" points="64.338,-143.539 -64.338,-143.539 -64.338,-141.539 62.338,-141.539 62.338,-108.114 
+		64.338,-108.114 	"/>
+	<g>
+		<path fill="#1B1B1B" d="M5.539,15.043v-0.005c0.008-0.034,0.016-0.074,0.023-0.112L5.539,15.043z"/>
+		<path fill="#1B1B1B" d="M9.756,14.931c0.012,0.033,0.018,0.073,0.025,0.112v0.006L9.756,14.931z"/>
+		<path fill="#1B1B1B" d="M15.988-11.937c-0.866-1.927,2.318-4.758,0.156-6.048c0.004,0.221-0.132,0.429-0.353,0.505
+			c-0.279,0.097-0.583-0.056-0.675-0.328l-0.729-2.14c-0.098-0.275,0.052-0.581,0.333-0.674c0.275-0.092,0.58,0.054,0.674,0.333
+			l0.01,0.022c1.219-0.719,4.172-2.072,5.256,0.81c1.303,3.472-3.943,7.14,1.668,8.184c0.257,0.047,0.326,0.389,0.1,0.519
+			C20.996-9.935,17.555-8.454,15.988-11.937"/>
+		<path fill="#1B1B1B" d="M-0.254-12.243c-1.567,3.48-5.008,1.997-6.438,1.18c-0.23-0.128-0.161-0.47,0.094-0.517
+			c5.619-1.045,0.364-4.712,1.668-8.183c1.061-2.813,3.894-1.594,5.16-0.865c0.105-0.257,0.385-0.395,0.652-0.31
+			c0.279,0.089,0.434,0.391,0.344,0.668l-0.695,2.147c-0.09,0.277-0.389,0.434-0.664,0.342c-0.215-0.066-0.349-0.251-0.373-0.455
+			C-2.484-16.922,0.596-14.141-0.254-12.243"/>
+		<path fill="#1B1B1B" d="M-23.086-3.419l-0.006,0.008c0,0,1.609-1.967,2.324-2.837c0.732-0.854,1.457-1.711,2.213-2.541
+			c0.012-0.012,0.027-0.018,0.037-0.032c0.393-0.406,0.925-0.597,1.453-0.571c0.229,0.015,0.455,0.063,0.672,0.158
+			c0.254-0.172,0.526-0.306,0.818-0.372v-0.636c-2.834-0.738-4.928-3.297-4.928-6.352c0-3.633,2.957-6.578,6.598-6.578
+			c3.646,0,6.598,2.945,6.598,6.578c0,3.151-2.23,5.784-5.205,6.425v0.514c0.438,0.049,0.854,0.227,1.219,0.505
+			c0.615-0.148,1.286,0.012,1.768,0.483c0.83,0.807,1.632,1.643,2.43,2.479c0.748,0.807,1.497,1.6,2.234,2.415
+			c0.563,0.059,1.125,0.111,1.688,0.177c0.705,0.078,1.408,0.167,2.109,0.263c0.567-0.8,1.143-1.585,1.717-2.38
+			C1.373-6.672,2.086-7.633,2.83-8.568c0.032-0.036,0.068-0.079,0.105-0.117C2.943-8.696,2.955-8.7,2.963-8.71
+			c0.324-0.33,0.738-0.51,1.166-0.549c0.279-0.026,0.563,0,0.835,0.1c0.274-0.174,0.575-0.296,0.89-0.358v-0.613v-0.342
+			c-0.158-0.053-0.311-0.109-0.465-0.171c-2.4-0.957-4.098-3.293-4.098-6.026c0-3.587,2.92-6.502,6.518-6.502
+			c3.6,0,6.518,2.915,6.518,6.502c0,2.84-1.83,5.25-4.379,6.132c-0.341,0.118-0.697,0.207-1.061,0.268v0.109v0.607
+			c0.291,0.025,0.582,0.105,0.857,0.23c0.283-0.132,0.591-0.18,0.895-0.162c0.527,0.03,1.032,0.275,1.377,0.723
+			c0.012,0.015,0.023,0.022,0.035,0.037c0.665,0.906,1.292,1.835,1.924,2.765c0.615,0.943,1.246,1.874,1.846,2.827l0.154,0.245
+			l-0.002-0.011c0.41,1.081,0.838,2.16,1.234,3.251c0.404,1.085,0.8,2.183,1.174,3.279c0.081,0.243-0.002,0.514-0.221,0.66
+			c-0.263,0.178-0.619,0.103-0.795-0.151c-0.654-0.967-1.285-1.942-1.913-2.917c-0.453-0.698-0.894-1.403-1.332-2.109
+			c-0.126-0.202-0.255-0.407-0.38-0.611c-0.177-0.172-0.349-0.353-0.522-0.528c-0.276-0.284-0.556-0.564-0.829-0.849l2.563,13.562
+			c0.082,0.389-0.092,0.783-0.441,0.968c-0.405,0.211-0.809,0.403-1.207,0.579c-0.117,0.053-0.235,0.081-0.353,0.129
+			c0.085-0.032,0.167-0.048,0.251-0.083c0,0.045-0.008,0.089-0.008,0.139c-0.061,0.714-0.105,1.434-0.182,2.157
+			c-0.074,0.72-0.191,1.44-0.248,2.163l-0.008-0.127c0.024,0.791,0.041,1.585,0.068,2.378c0.037,0.8,0.065,1.589,0.122,2.381
+			c0.04,0.578-0.364,1.104-0.951,1.204c-0.619,0.101-1.206-0.316-1.312-0.936c-0.129-0.785-0.279-1.564-0.438-2.342
+			c-0.15-0.744-0.307-1.483-0.465-2.223l-0.033-0.24c-0.097-0.715-0.264-1.432-0.385-2.144c-0.068-0.421-0.129-0.844-0.189-1.271
+			c-0.062,0.009-0.121,0.028-0.179,0.038c-0.498,0.063-0.995,0.1-1.493,0.1c-0.389,0-0.781-0.03-1.178-0.066
+			c-0.062-0.004-0.122-0.022-0.178-0.03c-0.062,0.409-0.118,0.819-0.188,1.23c-0.121,0.712-0.287,1.429-0.384,2.144l-0.036,0.24
+			c-0.154,0.739-0.316,1.479-0.467,2.223c-0.154,0.777-0.303,1.557-0.438,2.342c-0.092,0.568-0.611,0.988-1.205,0.943
+			c-0.623-0.038-1.102-0.585-1.053-1.212c0.053-0.792,0.084-1.581,0.117-2.381c0.033-0.793,0.045-1.587,0.073-2.383l-0.009,0.132
+			c-0.053-0.716-0.174-1.443-0.251-2.163c-0.072-0.721-0.118-1.443-0.178-2.157c0-0.007,0-0.009,0-0.011
+			c-0.032-0.015-0.069-0.021-0.101-0.032C1.526,12.16,1.021,11.93,0.506,11.66c-0.348-0.185-0.529-0.585-0.445-0.974L2.681-3.1
+			C2.405-2.838,2.138-2.575,1.862-2.314C1.6-2.055,1.328-1.798,1.057-1.538c-0.17,0.153-0.331,0.313-0.502,0.471l-0.696,0.645
+			l-0.623-0.225c-0.931-0.343-1.87-0.669-2.802-1.029c0.243,0.438,0.49,0.868,0.729,1.308c0.555,1.019,1.105,2.045,1.636,3.073
+			c0.114,0.226,0.069,0.512-0.13,0.689C-1.566,3.61-1.931,3.597-2.148,3.359c-0.785-0.857-1.555-1.724-2.32-2.601
+			c-0.704-0.798-1.385-1.609-2.072-2.417c-0.943-0.67-1.862-1.366-2.785-2.05c-0.125-0.096-0.247-0.189-0.373-0.283l0.977,10.626
+			c0.012,0.259-0.122,0.524-0.336,0.713L-9.1,21.829c-0.004,0.68-0.518,1.261-1.207,1.336c-0.744,0.077-1.408-0.459-1.485-1.198
+			l-1.137-13.458c-0.328,0.036-0.65,0.048-0.976,0.048c-0.262,0-0.522-0.008-0.786-0.031l-1.165,13.423
+			c-0.076,0.668-0.646,1.2-1.339,1.2c-0.742,0.007-1.353-0.597-1.354-1.337l-0.036-14.347c-0.314-0.187-0.512-0.508-0.498-0.83
+			l0.967-10.479c-1.352,1.036-3.259,2.504-3.354,2.625c-0.51,0.652,3.261,3.437,2.51,4.323c-0.204,0.241-0.604,0.271-0.865,0.093
+			c-0.211-0.142-0.318-0.227-0.516-0.389C-25.326-1.334-23.617-2.389-23.086-3.419z"/>
+	</g>
+</symbol>
+<symbol  id="coupe-empty" viewBox="-64.088 -47.468 128.674 95.035">
+	<polygon fill="#8B8A89" points="62.637,-46.616 -64.088,-46.616 -64.088,46.579 62.637,46.579 	"/>
+	<path fill="#4F4E4E" d="M64.586,12.288h-2v33.311l-126.674-0.033v2.002c1.284,0,127.331-0.002,127.672-0.002l1.002,0.002V12.288z"
+		/>
+	<polygon fill="#4F4E4E" points="64.586,-47.468 -64.088,-47.468 -64.088,-45.466 62.586,-45.466 62.586,-12.005 64.586,-12.005 	
+		"/>
+</symbol>
+<symbol  id="door-interior" viewBox="-16.958 -1 33.918 2">
+	<g>
+		<g>
+			<line fill="none" stroke="#4F4E4D" stroke-width="2" stroke-miterlimit="10" x1="-16.958" y1="0" x2="-15.458" y2="0"/>
+			
+				<line fill="none" stroke="#4F4E4D" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="2.8106,2.8106" x1="-12.647" y1="0" x2="14.054" y2="0"/>
+			<line fill="none" stroke="#4F4E4D" stroke-width="2" stroke-miterlimit="10" x1="15.459" y1="0" x2="16.959" y2="0"/>
+		</g>
+	</g>
+</symbol>
+<symbol  id="seat-blue" viewBox="-20 -15 40 30">
+	<g>
+		<path fill="#3867AA" stroke="#1E3F6B" stroke-width="0.75" stroke-miterlimit="10" d="M16.803-11.385
+			c0-1.788-1.432-3.24-3.197-3.24h-27.211c-1.766,0-3.197,1.452-3.197,3.24v22.771c0,1.789,1.432,3.239,3.197,3.239h27.211
+			c1.766,0,3.197-1.45,3.197-3.239V-11.385z"/>
+		<path fill="#1E3E6A" d="M13.605-15h-27.211c-1.97,0-3.572,1.621-3.572,3.615v22.771c0,1.993,1.603,3.614,3.572,3.614h27.211
+			c1.971,0,3.572-1.621,3.572-3.614v-22.771C17.178-13.379,15.576-15,13.605-15z M-13.605,14.25c-1.557,0-2.822-1.285-2.822-2.864
+			v-22.771c0-1.58,1.266-2.865,2.822-2.865h27.211c1.557,0,2.822,1.285,2.822,2.865v22.771c0,1.579-1.266,2.864-2.822,2.864H-13.605
+			z"/>
+	</g>
+	<path fill="#1E3D69" d="M16.773,9.563c0-1.788-1.432-3.239-3.199-3.239h-27.148c-1.766,0-3.198,1.451-3.198,3.239v1.821
+		c0,1.789,1.433,3.239,3.198,3.239h27.148c1.768,0,3.199-1.45,3.199-3.239V9.563z"/>
+	<path fill="#1E3D69" d="M-16.803-11.694c-1.766,0-3.197,1.451-3.197,3.24V3.813c0,1.789,1.432,3.24,3.197,3.24V-11.694z"/>
+	<path fill="#1E3D69" d="M16.803-11.694c1.766,0,3.197,1.451,3.197,3.24V3.813c0,1.789-1.432,3.24-3.197,3.24V-11.694z"/>
+</symbol>
+<symbol  id="seat-grey" viewBox="-20 -15 40 30">
+	<g>
+		<path fill="#8A8A89" d="M16.803-11.385c0-1.788-1.432-3.24-3.197-3.24h-27.211c-1.766,0-3.197,1.452-3.197,3.24v22.771
+			c0,1.789,1.432,3.239,3.197,3.239h27.211c1.766,0,3.197-1.45,3.197-3.239V-11.385z"/>
+		<path fill="#656565" d="M13.605-15h-27.211c-1.97,0-3.572,1.622-3.572,3.615v22.771c0,1.992,1.603,3.614,3.572,3.614h27.211
+			c1.971,0,3.572-1.622,3.572-3.614v-22.771C17.178-13.378,15.576-15,13.605-15z M-13.605,14.25c-1.557,0-2.822-1.284-2.822-2.864
+			v-22.771c0-1.58,1.266-2.865,2.822-2.865h27.211c1.557,0,2.822,1.285,2.822,2.865v22.771c0,1.58-1.266,2.864-2.822,2.864H-13.605z
+			"/>
+	</g>
+	<path fill="#656565" d="M16.773,9.563c0-1.789-1.432-3.238-3.199-3.238h-27.148c-1.766,0-3.198,1.449-3.198,3.238v1.821
+		c0,1.789,1.433,3.239,3.198,3.239h27.148c1.768,0,3.199-1.45,3.199-3.239V9.563z"/>
+	<path fill="#656565" d="M-16.803-11.694c-1.766,0-3.197,1.451-3.197,3.24V3.813c0,1.789,1.432,3.24,3.197,3.24V-11.694z"/>
+	<path fill="#656565" d="M16.803-11.694c1.766,0,3.197,1.451,3.197,3.24V3.813c0,1.789-1.432,3.24-3.197,3.24V-11.694z"/>
+</symbol>
+<symbol  id="steps" viewBox="-8.428 -15.408 16.854 30.817">
+	<polygon fill-rule="evenodd" clip-rule="evenodd" fill="#AFAFAF" points="-2.387,-15.408 -2.387,15.409 2.443,15.409 
+		2.443,-15.408 	"/>
+	<polygon fill-rule="evenodd" clip-rule="evenodd" fill="#919191" points="8.427,15.409 8.427,-15.408 3.625,-15.408 3.625,15.409 	
+		"/>
+	<path fill-rule="evenodd" clip-rule="evenodd" fill="#B7B7B7" d="M-5.026-15.283h1.458v30.692h-1.458
+		c-1.878,0-3.401-1.522-3.401-3.401v-23.89C-8.428-13.761-6.904-15.283-5.026-15.283z"/>
+</symbol>
+<symbol  id="wc" viewBox="-64.338 -40.135 128.676 80.27">
+	<polygon fill="#192945" points="62.338,-38.135 0,-38.135 0,38.134 62.338,38.134 	"/>
+	<path fill="#4F4E4E" d="M63.336,40.133c-0.342,0-126.39,0.002-127.674,0.002v-2c0,0,125.709-0.002,126.676,0.033v-76.303H-64.338
+		v-2H64.338v80.27L63.336,40.133z"/>
+	<polygon fill="#849BB7" points="0,-38.135 -64.337,-38.135 -64.337,38.131 0,38.131 	"/>
+	<g>
+		<path fill="#1A1A1A" d="M-16.529-8.224h-2.015l-1.617,8.364c-0.156,0.844-0.309,1.672-0.457,2.483
+			c-0.148,0.813-0.301,1.641-0.457,2.484h-0.094c-0.171-0.844-0.347-1.676-0.527-2.496c-0.179-0.819-0.363-1.644-0.55-2.472
+			l-2.132-8.364h-1.781l-2.132,8.364c-0.172,0.813-0.352,1.633-0.539,2.46c-0.188,0.828-0.375,1.664-0.563,2.508h-0.094
+			c-0.156-0.844-0.305-1.676-0.445-2.496c-0.141-0.819-0.281-1.644-0.422-2.472l-1.617-8.364h-1.898l3.187,15.37h2.367l2.319-9.255
+			c0.125-0.594,0.25-1.176,0.375-1.746c0.125-0.569,0.242-1.151,0.352-1.745h0.094c0.125,0.594,0.254,1.176,0.386,1.745
+			c0.133,0.57,0.262,1.152,0.387,1.746l2.296,9.255h2.319L-16.529-8.224z"/>
+		<path fill="#1A1A1A" d="M-35.367-0.539c0-1.233-0.172-2.343-0.516-3.327c-0.343-0.983-0.824-1.819-1.441-2.507
+			c-0.617-0.687-1.343-1.214-2.179-1.581c-0.835-0.367-1.746-0.551-2.729-0.551c-0.921,0-1.737,0.191-2.449,0.574
+			c-0.71,0.383-1.292,0.824-1.745,1.323l1.101,1.242c0.406-0.438,0.859-0.785,1.359-1.043c0.5-0.258,1.07-0.387,1.71-0.387
+			c0.734,0,1.402,0.145,2.003,0.434c0.602,0.289,1.113,0.703,1.535,1.242s0.75,1.191,0.984,1.956
+			c0.234,0.766,0.352,1.625,0.352,2.577c0,0.969-0.113,1.84-0.34,2.613c-0.226,0.772-0.546,1.433-0.96,1.979
+			c-0.414,0.547-0.914,0.969-1.5,1.266c-0.586,0.297-1.246,0.444-1.98,0.444c-0.734,0-1.378-0.147-1.933-0.444
+			c-0.554-0.297-1.082-0.719-1.582-1.266l-1.101,1.195c0.594,0.702,1.273,1.249,2.039,1.64c0.765,0.391,1.64,0.586,2.624,0.586
+			c0.969,0,1.863-0.18,2.683-0.539c0.82-0.359,1.531-0.879,2.132-1.558c0.602-0.68,1.074-1.516,1.417-2.508
+			C-35.539,1.832-35.367,0.711-35.367-0.539z"/>
+	</g>
+</symbol>
+<symbol  id="wc-empty" viewBox="-64.338 -40.135 128.676 80.27">
+	<polygon fill="#192945" points="63.25,-38.135 -64.338,-38.135 -64.338,38.134 63.25,38.134 	"/>
+	<path fill="#4F4E4E" d="M63.336,40.133c-0.342,0-126.391,0.002-127.674,0.002v-2c0,0,125.709-0.002,126.676,0.033v-76.303H-64.338
+		v-2H64.338v80.27L63.336,40.133z"/>
+</symbol>
+<symbol  id="wheelchair-ramp" viewBox="-12.295 -14.903 24.838 30.14">
+	<g>
+		<g>
+			<path fill="#1B1B1B" d="M12.365-8.587L12.365-8.587L7.162-0.181C6.884,0.237,6.419,0.33,5.861,0.284h-6.593
+				c-0.278,0-0.465,0.046-0.465,0.046v0.093V1.49c0,0.279,0.047,0.465,0.093,0.465c0.047,0,0.047,0,0.093,0h5.757
+				c0.651,0,1.16,0.51,1.16,1.207c0,0.604-0.509,1.161-1.16,1.161H-1.01c-0.046,0-0.046,0-0.093,0
+				C-1.15,4.276-1.197,4.509-1.197,4.785v2.742c0,1.068-0.883,1.904-1.903,1.904h-0.51c-1.069,0-1.905-0.836-1.905-1.904V0.19V-1.99
+				c0-1.023,0.836-1.907,1.905-1.907h0.51h0.927h7.617c0.278,0,0.604-0.187,0.742-0.371c0.931-1.394,3.81-5.804,3.81-5.804
+				c0.371-0.559,1.207-0.696,1.858-0.279C12.504-9.98,12.737-9.191,12.365-8.587L12.365-8.587z"/>
+		</g>
+		<g>
+			<path fill="#1B1B1B" d="M6.56-7.846L6.56-7.846c-0.512,0.232-1.115,0-1.348-0.463c-1.346-2.834-4.228-4.644-7.385-4.644
+				c-4.503,0-8.174,3.668-8.174,8.173c0,2.555,1.208,4.924,3.207,6.454c0.465,0.374,0.512,0.977,0.187,1.395
+				C-7.281,3.487-7.885,3.58-8.301,3.255c-2.555-1.951-3.994-4.876-3.994-8.034c0-5.572,4.549-10.124,10.122-10.124
+				c3.903,0,7.477,2.228,9.15,5.759C7.21-8.68,7.021-8.076,6.56-7.846L6.56-7.846z"/>
+		</g>
+		<g>
+			<path fill="#1B1B1B" d="M-3.658,15.236c1.393,0,2.508-1.113,2.508-2.508c0-1.393-1.115-2.507-2.508-2.507
+				c-1.392,0-2.508,1.114-2.508,2.507C-6.167,14.123-5.05,15.236-3.658,15.236L-3.658,15.236z"/>
+		</g>
+	</g>
+</symbol>
+<symbol  id="window" viewBox="-1.248 -34.5 2.497 69">
+	<polygon fill="#D8D8D8" points="1.249,-34.5 -1.248,-34.5 -1.248,34.5 1.249,34.5 	"/>
+</symbol>
+<symbol  id="windows" viewBox="-1.248 -575.002 2.496 1150.003">
+	
+		<use xlink:href="#window"  width="2.497" height="69" x="-1.248" y="-34.5" transform="matrix(-1 0 0 -1 0 465.0762)" overflow="visible"/>
+	
+		<use xlink:href="#window"  width="2.497" height="69" x="-1.248" y="-34.5" transform="matrix(-1 0 0 -1 0 372.291)" overflow="visible"/>
+	
+		<use xlink:href="#window"  width="2.497" height="69" x="-1.248" y="-34.5" transform="matrix(-1 0 0 -1 0 278.9785)" overflow="visible"/>
+	
+		<use xlink:href="#window"  width="2.497" height="69" x="-1.248" y="-34.5" transform="matrix(-1 0 0 -1 0 186.165)" overflow="visible"/>
+	
+		<use xlink:href="#window"  width="2.497" height="69" x="-1.248" y="-34.5" transform="matrix(-1 0 0 -1 0 93.25)" overflow="visible"/>
+	
+		<use xlink:href="#window"  width="2.497" height="69" x="-1.248" y="-34.5" transform="matrix(-1 0 0 -1 0 0.625)" overflow="visible"/>
+	
+		<use xlink:href="#window"  width="2.497" height="69" x="-1.248" y="-34.5" transform="matrix(-1 0 0 -1 0 -92.875)" overflow="visible"/>
+	
+		<use xlink:href="#window"  width="2.497" height="69" x="-1.248" y="-34.5" transform="matrix(-1 0 0 -1 0 -186.0195)" overflow="visible"/>
+	
+		<use xlink:href="#window"  width="2.497" height="69" x="-1.248" y="-34.5" transform="matrix(-1 0 0 -1 0 -278.644)" overflow="visible"/>
+	
+		<use xlink:href="#window"  width="2.497" height="69" x="-1.248" y="-34.5" transform="matrix(-1 0 0 -1 0 -463.2896)" overflow="visible"/>
+	
+		<use xlink:href="#window"  width="2.497" height="69" x="-1.248" y="-34.5" transform="matrix(-1 0 0 -0.6812 0 -551.5005)" overflow="visible"/>
+	
+		<use xlink:href="#window"  width="2.497" height="69" x="-1.248" y="-34.5" transform="matrix(-1 0 0 -0.6812 0 551.5)" overflow="visible"/>
+	
+		<use xlink:href="#window"  width="2.497" height="69" x="-1.248" y="-34.5" transform="matrix(-1 0 0 -1 0 -371.894)" overflow="visible"/>
+	
+		<use xlink:href="#window"  width="2.497" height="69" x="-1.248" y="-34.5" transform="matrix(-1 0 0 -1 0 -464.894)" overflow="visible"/>
+</symbol>
+<g id="wagon">
+	<path id="wagon-background" fill="#DDDDDD" d="M76.563,88.014c0-1.789,1.432-3.24,3.197-3.24h158.751
+		c1.766,0,3.196,1.451,3.196,3.24v1276.768c0,1.789-1.433,3.24-3.197,3.24l-158.75-0.001c-1.766,0-3.197-1.45-3.197-3.239V88.014z"
+		/>
+	
+		<use xlink:href="#coupe-blue"  width="128.855" height="95.035" id="XMLID_7_" x="-64.269" y="-47.468" transform="matrix(-1 0 0 1 174.8149 259.8667)" overflow="visible"/>
+	
+		<use xlink:href="#coupe-blue"  width="128.855" height="95.035" id="XMLID_5_" x="-64.269" y="-47.468" transform="matrix(-1 0 0 1 174.8149 352.9111)" overflow="visible"/>
+	
+		<use xlink:href="#coupe-blue"  width="128.855" height="95.035" x="-64.269" y="-47.468" transform="matrix(-1 0 0 1 174.8149 445.9829)" overflow="visible"/>
+	
+		<use xlink:href="#coupe-blue"  width="128.855" height="95.035" id="XMLID_9_" x="-64.269" y="-47.468" transform="matrix(-1 0 0 1 174.8149 538.9946)" overflow="visible"/>
+	
+		<use xlink:href="#coupe-blue"  width="128.855" height="95.035" id="XMLID_8_" x="-64.269" y="-47.468" transform="matrix(-1 0 0 1 174.8149 632.1997)" overflow="visible"/>
+	
+		<use xlink:href="#coupe-blue"  width="128.855" height="95.035" id="XMLID_6_" x="-64.269" y="-47.468" transform="matrix(-1 0 0 1 174.8149 725.2441)" overflow="visible"/>
+	
+		<use xlink:href="#coupe-childrens"  width="128.676" height="280.999" id="XMLID_3_" x="-64.338" y="-143.539" transform="matrix(-1 0 0 1 174.5649 914.6626)" overflow="visible"/>
+	
+		<use xlink:href="#coupe-empty"  width="128.674" height="95.035" id="XMLID_10_" x="-64.088" y="-47.468" transform="matrix(-1 0 0 1 174.8149 1097.4683)" overflow="visible"/>
+	
+		<use xlink:href="#coupe-empty"  width="128.674" height="95.035" x="-64.088" y="-47.468" transform="matrix(-1 0 0 1 174.8149 1190.4683)" overflow="visible"/>
+	
+		<use xlink:href="#wc"  width="128.676" height="80.27" id="XMLID_1_" x="-64.338" y="-40.135" transform="matrix(-1 0 0 1 174.5625 174.1895)" overflow="visible"/>
+	
+		<use xlink:href="#wheelchair-ramp"  width="24.838" height="30.14" id="XMLID_11_" x="-12.295" y="-14.903" transform="matrix(1 0 0 -1 160.7095 1341.4888)" overflow="visible"/>
+	
+		<use xlink:href="#door-interior"  width="33.918" height="2" x="-16.958" y="-1" transform="matrix(-1 0 0 1 93.2661 213.3203)" overflow="visible"/>
+	
+		<use xlink:href="#bumper"  width="29.768" height="13.812" x="-14.884" y="-6.906" transform="matrix(-1 0 0 1 211.0488 1374.3022)" overflow="visible"/>
+	
+		<use xlink:href="#bumper"  width="29.768" height="13.812" x="-14.884" y="-6.906" transform="matrix(-1 0 0 1 102.9575 1374.3022)" overflow="visible"/>
+	
+		<use xlink:href="#bumper"  width="29.768" height="13.812" x="-14.884" y="-6.906" transform="matrix(1 0 0 -1 211.0488 77.2432)" overflow="visible"/>
+	
+		<use xlink:href="#bumper"  width="29.768" height="13.812" x="-14.884" y="-6.906" transform="matrix(1 0 0 -1 102.9575 77.2432)" overflow="visible"/>
+	
+		<use xlink:href="#door-interior"  width="33.918" height="2" x="-16.958" y="-1" transform="matrix(-1 0 0 1 93.2651 1237.4028)" overflow="visible"/>
+	
+		<use xlink:href="#steps"  width="16.854" height="30.817" id="XMLID_2_" x="-8.428" y="-15.408" transform="matrix(-1 0 0 1 85.0903 111.0254)" overflow="visible"/>
+	
+		<use xlink:href="#steps"  width="16.854" height="30.817" x="-8.428" y="-15.408" transform="matrix(1 0 0 1 230.4731 111.0254)" overflow="visible"/>
+	
+		<use xlink:href="#steps"  width="16.854" height="30.817" x="-8.428" y="-15.408" transform="matrix(-1 0 0 1 85.0903 1342.4868)" overflow="visible"/>
+	
+		<use xlink:href="#steps"  width="16.854" height="30.817" x="-8.428" y="-15.408" transform="matrix(1 0 0 1 230.4731 1342.4868)" overflow="visible"/>
+	
+		<use xlink:href="#wc-empty"  width="128.676" height="80.27" id="XMLID_4_" x="-64.338" y="-40.135" transform="matrix(-1 0 0 1 174.6001 1276.2104)" overflow="visible"/>
+	<path id="wagon-border" fill="none" stroke="#4F4E4D" stroke-width="3" stroke-miterlimit="10" d="M75.188,87.389
+		c0-1.789,1.432-3.24,3.197-3.24h158.751c1.766,0,3.196,1.451,3.196,3.24v1276.768c0,1.789-1.433,3.24-3.197,3.24l-158.75-0.001
+		c-1.766,0-3.197-1.45-3.197-3.239V87.389z"/>
+	
+		<use xlink:href="#windows"  width="2.496" height="1150.003" x="-1.248" y="-575.002" transform="matrix(1 0 0 -1 240.3589 725.3354)" overflow="visible"/>
+	
+		<use xlink:href="#windows"  width="2.496" height="1150.003" x="-1.248" y="-575.002" transform="matrix(1 0 0 -1 75.1997 725.3354)" overflow="visible"/>
+</g>
+<g id="seats-numbering">
+	<g id="s1">
+		<circle id="c1" fill="#BFBFBF" stroke="#656565" stroke-width="0.5" stroke-miterlimit="10" cx="135.5" cy="233.04" r="11.327"/>
+		<text id="n1" transform="matrix(1 0 0 1 131.9287 237.4526)" font-family="'SourceSansPro-Regular'" font-size="14">1</text>
+	</g>
+	<g id="s2">
+		<circle id="c2" fill="#BFBFBF" stroke="#656565" stroke-width="0.5" stroke-miterlimit="10" cx="175.5" cy="233.04" r="11.327"/>
+		<text id="n2" transform="matrix(1 0 0 1 171.9365 237.2983)" font-family="'SourceSansPro-Regular'" font-size="14">2</text>
+	</g>
+	<g id="s3">
+		
+			<circle id="c3" fill="#BFBFBF" stroke="#656565" stroke-width="0.5" stroke-miterlimit="10" cx="215.499" cy="233.04" r="11.327"/>
+		<text id="n3" transform="matrix(1 0 0 1 211.9502 237.2983)" font-family="'SourceSansPro-Regular'" font-size="14">3</text>
+	</g>
+	<g id="s4">
+		
+			<circle id="c4" fill="#BFBFBF" stroke="#656565" stroke-width="0.5" stroke-miterlimit="10" cx="215.516" cy="286.662" r="11.327"/>
+		<text id="n4" transform="matrix(1 0 0 1 211.7188 291.2974)" font-family="'SourceSansPro-Regular'" font-size="14">4</text>
+	</g>
+	<g id="s5">
+		
+			<circle id="c5" fill="#BFBFBF" stroke="#656565" stroke-width="0.5" stroke-miterlimit="10" cx="175.516" cy="286.662" r="11.327"/>
+		<text id="n5" transform="matrix(1 0 0 1 171.9365 291.2974)" font-family="'SourceSansPro-Regular'" font-size="14">5</text>
+	</g>
+	<g id="s6">
+		
+			<circle id="c6" fill="#BFBFBF" stroke="#656565" stroke-width="0.5" stroke-miterlimit="10" cx="135.516" cy="286.662" r="11.327"/>
+		<text id="n6" transform="matrix(1 0 0 1 131.9287 291.2974)" font-family="'SourceSansPro-Regular'" font-size="14">6</text>
+	</g>
+	<g id="s11">
+		
+			<circle id="c11" fill="#BFBFBF" stroke="#656565" stroke-width="0.5" stroke-miterlimit="10" cx="135.5" cy="326.071" r="11.327"/>
+		<text id="n11" transform="matrix(1 0 0 1 128.9614 330.311)" font-family="'SourceSansPro-Regular'" font-size="14">11</text>
+	</g>
+	<g id="s12">
+		
+			<circle id="c12" fill="#BFBFBF" stroke="#656565" stroke-width="0.5" stroke-miterlimit="10" cx="175.5" cy="326.071" r="11.327"/>
+		<text id="n12" transform="matrix(1 0 0 1 168.2397 330.311)" font-family="'SourceSansPro-Regular'" font-size="14">12</text>
+	</g>
+	<g id="s13">
+		
+			<circle id="c13" fill="#BFBFBF" stroke="#656565" stroke-width="0.5" stroke-miterlimit="10" cx="215.5" cy="326.071" r="11.327"/>
+		<text id="n13" transform="matrix(1 0 0 1 208.2402 330.311)" font-family="'SourceSansPro-Regular'" font-size="14">13</text>
+	</g>
+	<g id="s14">
+		
+			<circle id="c14" fill="#BFBFBF" stroke="#656565" stroke-width="0.5" stroke-miterlimit="10" cx="215.54" cy="379.771" r="11.326"/>
+		<text id="n14" transform="matrix(1 0 0 1 208.2637 384.3013)" font-family="'SourceSansPro-Regular'" font-size="14">14</text>
+	</g>
+	<g id="s15">
+		
+			<circle id="c15" fill="#BFBFBF" stroke="#656565" stroke-width="0.5" stroke-miterlimit="10" cx="175.539" cy="379.771" r="11.326"/>
+		<text id="n15" transform="matrix(1 0 0 1 168.2632 384.3013)" font-family="'SourceSansPro-Regular'" font-size="14">15</text>
+	</g>
+	<g id="s16">
+		
+			<circle id="c16" fill="#BFBFBF" stroke="#656565" stroke-width="0.5" stroke-miterlimit="10" cx="135.539" cy="379.771" r="11.326"/>
+		<text id="n16" transform="matrix(1 0 0 1 127.8184 384.1353)" font-family="'SourceSansPro-Regular'" font-size="14">16</text>
+	</g>
+	<g id="s21">
+		
+			<circle id="c21" fill="#BFBFBF" stroke="#656565" stroke-width="0.5" stroke-miterlimit="10" cx="135.5" cy="419.165" r="11.327"/>
+		<text id="n21" transform="matrix(1 0 0 1 128.9614 423.7339)" font-family="'SourceSansPro-Regular'" font-size="14">21</text>
+	</g>
+	<g id="s22">
+		
+			<circle id="c22" fill="#BFBFBF" stroke="#656565" stroke-width="0.5" stroke-miterlimit="10" cx="175.5" cy="419.165" r="11.327"/>
+		<text id="n22" transform="matrix(1 0 0 1 168.2397 423.7339)" font-family="'SourceSansPro-Regular'" font-size="14">22</text>
+	</g>
+	<g id="s23">
+		
+			<circle id="c23" fill="#BFBFBF" stroke="#656565" stroke-width="0.5" stroke-miterlimit="10" cx="215.5" cy="419.165" r="11.327"/>
+		<text id="n23" transform="matrix(1 0 0 1 208.7402 423.7339)" font-family="'SourceSansPro-Regular'" font-size="14">23</text>
+	</g>
+	<g id="s24">
+		
+			<circle id="c24" fill="#BFBFBF" stroke="#656565" stroke-width="0.5" stroke-miterlimit="10" cx="215.55" cy="472.997" r="11.327"/>
+		<text id="n24" transform="matrix(1 0 0 1 208.7744 477.4019)" font-family="'SourceSansPro-Regular'" font-size="14">24</text>
+	</g>
+	<g id="s25">
+		
+			<circle id="c25" fill="#BFBFBF" stroke="#656565" stroke-width="0.5" stroke-miterlimit="10" cx="175.55" cy="472.997" r="11.327"/>
+		<text id="n25" transform="matrix(1 0 0 1 168.2739 477.4019)" font-family="'SourceSansPro-Regular'" font-size="14">25</text>
+	</g>
+	<g id="s26">
+		
+			<circle id="c26" fill="#BFBFBF" stroke="#656565" stroke-width="0.5" stroke-miterlimit="10" cx="135.55" cy="472.997" r="11.327"/>
+		<text id="n26" transform="matrix(1 0 0 1 128.9956 477.4019)" font-family="'SourceSansPro-Regular'" font-size="14">26</text>
+	</g>
+	<g id="s31">
+		
+			<circle id="c31" fill="#BFBFBF" stroke="#656565" stroke-width="0.5" stroke-miterlimit="10" cx="135.48" cy="512.171" r="11.327"/>
+		<text id="n31" transform="matrix(1 0 0 1 128.3154 516.8774)" font-family="'SourceSansPro-Regular'" font-size="14">31</text>
+	</g>
+	<g id="s32">
+		
+			<circle id="c32" fill="#BFBFBF" stroke="#656565" stroke-width="0.5" stroke-miterlimit="10" cx="175.48" cy="512.171" r="11.327"/>
+		<text id="n32" transform="matrix(1 0 0 1 168.3154 516.8774)" font-family="'SourceSansPro-Regular'" font-size="14">32</text>
+	</g>
+	<g id="s33">
+		
+			<circle id="c33" fill="#BFBFBF" stroke="#656565" stroke-width="0.5" stroke-miterlimit="10" cx="215.48" cy="512.171" r="11.327"/>
+		<text id="n33" transform="matrix(1 0 0 1 208.3311 516.8774)" font-family="'SourceSansPro-Regular'" font-size="14">33</text>
+	</g>
+	<g id="s34">
+		
+			<circle id="c34" fill="#BFBFBF" stroke="#656565" stroke-width="0.5" stroke-miterlimit="10" cx="215.516" cy="565.815" r="11.327"/>
+		<text id="n34" transform="matrix(1 0 0 1 208.7402 570.0249)" font-family="'SourceSansPro-Regular'" font-size="14">34</text>
+	</g>
+	<g id="s35">
+		
+			<circle id="c35" fill="#BFBFBF" stroke="#656565" stroke-width="0.5" stroke-miterlimit="10" cx="175.516" cy="565.815" r="11.327"/>
+		<text id="n35" transform="matrix(1 0 0 1 168.335 570.0249)" font-family="'SourceSansPro-Regular'" font-size="14">35</text>
+	</g>
+	<g id="s36">
+		
+			<circle id="c36" fill="#BFBFBF" stroke="#656565" stroke-width="0.5" stroke-miterlimit="10" cx="135.516" cy="565.815" r="11.327"/>
+		<text id="n36" transform="matrix(1 0 0 1 128.335 570.0249)" font-family="'SourceSansPro-Regular'" font-size="14">36</text>
+	</g>
+	<g id="s41">
+		
+			<circle id="c41" fill="#BFBFBF" stroke="#656565" stroke-width="0.5" stroke-miterlimit="10" cx="135.484" cy="605.351" r="11.327"/>
+		<text id="n41" transform="matrix(1 0 0 1 128.2725 609.9077)" font-family="'SourceSansPro-Regular'" font-size="14">41</text>
+	</g>
+	<g id="s42">
+		
+			<circle id="c42" fill="#BFBFBF" stroke="#656565" stroke-width="0.5" stroke-miterlimit="10" cx="175.485" cy="605.351" r="11.327"/>
+		<text id="n42" transform="matrix(1 0 0 1 168.2725 609.9077)" font-family="'SourceSansPro-Regular'" font-size="14">42</text>
+	</g>
+	<g id="s43">
+		
+			<circle id="c43" fill="#BFBFBF" stroke="#656565" stroke-width="0.5" stroke-miterlimit="10" cx="215.484" cy="605.351" r="11.327"/>
+		<text id="n43" transform="matrix(1 0 0 1 208.6143 609.9077)" font-family="'SourceSansPro-Regular'" font-size="14">43</text>
+	</g>
+	<g id="s44">
+		
+			<circle id="c44" fill="#BFBFBF" stroke="#656565" stroke-width="0.5" stroke-miterlimit="10" cx="215.546" cy="659.016" r="11.327"/>
+		<text id="n44" transform="matrix(1 0 0 1 208.2412 663.8062)" font-family="'SourceSansPro-Regular'" font-size="14">44</text>
+	</g>
+	<g id="s45">
+		
+			<circle id="c45" fill="#BFBFBF" stroke="#656565" stroke-width="0.5" stroke-miterlimit="10" cx="175.547" cy="659.016" r="11.327"/>
+		<text id="n45" transform="matrix(1 0 0 1 168.2407 663.8062)" font-family="'SourceSansPro-Regular'" font-size="14">45</text>
+	</g>
+	<g id="s46">
+		
+			<circle id="c46" fill="#BFBFBF" stroke="#656565" stroke-width="0.5" stroke-miterlimit="10" cx="135.546" cy="659.016" r="11.327"/>
+		<text id="n46" transform="matrix(1 0 0 1 127.7959 663.8062)" font-family="'SourceSansPro-Regular'" font-size="14">46</text>
+	</g>
+	<g id="s51">
+		
+			<circle id="c51" fill="#BFBFBF" stroke="#656565" stroke-width="0.5" stroke-miterlimit="10" cx="135.545" cy="698.474" r="11.327"/>
+		<text id="n51" transform="matrix(1 0 0 1 128.9614 702.5122)" font-family="'SourceSansPro-Regular'" font-size="14">51</text>
+	</g>
+	<g id="s52">
+		
+			<circle id="c52" fill="#BFBFBF" stroke="#656565" stroke-width="0.5" stroke-miterlimit="10" cx="175.546" cy="698.474" r="11.327"/>
+		<text id="n52" transform="matrix(1 0 0 1 168.335 702.5122)" font-family="'SourceSansPro-Regular'" font-size="14">52</text>
+	</g>
+	<g id="s53">
+		
+			<circle id="c53" fill="#BFBFBF" stroke="#656565" stroke-width="0.5" stroke-miterlimit="10" cx="215.545" cy="698.474" r="11.327"/>
+		<text id="n53" transform="matrix(1 0 0 1 208.7402 702.5122)" font-family="'SourceSansPro-Regular'" font-size="14">53</text>
+	</g>
+	<g id="s54">
+		
+			<circle id="c54" fill="#BFBFBF" stroke="#656565" stroke-width="0.5" stroke-miterlimit="10" cx="215.545" cy="752.001" r="11.327"/>
+		<text id="n54" transform="matrix(1 0 0 1 208.4053 756.6079)" font-family="'SourceSansPro-Regular'" font-size="14">54</text>
+	</g>
+	<g id="s55">
+		
+			<circle id="c55" fill="#BFBFBF" stroke="#656565" stroke-width="0.5" stroke-miterlimit="10" cx="175.546" cy="752.001" r="11.327"/>
+		<text id="n55" transform="matrix(1 0 0 1 168.334 756.6079)" font-family="'SourceSansPro-Regular'" font-size="14">55</text>
+	</g>
+	<g id="s56">
+		
+			<circle id="c56" fill="#BFBFBF" stroke="#656565" stroke-width="0.5" stroke-miterlimit="10" cx="135.545" cy="752.001" r="11.327"/>
+		<text id="n56" transform="matrix(1 0 0 1 128.334 756.6079)" font-family="'SourceSansPro-Regular'" font-size="14">56</text>
+	</g>
+	<g id="s61">
+		
+			<circle id="c61" fill="#BFBFBF" stroke="#656565" stroke-width="0.5" stroke-miterlimit="10" cx="135.506" cy="792.046" r="11.328"/>
+		<text id="n61" transform="matrix(1 0 0 1 128.334 796.0854)" font-family="'SourceSansPro-Regular'" font-size="14">61</text>
+	</g>
+	<g id="s62">
+		
+			<circle id="c62" fill="#BFBFBF" stroke="#656565" stroke-width="0.5" stroke-miterlimit="10" cx="175.507" cy="792.046" r="11.328"/>
+		<text id="n62" transform="matrix(1 0 0 1 168.334 796.0854)" font-family="'SourceSansPro-Regular'" font-size="14">62</text>
+	</g>
+	<g id="s63">
+		
+			<circle id="c63" fill="#BFBFBF" stroke="#656565" stroke-width="0.5" stroke-miterlimit="10" cx="215.506" cy="792.046" r="11.328"/>
+		<text id="n63" transform="matrix(1 0 0 1 208.2402 796.0854)" font-family="'SourceSansPro-Regular'" font-size="14">63</text>
+	</g>
+	<g id="s64">
+		
+			<circle id="c64" fill="#BFBFBF" stroke="#656565" stroke-width="0.5" stroke-miterlimit="10" cx="215.505" cy="1031.045" r="11.327"/>
+		<text id="n64" transform="matrix(1 0 0 1 208.3506 1035.8306)" font-family="'SourceSansPro-Regular'" font-size="14">64</text>
+	</g>
+	<g id="s65">
+		
+			<circle id="c65" fill="#BFBFBF" stroke="#656565" stroke-width="0.5" stroke-miterlimit="10" cx="175.507" cy="1031.045" r="11.327"/>
+		<text id="n65" transform="matrix(1 0 0 1 168.334 1035.8306)" font-family="'SourceSansPro-Regular'" font-size="14">65</text>
+	</g>
+	<g id="s66">
+		
+			<circle id="c66" fill="#BFBFBF" stroke="#656565" stroke-width="0.5" stroke-miterlimit="10" cx="135.506" cy="1031.045" r="11.327"/>
+		<text id="n66" transform="matrix(1 0 0 1 128.0869 1035.8306)" font-family="'SourceSansPro-Regular'" font-size="14">66</text>
+	</g>
+</g>
+</svg>

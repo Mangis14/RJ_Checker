@@ -1,0 +1,550 @@
+[
+ {
+  "carrierId": 5044895002,
+  "connectionCode": "RJ 1021",
+  "connectionId": 8185010074,
+  "direction": "there",
+  "fromCityName": "Praha",
+  "stations": [
+   {
+    "arrival": "",
+    "departure": "21:46:00.000",
+    "index": 1,
+    "platform": "",
+    "stationId": 372825000,
+    "symbols": []
+   },
+   {
+    "arrival": "22:43:00.000",
+    "departure": "22:45:00.000",
+    "index": 2,
+    "platform": "",
+    "stationId": 372825002,
+    "symbols": [
+     ")"
+    ]
+   },
+   {
+    "arrival": "",
+    "departure": "",
+    "index": 3,
+    "platform": "",
+    "stationId": 1313142000,
+    "symbols": [
+     "<"
+    ]
+   },
+   {
+    "arrival": "",
+    "departure": "",
+    "index": 4,
+    "platform": "",
+    "stationId": 372825004,
+    "symbols": [
+     "<"
+    ]
+   },
+   {
+    "arrival": "00:03:00.000",
+    "departure": "00:06:00.000",
+    "index": 5,
+    "platform": "",
+    "stationId": 372825005,
+    "symbols": [
+     ")"
+    ]
+   },
+   {
+    "arrival": "",
+    "departure": "",
+    "index": 6,
+    "platform": "",
+    "stationId": 372825006,
+    "symbols": [
+     "<"
+    ]
+   },
+   {
+    "arrival": "01:01:00.000",
+    "departure": "01:03:00.000",
+    "index": 7,
+    "platform": "",
+    "stationId": 372825007,
+    "symbols": [
+     ")"
+    ]
+   },
+   {
+    "arrival": "",
+    "departure": "",
+    "index": 8,
+    "platform": "",
+    "stationId": 3741302004,
+    "symbols": [
+     "<"
+    ]
+   },
+   {
+    "arrival": "01:09:00.000",
+    "departure": "01:11:00.000",
+    "index": 9,
+    "platform": "",
+    "stationId": 372825008,
+    "symbols": [
+     ")"
+    ]
+   },
+   {
+    "arrival": "",
+    "departure": "",
+    "index": 10,
+    "platform": "",
+    "stationId": 4961583004,
+    "symbols": [
+     "<"
+    ]
+   },
+   {
+    "arrival": "",
+    "departure": "",
+    "index": 11,
+    "platform": "",
+    "stationId": 372825009,
+    "symbols": [
+     "<"
+    ]
+   },
+   {
+    "arrival": "01:28:00.000",
+    "departure": "01:31:00.000",
+    "index": 12,
+    "platform": "",
+    "stationId": 372825010,
+    "symbols": [
+     ")"
+    ]
+   },
+   {
+    "arrival": "",
+    "departure": "",
+    "index": 13,
+    "platform": "",
+    "stationId": 508812001,
+    "symbols": [
+     "<"
+    ]
+   },
+   {
+    "arrival": "",
+    "departure": "",
+    "index": 14,
+    "platform": "",
+    "stationId": 1313142001,
+    "symbols": [
+     "<"
+    ]
+   },
+   {
+    "arrival": "",
+    "departure": "",
+    "index": 15,
+    "platform": "",
+    "stationId": 1313142002,
+    "symbols": [
+     "<"
+    ]
+   },
+   {
+    "arrival": "",
+    "departure": "",
+    "index": 16,
+    "platform": "",
+    "stationId": 1558071000,
+    "symbols": [
+     "<"
+    ]
+   },
+   {
+    "arrival": "02:14:00.000",
+    "departure": "02:17:00.000",
+    "index": 17,
+    "platform": "",
+    "stationId": 508812003,
+    "symbols": [
+     ")"
+    ]
+   },
+   {
+    "arrival": "02:41:00.000",
+    "departure": "02:44:00.000",
+    "index": 18,
+    "platform": "",
+    "stationId": 508812004,
+    "symbols": [
+     ")"
+    ]
+   },
+   {
+    "arrival": "03:03:00.000",
+    "departure": "03:04:00.000",
+    "index": 19,
+    "platform": "",
+    "stationId": 1763018000,
+    "symbols": [
+     ")"
+    ]
+   },
+   {
+    "arrival": "03:29:00.000",
+    "departure": "03:30:00.000",
+    "index": 20,
+    "platform": "",
+    "stationId": 1763018001,
+    "symbols": [
+     ")"
+    ]
+   },
+   {
+    "arrival": "03:50:00.000",
+    "departure": "03:51:00.000",
+    "index": 21,
+    "platform": "",
+    "stationId": 1763018002,
+    "symbols": [
+     ")"
+    ]
+   },
+   {
+    "arrival": "04:18:00.000",
+    "departure": "04:19:00.000",
+    "index": 22,
+    "platform": "",
+    "stationId": 1763018003,
+    "symbols": [
+     ")"
+    ]
+   },
+   {
+    "arrival": "04:32:00.000",
+    "departure": "04:34:00.000",
+    "index": 23,
+    "platform": "",
+    "stationId": 1763018004,
+    "symbols": [
+     ")"
+    ]
+   },
+   {
+    "arrival": "04:57:00.000",
+    "departure": "05:00:00.000",
+    "index": 24,
+    "platform": "",
+    "stationId": 1763018005,
+    "symbols": [
+     ")"
+    ]
+   },
+   {
+    "arrival": "05:40:00.000",
+    "departure": "05:41:00.000",
+    "index": 25,
+    "platform": "",
+    "stationId": 2317717000,
+    "symbols": [
+     ")"
+    ]
+   },
+   {
+    "arrival": "05:54:00.000",
+    "departure": "05:56:00.000",
+    "index": 26,
+    "platform": "",
+    "stationId": 1763018006,
+    "symbols": [
+     ")"
+    ]
+   },
+   {
+    "arrival": "06:12:00.000",
+    "departure": "06:46:00.000",
+    "index": 27,
+    "platform": "",
+    "stationId": 1763018007,
+    "symbols": [
+     ")"
+    ]
+   },
+   {
+    "arrival": "10:38:00.000",
+    "departure": "",
+    "index": 28,
+    "platform": "",
+    "stationId": 7122901004,
+    "symbols": []
+   }
+  ],
+  "timetableId": 8185007005,
+  "toCityName": "Čop",
+  "validFrom": "2025-12-14",
+  "validTo": "2026-12-12"
+ },
+ {
+  "carrierId": 5044895002,
+  "connectionCode": "RJ 1021",
+  "connectionId": 8185010002,
+  "direction": "there",
+  "fromCityName": "Praha",
+  "stations": [
+   {
+    "arrival": "",
+    "departure": "",
+    "index": 1,
+    "platform": "",
+    "stationId": 7434585001,
+    "symbols": [
+     "<"
+    ]
+   },
+   {
+    "arrival": "",
+    "departure": "21:45:00.000",
+    "index": 2,
+    "platform": "",
+    "stationId": 372825000,
+    "symbols": []
+   },
+   {
+    "arrival": "22:43:00.000",
+    "departure": "22:45:00.000",
+    "index": 3,
+    "platform": "",
+    "stationId": 372825002,
+    "symbols": []
+   },
+   {
+    "arrival": "",
+    "departure": "",
+    "index": 4,
+    "platform": "",
+    "stationId": 1313142000,
+    "symbols": [
+     "<"
+    ]
+   },
+   {
+    "arrival": "",
+    "departure": "",
+    "index": 5,
+    "platform": "",
+    "stationId": 372825004,
+    "symbols": [
+     "<"
+    ]
+   },
+   {
+    "arrival": "00:03:00.000",
+    "departure": "00:06:00.000",
+    "index": 6,
+    "platform": "",
+    "stationId": 372825005,
+    "symbols": []
+   },
+   {
+    "arrival": "",
+    "departure": "",
+    "index": 7,
+    "platform": "",
+    "stationId": 372825006,
+    "symbols": [
+     "<"
+    ]
+   },
+   {
+    "arrival": "01:01:00.000",
+    "departure": "01:03:00.000",
+    "index": 8,
+    "platform": "",
+    "stationId": 372825007,
+    "symbols": []
+   },
+   {
+    "arrival": "",
+    "departure": "",
+    "index": 9,
+    "platform": "",
+    "stationId": 3741302004,
+    "symbols": [
+     "<"
+    ]
+   },
+   {
+    "arrival": "01:09:00.000",
+    "departure": "01:11:00.000",
+    "index": 10,
+    "platform": "",
+    "stationId": 372825008,
+    "symbols": []
+   },
+   {
+    "arrival": "",
+    "departure": "",
+    "index": 11,
+    "platform": "",
+    "stationId": 4961583004,
+    "symbols": [
+     "<"
+    ]
+   },
+   {
+    "arrival": "",
+    "departure": "",
+    "index": 12,
+    "platform": "",
+    "stationId": 372825009,
+    "symbols": [
+     "<"
+    ]
+   },
+   {
+    "arrival": "01:28:00.000",
+    "departure": "01:31:00.000",
+    "index": 13,
+    "platform": "",
+    "stationId": 372825010,
+    "symbols": []
+   },
+   {
+    "arrival": "",
+    "departure": "",
+    "index": 14,
+    "platform": "",
+    "stationId": 508812001,
+    "symbols": [
+     "<"
+    ]
+   },
+   {
+    "arrival": "",
+    "departure": "",
+    "index": 15,
+    "platform": "",
+    "stationId": 1313142001,
+    "symbols": [
+     "<"
+    ]
+   },
+   {
+    "arrival": "",
+    "departure": "",
+    "index": 16,
+    "platform": "",
+    "stationId": 1313142002,
+    "symbols": [
+     "<"
+    ]
+   },
+   {
+    "arrival": "",
+    "departure": "",
+    "index": 17,
+    "platform": "",
+    "stationId": 1558071000,
+    "symbols": [
+     "<"
+    ]
+   },
+   {
+    "arrival": "02:14:00.000",
+    "departure": "02:17:00.000",
+    "index": 18,
+    "platform": "",
+    "stationId": 508812003,
+    "symbols": []
+   },
+   {
+    "arrival": "02:41:00.000",
+    "departure": "02:44:00.000",
+    "index": 19,
+    "platform": "",
+    "stationId": 508812004,
+    "symbols": []
+   },
+   {
+    "arrival": "03:03:00.000",
+    "departure": "03:04:00.000",
+    "index": 20,
+    "platform": "",
+    "stationId": 1763018000,
+    "symbols": []
+   },
+   {
+    "arrival": "03:29:00.000",
+    "departure": "03:30:00.000",
+    "index": 21,
+    "platform": "",
+    "stationId": 1763018001,
+    "symbols": []
+   },
+   {
+    "arrival": "03:50:00.000",
+    "departure": "03:51:00.000",
+    "index": 22,
+    "platform": "",
+    "stationId": 1763018002,
+    "symbols": []
+   },
+   {
+    "arrival": "04:18:00.000",
+    "departure": "04:19:00.000",
+    "index": 23,
+    "platform": "",
+    "stationId": 1763018003,
+    "symbols": []
+   },
+   {
+    "arrival": "04:32:00.000",
+    "departure": "04:34:00.000",
+    "index": 24,
+    "platform": "",
+    "stationId": 1763018004,
+    "symbols": []
+   },
+   {
+    "arrival": "04:57:00.000",
+    "departure": "05:00:00.000",
+    "index": 25,
+    "platform": "",
+    "stationId": 1763018005,
+    "symbols": []
+   },
+   {
+    "arrival": "05:40:00.000",
+    "departure": "05:41:00.000",
+    "index": 26,
+    "platform": "",
+    "stationId": 2317717000,
+    "symbols": []
+   },
+   {
+    "arrival": "05:54:00.000",
+    "departure": "05:56:00.000",
+    "index": 27,
+    "platform": "",
+    "stationId": 1763018006,
+    "symbols": []
+   },
+   {
+    "arrival": "06:12:00.000",
+    "departure": "",
+    "index": 28,
+    "platform": "",
+    "stationId": 1763018007,
+    "symbols": []
+   }
+  ],
+  "timetableId": 8185007001,
+  "toCityName": "Košice",
+  "validFrom": "2025-12-14",
+  "validTo": "2026-12-12"
+ }
+]
