@@ -76,6 +76,24 @@ class CoachLayout internal constructor(
      * spolahlivo. Vtedy je lepsie priznat viac kandidatov ako tvrdit jedno
      * nespravne miesto.
      */
+    /**
+     * S kolkymi miestami dane sedadlo delis priestor.
+     *
+     * Stvorica otocena k sebe znamena v praxi stolik - vo velkopriestorovom
+     * vozni je medzi takymi miestami vzdy. Rozhoduje velkost oddielu, takze
+     * vysledok je taky spolahlivy ako odvodena topologia.
+     */
+    fun seatKind(seat: Int): SeatKind {
+        if (seat !in positions) return SeatKind.UNKNOWN
+        return when (bay(seat).size) {
+            1 -> SeatKind.SINGLE
+            2 -> SeatKind.PAIR
+            3 -> SeatKind.UNKNOWN         // 3 v oddiele nesedi na ziadny typ
+            4 -> SeatKind.TABLE_QUAD
+            else -> SeatKind.COMPARTMENT
+        }
+    }
+
     fun confidence(seat: Int): Confidence = when {
         seatBay[seat] != null -> Confidence.CERTAIN
         aisleAfterColumn == null && nextTo(seat).size > 1 -> Confidence.UNCERTAIN

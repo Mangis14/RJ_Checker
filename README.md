@@ -122,8 +122,14 @@ miesto vo vozni 7" človeku nepovie, kam si má sadnúť. Preto si snapshot pam�
 celý zoznam voľných miest vo vozni, nie len ich počet. Klepnutie otvorí appku
 priamo na analýze sledovaného miesta.
 
-Priorita je: zmena na **susedných** miestach (to je to, na čo sa používateľ pýta),
-až potom ostatné miesta vo vozni.
+Priorita je: **celý uvoľnený oddiel** (najsilnejší signál — dá sa presunúť
+a cestovať sám), potom zmena na **susedných** miestach, až potom ostatné miesta
+vo vozni.
+
+Sledovať sa dá **viac spojov naraz** — cesta tam aj späť, alebo dva kandidátske
+vlaky. Každý má vlastný snapshot, takže sa zmeny hlásia nezávisle a prvé kolo
+daného spoja nehlási nič. Notifikácie majú vlastné ID podľa spoja, takže si
+navzájom neprepisujú.
 
 ### Build APK
 

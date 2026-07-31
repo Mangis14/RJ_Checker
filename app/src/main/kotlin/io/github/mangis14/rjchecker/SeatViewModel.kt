@@ -12,6 +12,7 @@ import io.github.mangis14.rjchecker.core.SeatPick
 import io.github.mangis14.rjchecker.core.SeatSnapshot
 import io.github.mangis14.rjchecker.core.StationRef
 import io.github.mangis14.rjchecker.core.TrainOption
+import io.github.mangis14.rjchecker.core.WatchedTrip
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
@@ -62,8 +63,8 @@ data class UiState(
     val recommendations: List<SeatPick> = emptyList(),
     val seatClassTitles: Map<String, String> = emptyMap(),
     val watching: Boolean = false,
-    /** ulozeny sledovany spoj - da sa k nemu vratit jednym klepnutim */
-    val savedTrip: WatchedTrip? = null,
+    /** sledovane spoje - da sa k nim vratit jednym klepnutim */
+    val watchedTrips: List<WatchedTrip> = emptyList(),
     /** true = plna analyza (vsetky zastavky) uz prebehla */
     val fullScanDone: Boolean = false,
 )
@@ -95,7 +96,8 @@ class SeatViewModel(app: Application) : AndroidViewModel(app) {
             withContext(Dispatchers.IO) { client.stations() to client.seatClassTitles() }
         }.onSuccess { (stations, titles) ->
             stationNames = stations.associate { it.id to it.name }
-            val saved = prefs.load()
+            val watched = prefs.trips()
+            val saved = watched.lastOrNull()
             _state.update {
                 it.copy(
                     busy = false,
@@ -107,8 +109,7 @@ class SeatViewModel(app: Application) : AndroidViewModel(app) {
                     to = stations.firstOrNull { s -> s.id == (saved?.toId ?: 1763018007L) }
                         ?: stations.firstOrNull { s -> s.id == 1763018007L },
                     date = saved?.date ?: it.date,
-                    watching = saved != null,
-                    savedTrip = saved,
+                    watchedTrips = watched,
                 )
             }
         }.onFailure { fail(it) }
@@ -250,6 +251,8 @@ class SeatViewModel(app: Application) : AndroidViewModel(app) {
         _state.update {
             it.copy(seat = seat, step = Step.RESULT, busy = true, progress = "citam vozen")
         }
+        // stav tlacitka "Sledovat" musi zodpovedat prave zobrazenemu miestu
+        _state.update { it.copy(watching = isCurrentWatched()) }
 
         // Pozor: analyseSeat si dotahuje SVG layout vozna, takze MUSI bezat na IO -
         // na main threade by to skoncilo NetworkOnMainThreadException.
@@ -285,49 +288,77 @@ class SeatViewModel(app: Application) : AndroidViewModel(app) {
                     recommendations = picks, fullScanDone = true,
                 )
             }
-            analysis?.let { prefs.saveSnapshot(snapshotOf(it, full, coach)) }
+            analysis?.let { prefs.saveSnapshotIfWatched(it, full, coach, currentTrip()) }
         }.onFailure { fail(it) }
     }
 
-    /**
-     * Stav na porovnanie v dalsom kole sledovania. Drzi aj cely zoznam volnych
-     * miest vo vozni, aby notifikacia vedela povedat, KTORE miesto sa uvolnilo.
-     */
-    private fun snapshotOf(analysis: SeatAnalysis, journey: Journey, coach: Int): SeatSnapshot =
-        SeatSnapshot.of(
-            analysis = analysis,
-            coachFreeSeats = journey.stops.firstOrNull()
-                ?.section?.vehicle(coach)?.decks?.firstOrNull()
-                ?.freeSeats?.toSet() ?: emptySet(),
-        )
-
-    fun toggleWatching() {
+    /** Spoj poskladany z aktualneho vyberu, alebo null ak nie je co sledovat. */
+    private fun currentTrip(): WatchedTrip? {
         val s = _state.value
-        val app = getApplication<Application>()
-        if (s.watching) {
-            WatchWorker.cancel(app)
-            prefs.clear()
-            _state.update { it.copy(watching = false, savedTrip = null) }
-            return
-        }
-        val from = s.from ?: return
-        val to = s.to ?: return
-        val train = s.train ?: return
-        val coach = s.coach ?: return
-        val seat = s.seat ?: return
-        val trip = WatchedTrip(
-            date = s.date, fromId = from.id, toId = to.id,
-            fromName = from.name, toName = to.name,
-            routeId = train.routeId, departure = train.departure,
-            coach = coach, seat = seat,
+        return WatchedTrip(
+            date = s.date,
+            fromId = s.from?.id ?: return null,
+            toId = s.to?.id ?: return null,
+            fromName = s.from?.name ?: return null,
+            toName = s.to?.name ?: return null,
+            routeId = s.train?.routeId ?: return null,
+            departure = s.train?.departure ?: return null,
+            coach = s.coach ?: return null,
+            seat = s.seat ?: return null,
         )
-        prefs.save(trip)
-        _state.update { it.copy(savedTrip = trip) }
-        val current = journey
-        s.analysis?.let { if (current != null) prefs.saveSnapshot(snapshotOf(it, current, coach)) }
-        WatchWorker.schedule(app)
-        _state.update { it.copy(watching = true) }
     }
+
+    /**
+     * Stav na porovnanie v dalsom kole. Drzi zoznam volnych miest vo vozni aj
+     * prazdne oddiely, aby notifikacia vedela povedat KTORE miesto sa uvolnilo
+     * a ci sa neuvolnilo cele kupe.
+     */
+    private fun TripPrefs.saveSnapshotIfWatched(
+        analysis: SeatAnalysis,
+        journey: Journey,
+        coach: Int,
+        trip: WatchedTrip?,
+    ) {
+        if (trip == null || !isWatching(trip.id)) return
+        saveSnapshot(
+            trip.id,
+            SeatSnapshot.of(
+                analysis = analysis,
+                coachFreeSeats = journey.stops.firstOrNull()
+                    ?.section?.vehicle(coach)?.decks?.firstOrNull()
+                    ?.freeSeats?.toSet() ?: emptySet(),
+                emptyBays = journey.emptyBaysInCoach(coach),
+            ),
+        )
+    }
+
+    /** Zapne alebo vypne sledovanie prave zobrazeneho miesta. */
+    fun toggleWatching() {
+        val app = getApplication<Application>()
+        val trip = currentTrip() ?: return
+        if (prefs.isWatching(trip.id)) {
+            prefs.removeTrip(trip.id)
+            if (prefs.trips().isEmpty()) WatchWorker.cancel(app)
+        } else {
+            prefs.addTrip(trip)
+            val current = journey
+            _state.value.analysis?.let {
+                if (current != null) prefs.saveSnapshotIfWatched(it, current, trip.coach, trip)
+            }
+            WatchWorker.schedule(app)
+        }
+        _state.update { it.copy(watchedTrips = prefs.trips(), watching = isCurrentWatched()) }
+    }
+
+    /** Odobranie spoja zo zoznamu sledovanych. */
+    fun stopWatching(tripId: String) {
+        prefs.removeTrip(tripId)
+        if (prefs.trips().isEmpty()) WatchWorker.cancel(getApplication())
+        _state.update { it.copy(watchedTrips = prefs.trips(), watching = isCurrentWatched()) }
+    }
+
+    /** Sledujeme prave zobrazene miesto? */
+    fun isCurrentWatched(): Boolean = currentTrip()?.let { prefs.isWatching(it.id) } ?: false
 
     /**
      * Otvori sledovany spoj a miesto - vola sa po kliknuti na notifikaciu.
@@ -335,8 +366,12 @@ class SeatViewModel(app: Application) : AndroidViewModel(app) {
      * Spoj netreba znovu vyhladavat, routeId aj cas su ulozene, takze sa
      * poskladaju priamo a ide sa hned na analyzu miesta.
      */
-    fun openWatchedTrip(coach: Int, seat: Int) {
-        val trip = prefs.load() ?: return
+    fun openWatchedTrip(coach: Int, seat: Int, tripId: String? = null) {
+        val trips = prefs.trips()
+        val trip = trips.firstOrNull { it.id == tripId }
+            ?: trips.firstOrNull { it.coach == coach && it.seat == seat }
+            ?: trips.lastOrNull()
+            ?: return
         _state.update {
             it.copy(
                 date = trip.date,
@@ -349,7 +384,7 @@ class SeatViewModel(app: Application) : AndroidViewModel(app) {
                     departureIso = "",
                     freeSeats = 0,
                 ),
-                coach = coach,
+                coach = trip.coach,
                 trains = emptyList(),
                 quickSection = null,
                 watching = true,
@@ -357,7 +392,7 @@ class SeatViewModel(app: Application) : AndroidViewModel(app) {
             )
         }
         journey = null              // stary spoj by dal nespravnu analyzu
-        selectSeat(seat)
+        selectSeat(trip.seat)
     }
 
     fun decksOf(coach: Int): Deck? =

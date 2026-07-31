@@ -71,6 +71,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import io.github.mangis14.rjchecker.core.ComfortSummary
 import io.github.mangis14.rjchecker.core.Confidence
 import io.github.mangis14.rjchecker.core.SeatFlag
+import io.github.mangis14.rjchecker.core.SeatKind
 import io.github.mangis14.rjchecker.core.StationRef
 import java.time.LocalDate
 import java.time.format.TextStyle as JavaTextStyle
@@ -314,24 +315,32 @@ private fun PickTrip(state: UiState, vm: SeatViewModel) {
         contentPadding = PaddingValues(top = 12.dp, bottom = 24.dp),
         verticalArrangement = Arrangement.spacedBy(12.dp),
     ) {
-        // Sledovany spoj sa da otvorit jednym klepnutim - netreba znovu
-        // prechadzat vyber trasy, spoja a miesta.
-        state.savedTrip?.let { trip ->
+        // Sledovane spoje sa daju otvorit jednym klepnutim - netreba znovu
+        // prechadzat vyber trasy, spoja a miesta. Moze ich byt viac naraz
+        // (cesta tam aj spat, alebo dva kandidatske vlaky).
+        if (state.watchedTrips.isNotEmpty()) {
             item {
+                Text(
+                    if (state.watchedTrips.size == 1) "Sleduješ" else "Sleduješ ${state.watchedTrips.size} spoje",
+                    style = MaterialTheme.typography.titleMedium,
+                )
+            }
+            items(state.watchedTrips, key = { it.id }) { trip ->
                 Card(
                     Modifier
                         .fillMaxWidth()
-                        .clickable { vm.openWatchedTrip(trip.coach, trip.seat) },
+                        .clickable { vm.openWatchedTrip(trip.coach, trip.seat, trip.id) },
                     shape = RoundedCornerShape(14.dp),
                     colors = CardDefaults.cardColors(containerColor = RjYellow),
                 ) {
                     Row(
-                        Modifier.padding(16.dp).fillMaxWidth(),
+                        Modifier.padding(start = 16.dp, top = 12.dp, end = 8.dp, bottom = 12.dp)
+                            .fillMaxWidth(),
                         verticalAlignment = Alignment.CenterVertically,
                     ) {
                         Column(Modifier.weight(1f)) {
                             Text(
-                                "Sleduješ vozeň ${trip.coach}, miesto ${trip.seat}",
+                                trip.label,
                                 style = MaterialTheme.typography.titleMedium,
                                 color = RjInk,
                             )
@@ -341,10 +350,14 @@ private fun PickTrip(state: UiState, vm: SeatViewModel) {
                                 color = RjInk.copy(alpha = 0.8f),
                             )
                         }
-                        Text("›", fontSize = 24.sp, color = RjInk)
+                        TextButton(
+                            onClick = { vm.stopWatching(trip.id) },
+                            modifier = Modifier.heightIn(min = TapTarget),
+                        ) { Text("Zrušiť", color = RjInk) }
                     }
                 }
             }
+            item { HorizontalDivider(color = MaterialTheme.colorScheme.outline.copy(alpha = 0.3f)) }
         }
 
         item { StationPicker("Odkiaľ", state.from, state.stations) { vm.setFrom(it) } }
@@ -455,7 +468,7 @@ private fun PickTrain(state: UiState, vm: SeatViewModel) {
                     Spacer(Modifier.height(10.dp))
                     HorizontalDivider(color = MaterialTheme.colorScheme.outline.copy(alpha = 0.3f))
                     Spacer(Modifier.height(10.dp))
-                    ComfortRow(state.comfort[train.routeId], state.comfortLoading)
+                    ComfortRow(state.comfort[train.routeId], state.comfortLoading, state.seatClassTitles)
                 }
             }
         }
@@ -464,7 +477,11 @@ private fun PickTrain(state: UiState, vm: SeatViewModel) {
 
 /** Odporucenie pohodlia priamo v zozname spojov. */
 @Composable
-private fun ComfortRow(comfort: ComfortSummary?, loading: Boolean) {
+private fun ComfortRow(
+    comfort: ComfortSummary?,
+    loading: Boolean,
+    classTitles: Map<String, String>,
+) {
     if (comfort == null) {
         Row(verticalAlignment = Alignment.CenterVertically) {
             if (loading) {
@@ -489,6 +506,23 @@ private fun ComfortRow(comfort: ComfortSummary?, loading: Boolean) {
             }
             if (comfort.emptyCompartments == 0 && comfort.emptyPairs == 0) {
                 Badge("nikde celý oddiel voľný", RjSeatTaken)
+            }
+        }
+        // Rozpad volnych miest po triedach a typoch sedadiel - "Relax 12 (4
+        // samostatné, 8 dvojica)" povie viac ako samotne cislo.
+        if (comfort.byClass.isNotEmpty()) {
+            Spacer(Modifier.height(8.dp))
+            comfort.byClass.forEach { row ->
+                val kinds = row.byKind.entries
+                    .sortedByDescending { it.value }
+                    .joinToString(", ") { "${it.value}× ${kindShort(it.key)}" }
+                Text(
+                    "${classTitles[row.seatClass] ?: row.seatClass}: ${row.freeSeats} voľných" +
+                        if (kinds.isNotEmpty()) "  ($kinds)" else "",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    modifier = Modifier.padding(top = 1.dp),
+                )
             }
         }
         comfort.best?.let { best ->
@@ -785,7 +819,7 @@ private fun ResultScreen(state: UiState, vm: SeatViewModel) {
                             fontWeight = FontWeight.Medium,
                         )
                         Text(
-                            (if (pick.isCompartment) "kupé " else "dvojica ") +
+                            seatKindLabel(pick.kind, pick.confidence) +
                                 pick.bay.joinToString(", ") + " · " + status,
                             style = MaterialTheme.typography.bodySmall,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
@@ -824,6 +858,29 @@ private fun ResultScreen(state: UiState, vm: SeatViewModel) {
             }
         }
     }
+}
+
+/**
+ * Popisok typu sedadla. Pri neistej topologii (Relax Bm3xx) sa typ NEUVADZA -
+ * radsej chybajuci detail ako vymysleny.
+ */
+private fun seatKindLabel(kind: SeatKind, confidence: Confidence): String {
+    if (confidence == Confidence.UNCERTAIN) return "miesta "
+    return when (kind) {
+        SeatKind.SINGLE -> "samostatné "
+        SeatKind.PAIR -> "dvojica "
+        SeatKind.TABLE_QUAD -> "štvorica so stolíkom "
+        SeatKind.COMPARTMENT -> "kupé "
+        SeatKind.UNKNOWN -> "miesta "
+    }
+}
+
+private fun kindShort(kind: SeatKind): String = when (kind) {
+    SeatKind.SINGLE -> "samostatné"
+    SeatKind.PAIR -> "dvojica"
+    SeatKind.TABLE_QUAD -> "stolík"
+    SeatKind.COMPARTMENT -> "kupé"
+    SeatKind.UNKNOWN -> "ostatné"
 }
 
 private fun flagLabel(flag: SeatFlag): String = when (flag) {

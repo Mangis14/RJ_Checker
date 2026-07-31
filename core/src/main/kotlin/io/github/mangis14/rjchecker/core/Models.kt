@@ -45,6 +45,29 @@ data class FreeSeatsSection(
 /** Nakolko sa da odvodene susedstvo brat ako iste. */
 enum class Confidence { CERTAIN, UNCERTAIN }
 
+/**
+ * Typ sedadla podla toho, s kolkymi miestami ho delis.
+ *
+ * Odvodzuje sa z topologie vozna, nie z API. Priznak "miesto pri stoliku"
+ * posiela RegioJet len pri vozni Astra a aj tam len ako upozornenie na chybajucu
+ * obrazovku, takze ako vseobecny marker stolika sa pouzit neda.
+ */
+enum class SeatKind {
+    /** samostatne miesto, nikto vedla (napr. strana 1 vo vozni Relax 2+1) */
+    SINGLE,
+
+    /** dvojica vedla seba */
+    PAIR,
+
+    /** stvorica otocena k sebe - v tomto priestore je zvycajne stolik */
+    TABLE_QUAD,
+
+    /** kupe pre 5 a viac */
+    COMPARTMENT,
+
+    UNKNOWN,
+}
+
 /** Odkial sa vzalo rozdelenie na oddiely. */
 enum class BaySource { SEAT_NUMBERING, ROW_GEOMETRY, NONE }
 

@@ -40,6 +40,10 @@ data class SeatPick(
     val emptyFrom: JourneyStop?,
     val flags: Set<SeatFlag>,
     val isCompartment: Boolean,
+    /** samostatne / dvojica / stvorica so stolikom / kupe */
+    val kind: SeatKind = SeatKind.UNKNOWN,
+    /** UNCERTAIN = layout vozna sa necita spolahlivo, typ neuvadzat */
+    val confidence: Confidence = Confidence.CERTAIN,
 )
 
 /**
@@ -55,6 +59,20 @@ data class ComfortSummary(
     /** dvojice vo velkopriestorovom vozni, kde su volne obe miesta */
     val emptyPairs: Int,
     val best: SeatPick?,
+    /** volne miesta po triedach (Relax, Low cost, Standard, Business) */
+    val byClass: List<ClassAvailability> = emptyList(),
+)
+
+/**
+ * Volne miesta jednej triedy, rozpadnute podla typu sedadla.
+ *
+ * Zobrazuje sa pri vybere spoja: "Relax 12 volnych (4 samostatne, 8 dvojice)"
+ * povie viac ako samotne cislo.
+ */
+data class ClassAvailability(
+    val seatClass: String,
+    val freeSeats: Int,
+    val byKind: Map<SeatKind, Int>,
 )
 
 /**
@@ -69,6 +87,38 @@ class Journey(val stops: List<JourneyStop>) {
 
     /** Layouty voznov dodava volajuci - core modul sam po sieti nesiaha. */
     var layoutProvider: (Deck) -> CoachLayout? = { null }
+
+    /**
+     * Volne miesta rozpadnute na triedy a typy sedadiel.
+     *
+     * Trieda ide z API (vehicle.seatClasses), typ sedadla z topologie vozna.
+     * Kde sa layout nepodari precitat, miesta sa do sumy triedy zapocitaju,
+     * ale bez typu - radsej chybajuci detail ako vymysleny.
+     */
+    fun availabilityByClass(): List<ClassAvailability> {
+        val start = firstStop() ?: return emptyList()
+        val free = HashMap<String, Int>()
+        val kinds = HashMap<String, MutableMap<SeatKind, Int>>()
+
+        for (vehicle in start.section.vehicles) {
+            val deck = vehicle.decks.firstOrNull() ?: continue
+            // vozen moze hlasit viac tried; miesto sa priradi tej svojej, inak prvej
+            val fallback = vehicle.seatClasses.firstOrNull() ?: continue
+            val layout = layoutOf(deck)
+            for (seat in deck.seats.filter { it.free }) {
+                val cls = seat.seatClass?.takeIf { it in vehicle.seatClasses } ?: fallback
+                free[cls] = (free[cls] ?: 0) + 1
+                val kind = layout?.seatKind(seat.index) ?: SeatKind.UNKNOWN
+                if (kind != SeatKind.UNKNOWN) {
+                    val perKind = kinds.getOrPut(cls) { HashMap() }
+                    perKind[kind] = (perKind[kind] ?: 0) + 1
+                }
+            }
+        }
+        return free.map { (cls, count) ->
+            ClassAvailability(cls, count, kinds[cls]?.toMap() ?: emptyMap())
+        }.sortedByDescending { it.freeSeats }
+    }
 
     /**
      * Kolko pokoja vlak nabizi. Ratane zo stavu na zaciatku, takze staci jedno
@@ -95,7 +145,13 @@ class Journey(val stops: List<JourneyStop>) {
                 }
             }
         }
-        return ComfortSummary(free, compartments, pairs, recommend(seatClass, limit = 1).firstOrNull())
+        return ComfortSummary(
+            freeSeats = free,
+            emptyCompartments = compartments,
+            emptyPairs = pairs,
+            best = recommend(seatClass, limit = 1).firstOrNull(),
+            byClass = availabilityByClass(),
+        )
     }
 
     private val layoutCache = HashMap<String, CoachLayout?>()
@@ -105,8 +161,27 @@ class Journey(val stops: List<JourneyStop>) {
 
     private fun firstStop(): JourneyStop? = stops.minByOrNull { it.order }
 
-    /** Prva zastavka, od ktorej je miesto volne az do ciela; null ak nikdy. */
     override fun toString(): String = "Journey(${stops.size} zastavok)"
+
+    /**
+     * Oddiely vo vozni, v ktorych je volne kazde miesto.
+     *
+     * Kazdy oddiel je zapisany ako cisla miest oddelene ciarkou, aby sa dal
+     * ulozit a porovnat medzi kolami sledovania. "Cele kupe je prazdne" je
+     * silnejsi signal ako jednotlive uvolnene miesto.
+     */
+    fun emptyBaysInCoach(coach: Int): Set<String> {
+        val start = firstStop() ?: return emptySet()
+        val deck = start.section.vehicle(coach)?.decks?.firstOrNull() ?: return emptySet()
+        val layout = layoutOf(deck) ?: return emptySet()
+        val out = LinkedHashSet<String>()
+        for (seat in deck.seats.map { it.index }) {
+            val bay = layout.neighboursOrNull(seat)?.bay ?: continue
+            if (bay.size < 2) continue                        // samostatne miesto nie je oddiel
+            if (bay.all { deck.seat(it)?.free == true }) out.add(bay.joinToString(","))
+        }
+        return out
+    }
 
     fun freesAt(coach: Int, seat: Int): JourneyStop? =
         stops.sortedBy { it.order }
@@ -216,6 +291,8 @@ class Journey(val stops: List<JourneyStop>) {
                         emptyFrom = emptyFrom,
                         flags = flags,
                         isCompartment = layout.seatBay[seat] != null,
+                        kind = layout.seatKind(seat),
+                        confidence = layout.confidence(seat),
                     ),
                 )
             }

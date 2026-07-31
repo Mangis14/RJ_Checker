@@ -1,12 +1,5 @@
 package io.github.mangis14.rjchecker
 
-import io.github.mangis14.rjchecker.core.JourneyLoader
-import io.github.mangis14.rjchecker.core.RjClient
-import io.github.mangis14.rjchecker.core.SeatChange
-import io.github.mangis14.rjchecker.core.SeatSnapshot
-import io.github.mangis14.rjchecker.core.SeatWatcher
-import io.github.mangis14.rjchecker.core.WatchSchedule
-import io.github.mangis14.rjchecker.core.WatchDecision
 import android.Manifest
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -25,42 +18,64 @@ import androidx.work.NetworkType
 import androidx.work.PeriodicWorkRequestBuilder
 import androidx.work.WorkManager
 import androidx.work.WorkerParameters
+import io.github.mangis14.rjchecker.core.JourneyLoader
+import io.github.mangis14.rjchecker.core.RjClient
+import io.github.mangis14.rjchecker.core.SeatChange
+import io.github.mangis14.rjchecker.core.SeatSnapshot
+import io.github.mangis14.rjchecker.core.SeatWatcher
+import io.github.mangis14.rjchecker.core.WatchDecision
+import io.github.mangis14.rjchecker.core.WatchSchedule
+import io.github.mangis14.rjchecker.core.WatchedTrip
 import java.util.concurrent.TimeUnit
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
 /**
- * Periodicka kontrola sledovaneho miesta.
+ * Periodicka kontrola sledovanych miest.
  *
  * Notifikacia ide len pri skutocnej zmene voci poslednemu ulozenemu stavu -
- * preto sa snapshot uklada do prefs. Bez toho by appka hlasila "zmenu" pri
- * kazdom kole.
+ * preto sa snapshot uklada pre kazdy spoj zvlast. Bez toho by appka hlasila
+ * "zmenu" pri kazdom kole.
  */
 class WatchWorker(context: Context, params: WorkerParameters) : CoroutineWorker(context, params) {
 
     override suspend fun doWork(): Result {
         val prefs = TripPrefs(applicationContext)
-        val trip = prefs.load() ?: return Result.success()   // sledovanie vypnute
-
-        // Jedna kontrola stiahne cca 223 kB a server negzipuje, takze sa najprv
-        // rozhodne, ci je vobec potrebna.
-        val tick = prefs.nextTick()
-        when (
-            WatchSchedule.decide(
-                nowMinutes = System.currentTimeMillis() / 60_000,
-                departureMinutes = trip.departureEpochMinutes(),
-                tick = tick,
-            )
-        ) {
-            WatchDecision.SKIP -> return Result.success()
-            WatchDecision.STOP -> {
-                cancel(applicationContext)
-                prefs.clear()
-                return Result.success()
-            }
-            WatchDecision.CHECK -> Unit
+        val trips = prefs.trips()
+        if (trips.isEmpty()) {
+            cancel(applicationContext)
+            return Result.success()
         }
 
+        val tick = prefs.nextTick()
+        val now = System.currentTimeMillis() / 60_000
+        var anyFailed = false
+
+        for (trip in trips) {
+            when (
+                WatchSchedule.decide(
+                    nowMinutes = now,
+                    departureMinutes = trip.departureEpochMinutes(),
+                    tick = tick,
+                )
+            ) {
+                // spoj uz odisiel - prestat ho sledovat, ale ostatne nechat bezat
+                WatchDecision.STOP -> {
+                    prefs.removeTrip(trip.id)
+                    continue
+                }
+                WatchDecision.SKIP -> continue
+                WatchDecision.CHECK -> Unit
+            }
+            if (!checkTrip(prefs, trip)) anyFailed = true
+        }
+
+        if (prefs.trips().isEmpty()) cancel(applicationContext)
+        return if (anyFailed) Result.retry() else Result.success()
+    }
+
+    /** @return false ak sa kontrola nepodarila a ma sa zopakovat */
+    private suspend fun checkTrip(prefs: TripPrefs, trip: WatchedTrip): Boolean {
         val loaded = try {
             withContext(Dispatchers.IO) {
                 val client = RjClient(layoutStore = FileLayoutStore(applicationContext))
@@ -68,8 +83,6 @@ class WatchWorker(context: Context, params: WorkerParameters) : CoroutineWorker(
                 // ciela - jedno volanie. Plny prechod zastavkami by kazdych 15
                 // minut znamenal cca 30 volani a odpoved na otazku "kde presne
                 // ten clovek vystupuje", ktoru notifikacia nepotrebuje.
-                // Nazvy stanic sa tiez nestahuju: /consts/locations je velky
-                // payload a v notifikacii sa nepouziva.
                 val journey = JourneyLoader(client).load(
                     routeId = trip.routeId,
                     fromStationId = trip.fromId,
@@ -82,59 +95,63 @@ class WatchWorker(context: Context, params: WorkerParameters) : CoroutineWorker(
                 val coachFree = journey.stops.firstOrNull()
                     ?.section?.vehicle(trip.coach)?.decks?.firstOrNull()
                     ?.freeSeats?.toSet() ?: emptySet()
-                analysis?.let { it to coachFree }
+                analysis?.let { Triple(it, coachFree, journey.emptyBaysInCoach(trip.coach)) }
             }
         } catch (e: Exception) {
-            return Result.retry()
-        } ?: return Result.success()
+            return false
+        } ?: return true
 
-        val (analysis, coachFree) = loaded
-        val current = SeatSnapshot.of(analysis, coachFree)
-        val previous = prefs.loadSnapshot()
+        val (analysis, coachFree, emptyBays) = loaded
+        val current = SeatSnapshot.of(analysis, coachFree, emptyBays)
+        val previous = prefs.loadSnapshot(trip.id)
 
         val alerts = SeatWatcher.diff(previous, current)
+        val baysFreed = SeatWatcher.baysBecameEmpty(previous, current)
         val freedInCoach = SeatWatcher.coachFreed(previous, current)
 
-        // Susedne miesta maju prednost - to je to, na co sa uzivatel pyta.
-        // Az potom zvysok vozna, a vzdy s cislami miest: samotny pocet
-        // volnych cloveku nepovie, kam si ma sadnut.
-        if (alerts.isNotEmpty()) {
-            val freed = alerts.filter { it.change == SeatChange.FREED }.map { it.seat }
-            val taken = alerts.filter { it.change == SeatChange.TAKEN }.map { it.seat }
-            val parts = buildList {
-                if (freed.isNotEmpty()) {
-                    add("uvoľnilo sa miesto ${SeatWatcher.describeSeats(freed)}")
-                }
-                if (taken.isNotEmpty()) {
-                    add("obsadilo sa ${SeatWatcher.describeSeats(taken)}")
-                }
-            }
-            notify(
-                title = "Vedľa teba sa niečo zmenilo",
-                text = "Vozeň ${trip.coach}, tvoje miesto ${trip.seat}: " +
-                    parts.joinToString("; ") + ". Klepni pre analýzu.",
-                coach = trip.coach,
-                seat = trip.seat,
+        // Poradie dolezitosti: cely prazdny oddiel je najsilnejsi signal (da sa
+        // presunut a cestovat sam), potom zmena vedla teba, az potom zvysok vozna.
+        when {
+            baysFreed.isNotEmpty() -> notify(
+                trip = trip,
+                title = "Uvoľnil sa celý oddiel",
+                text = "Vozeň ${trip.coach}: miesta ${baysFreed.first().replace(",", ", ")} " +
+                    "sú voľné všetky. Klepni pre analýzu.",
             )
-        } else if (freedInCoach.isNotEmpty()) {
-            notify(
+
+            alerts.isNotEmpty() -> {
+                val freed = alerts.filter { it.change == SeatChange.FREED }.map { it.seat }
+                val taken = alerts.filter { it.change == SeatChange.TAKEN }.map { it.seat }
+                val parts = buildList {
+                    if (freed.isNotEmpty()) add("uvoľnilo sa miesto ${SeatWatcher.describeSeats(freed)}")
+                    if (taken.isNotEmpty()) add("obsadilo sa ${SeatWatcher.describeSeats(taken)}")
+                }
+                notify(
+                    trip = trip,
+                    title = "Vedľa teba sa niečo zmenilo",
+                    text = "Vozeň ${trip.coach}, tvoje miesto ${trip.seat}: " +
+                        parts.joinToString("; ") + ". Klepni pre analýzu.",
+                )
+            }
+
+            freedInCoach.isNotEmpty() -> notify(
+                trip = trip,
                 title = "Vo vozni ${trip.coach} sa uvoľnilo miesto",
                 text = "Voľné je teraz miesto ${SeatWatcher.describeSeats(freedInCoach)} " +
                     "(vo vozni spolu ${current.freeInCoach}). Klepni pre analýzu.",
-                coach = trip.coach,
-                seat = trip.seat,
             )
         }
 
-        prefs.saveSnapshot(current)
-        return Result.success()
+        prefs.saveSnapshot(trip.id, current)
+        return true
     }
 
     /**
-     * Notifikacia otvara appku priamo na analyze sledovaneho miesta - bez
-     * PendingIntent by klepnutie nerobilo nic.
+     * Notifikacia otvara appku priamo na analyze daneho miesta - bez
+     * PendingIntent by klepnutie nerobilo nic. Kazdy spoj ma vlastne ID, aby si
+     * upozornenia navzajom neprepisovali.
      */
-    private fun notify(title: String, text: String, coach: Int, seat: Int) {
+    private fun notify(trip: WatchedTrip, title: String, text: String) {
         val manager = applicationContext.getSystemService(NotificationManager::class.java)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             manager.createNotificationChannel(
@@ -145,43 +162,45 @@ class WatchWorker(context: Context, params: WorkerParameters) : CoroutineWorker(
             ActivityCompat.checkSelfPermission(applicationContext, Manifest.permission.POST_NOTIFICATIONS)
             != PackageManager.PERMISSION_GRANTED
         ) {
-            return                                    // bez povolenia notifikovat nemozeme
+            return
         }
+        val requestCode = trip.id.hashCode()
         val intent = Intent(applicationContext, MainActivity::class.java).apply {
             flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
-            putExtra(EXTRA_COACH, coach)
-            putExtra(EXTRA_SEAT, seat)
+            putExtra(EXTRA_COACH, trip.coach)
+            putExtra(EXTRA_SEAT, trip.seat)
+            putExtra(EXTRA_TRIP_ID, trip.id)
         }
         val pending = PendingIntent.getActivity(
             applicationContext,
-            0,
+            requestCode,
             intent,
             PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE,
         )
-
         val notification = NotificationCompat.Builder(applicationContext, CHANNEL)
             .setSmallIcon(android.R.drawable.ic_dialog_info)
             .setContentTitle(title)
             .setContentText(text)
+            .setSubText("${trip.fromName} → ${trip.toName}")
             .setStyle(NotificationCompat.BigTextStyle().bigText(text))
             .setContentIntent(pending)
             .setAutoCancel(true)
             .build()
-        NotificationManagerCompat.from(applicationContext).notify(NOTIFICATION_ID, notification)
+        NotificationManagerCompat.from(applicationContext).notify(requestCode, notification)
     }
 
     companion object {
         private const val CHANNEL = "seat-changes"
-        private const val NOTIFICATION_ID = 1001
         private const val WORK_NAME = "rjseat-watch"
 
         /** Klepnutie na notifikaciu otvori analyzu tohto vozna a miesta. */
         const val EXTRA_COACH = "rjseat.coach"
         const val EXTRA_SEAT = "rjseat.seat"
+        const val EXTRA_TRIP_ID = "rjseat.tripId"
 
         /**
          * 15 minut je minimum, ktore WorkManager pre periodicku pracu povoluje.
-         * Castejsie kontroly by aj tak nemali zmysel - a API netreba zatazovat.
+         * Kolko z prebudeni sa naozaj vyuzije, rozhoduje WatchSchedule.
          */
         fun schedule(context: Context) {
             val request = PeriodicWorkRequestBuilder<WatchWorker>(15, TimeUnit.MINUTES)

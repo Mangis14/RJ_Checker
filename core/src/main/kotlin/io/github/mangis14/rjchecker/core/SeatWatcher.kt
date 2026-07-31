@@ -16,14 +16,20 @@ data class SeatSnapshot(
     val seats: Map<Int, Boolean>,
     val freeInCoach: Int = 0,
     val coachFreeSeats: Set<Int> = emptySet(),
+    /** oddiely s volnym kazdym miestom, zapisane ako "31,32,33,34,35,36" */
+    val emptyBays: Set<String> = emptySet(),
 ) {
     companion object {
-        fun of(analysis: SeatAnalysis, coachFreeSeats: Set<Int> = emptySet()): SeatSnapshot =
-            SeatSnapshot(
-                seats = analysis.neighbours.associate { it.seat to it.freeWholeWay },
-                freeInCoach = analysis.freeInCoach,
-                coachFreeSeats = coachFreeSeats,
-            )
+        fun of(
+            analysis: SeatAnalysis,
+            coachFreeSeats: Set<Int> = emptySet(),
+            emptyBays: Set<String> = emptySet(),
+        ): SeatSnapshot = SeatSnapshot(
+            seats = analysis.neighbours.associate { it.seat to it.freeWholeWay },
+            freeInCoach = analysis.freeInCoach,
+            coachFreeSeats = coachFreeSeats,
+            emptyBays = emptyBays,
+        )
     }
 }
 
@@ -60,6 +66,17 @@ object SeatWatcher {
     fun coachFreed(previous: SeatSnapshot?, current: SeatSnapshot): List<Int> {
         if (previous == null) return emptyList()
         return (current.coachFreeSeats - previous.coachFreeSeats).sorted()
+    }
+
+    /**
+     * Oddiely, ktore sa oproti minulemu kolu uplne vyprazdnili.
+     *
+     * Toto je najsilnejsi signal: cele prazdne kupe alebo stolik znamena, ze sa
+     * da presunut a cestovat sam. Ma preto prednost pred jednotlivymi miestami.
+     */
+    fun baysBecameEmpty(previous: SeatSnapshot?, current: SeatSnapshot): List<String> {
+        if (previous == null) return emptyList()
+        return (current.emptyBays - previous.emptyBays).sorted()
     }
 
     /** Cisla miest do textu notifikacie, dlhy zoznam sa skrati. */

@@ -84,6 +84,33 @@ class SeatWatcherTest {
         assertEquals(listOf(12, 31, 45), SeatWatcher.coachFreed(before, after))
     }
 
+    // --- cele prazdne oddiely -----------------------------------------
+    // "Kupe 41-46 je cele prazdne" je silnejsi signal ako jednotlive miesto:
+    // znamena, ze sa da presunut a cestovat sam.
+
+    @Test
+    fun `novo vyprazdneny oddiel sa ohlasi`() {
+        val before = SeatSnapshot(emptyMap(), emptyBays = setOf("11,12,13,14,15,16"))
+        val after = SeatSnapshot(
+            emptyMap(),
+            emptyBays = setOf("11,12,13,14,15,16", "41,42,43,44,45,46"),
+        )
+        assertEquals(listOf("41,42,43,44,45,46"), SeatWatcher.baysBecameEmpty(before, after))
+    }
+
+    @Test
+    fun `prve kolo nehlasi prazdne oddiely`() {
+        val after = SeatSnapshot(emptyMap(), emptyBays = setOf("1,2,3,4,5,6"))
+        assertTrue(SeatWatcher.baysBecameEmpty(null, after).isEmpty())
+    }
+
+    @Test
+    fun `obsadenie oddielu nie je jeho vyprazdnenie`() {
+        val before = SeatSnapshot(emptyMap(), emptyBays = setOf("1,2", "3,4"))
+        val after = SeatSnapshot(emptyMap(), emptyBays = setOf("1,2"))
+        assertTrue(SeatWatcher.baysBecameEmpty(before, after).isEmpty())
+    }
+
     @Test
     fun `zhrnutie pre notifikaciu skrati dlhy zoznam`() {
         val many = (1..12).toList()
