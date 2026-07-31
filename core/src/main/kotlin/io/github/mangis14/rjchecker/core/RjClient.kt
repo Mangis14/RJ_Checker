@@ -24,6 +24,18 @@ data class TrainOption(
 data class StationRef(val id: Long, val name: String)
 
 /**
+ * Ulozisko SVG layoutov voznov.
+ *
+ * Layout daneho typu vozna sa nemeni, ale ma cca 88 kB - bez cache by ho
+ * kontrola na pozadi stahovala kazdych 15 minut znovu. Implementaciu dodava
+ * volajuci (core modul sa nedotyka suboroveho systemu Androidu).
+ */
+interface LayoutStore {
+    fun get(url: String): String?
+    fun put(url: String, svg: String)
+}
+
+/**
  * Klient nad verejnym backendom RegioJetu - tym istym, z ktoreho cita ich web.
  *
  * Zamerne cez java.net, takze modul nema ziadnu sietovu zavislost a funguje aj
@@ -40,6 +52,8 @@ class RjClient(
     /** Dokumentacia uvadza APP pre mobilnu aplikaciu. */
     private val applicationOrigin: String = "APP",
     private val userAgent: String = "rjseat/1.0",
+    /** cache layoutov; bez nej sa SVG vozna stahuje pri kazdom volani */
+    private val layoutStore: LayoutStore? = null,
 ) {
     private val json = Json { ignoreUnknownKeys = true; isLenient = true }
 
@@ -202,23 +216,33 @@ class RjClient(
 
     fun timetables(): JsonArray = json.parseToJsonElement(request("GET", "/consts/timetables")).jsonArray
 
-    /** SVG layout vozna - z neho sa odvodzuje topologia miest. */
-    fun layoutSvg(url: String): String? = try {
-        val conn = (URL(url).openConnection() as HttpURLConnection).apply {
-            connectTimeout = 20_000
-            readTimeout = 45_000
-            setRequestProperty("User-Agent", userAgent)
-        }
-        try {
-            if (conn.responseCode in 200..299) {
-                conn.inputStream.bufferedReader().use { it.readText() }
-            } else {
-                null
+    /**
+     * SVG layout vozna - z neho sa odvodzuje topologia miest.
+     *
+     * Cita sa najprv z cache: layout typu vozna sa nemeni, ale ma cca 88 kB,
+     * co je najvacsia jednotliva polozka jednej kontroly na pozadi.
+     */
+    fun layoutSvg(url: String): String? {
+        layoutStore?.get(url)?.let { return it }
+        val downloaded = try {
+            val conn = (URL(url).openConnection() as HttpURLConnection).apply {
+                connectTimeout = 20_000
+                readTimeout = 45_000
+                setRequestProperty("User-Agent", userAgent)
             }
-        } finally {
-            conn.disconnect()
+            try {
+                if (conn.responseCode in 200..299) {
+                    conn.inputStream.bufferedReader().use { it.readText() }
+                } else {
+                    null
+                }
+            } finally {
+                conn.disconnect()
+            }
+        } catch (e: Exception) {
+            null
         }
-    } catch (e: Exception) {
-        null
+        if (downloaded != null) layoutStore?.put(url, downloaded)
+        return downloaded
     }
 }

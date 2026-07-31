@@ -5,6 +5,8 @@ import io.github.mangis14.rjchecker.core.RjClient
 import io.github.mangis14.rjchecker.core.SeatChange
 import io.github.mangis14.rjchecker.core.SeatSnapshot
 import io.github.mangis14.rjchecker.core.SeatWatcher
+import io.github.mangis14.rjchecker.core.WatchSchedule
+import io.github.mangis14.rjchecker.core.WatchDecision
 import android.Manifest
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -40,9 +42,28 @@ class WatchWorker(context: Context, params: WorkerParameters) : CoroutineWorker(
         val prefs = TripPrefs(applicationContext)
         val trip = prefs.load() ?: return Result.success()   // sledovanie vypnute
 
+        // Jedna kontrola stiahne cca 223 kB a server negzipuje, takze sa najprv
+        // rozhodne, ci je vobec potrebna.
+        val tick = prefs.nextTick()
+        when (
+            WatchSchedule.decide(
+                nowMinutes = System.currentTimeMillis() / 60_000,
+                departureMinutes = trip.departureEpochMinutes(),
+                tick = tick,
+            )
+        ) {
+            WatchDecision.SKIP -> return Result.success()
+            WatchDecision.STOP -> {
+                cancel(applicationContext)
+                prefs.clear()
+                return Result.success()
+            }
+            WatchDecision.CHECK -> Unit
+        }
+
         val loaded = try {
             withContext(Dispatchers.IO) {
-                val client = RjClient()
+                val client = RjClient(layoutStore = FileLayoutStore(applicationContext))
                 // Na upozornenie staci obsadenost pre usek z nastupnej stanice do
                 // ciela - jedno volanie. Plny prechod zastavkami by kazdych 15
                 // minut znamenal cca 30 volani a odpoved na otazku "kde presne

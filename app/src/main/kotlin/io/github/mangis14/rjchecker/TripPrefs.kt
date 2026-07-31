@@ -3,6 +3,19 @@ package io.github.mangis14.rjchecker
 import android.content.Context
 import io.github.mangis14.rjchecker.core.SeatSnapshot
 
+/**
+ * Cas odjazdu ako minuty od epochy, alebo null ak sa neda urcit.
+ *
+ * Podla toho sa rozhoduje, ci sledovanie este ma zmysel - bez toho by worker
+ * tahal data aj tyzdne po skoncenej ceste.
+ */
+fun WatchedTrip.departureEpochMinutes(): Long? = runCatching {
+    java.time.LocalDateTime.of(
+        java.time.LocalDate.parse(date),
+        java.time.LocalTime.parse(departure),
+    ).atZone(java.time.ZoneId.systemDefault()).toEpochSecond() / 60
+}.getOrNull()
+
 /** Spoj a miesto, ktore chce uzivatel sledovat. */
 data class WatchedTrip(
     val date: String,
@@ -57,6 +70,13 @@ class TripPrefs(context: Context) {
     }
 
     fun clear() = prefs.edit().clear().apply()
+
+    /** Poradove cislo prebudenia - podla neho sa preskakuju kontroly. */
+    fun nextTick(): Int {
+        val tick = prefs.getInt("tick", 0)
+        prefs.edit().putInt("tick", tick + 1).apply()
+        return tick
+    }
 
     /** Posledny znamy stav - bez neho by notifikacia isla pri kazdom kole. */
     fun saveSnapshot(snapshot: SeatSnapshot) {

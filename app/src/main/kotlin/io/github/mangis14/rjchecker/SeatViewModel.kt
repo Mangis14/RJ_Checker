@@ -70,7 +70,7 @@ data class UiState(
 
 class SeatViewModel(app: Application) : AndroidViewModel(app) {
 
-    private val client = RjClient()
+    private val client = RjClient(layoutStore = FileLayoutStore(app))
     private val prefs = TripPrefs(app)
 
     private val _state = MutableStateFlow(UiState())
