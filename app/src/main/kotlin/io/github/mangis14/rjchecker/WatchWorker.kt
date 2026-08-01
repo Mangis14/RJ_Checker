@@ -18,6 +18,7 @@ import androidx.work.NetworkType
 import androidx.work.PeriodicWorkRequestBuilder
 import androidx.work.WorkManager
 import androidx.work.WorkerParameters
+import io.github.mangis14.rjchecker.core.Journey
 import io.github.mangis14.rjchecker.core.JourneyLoader
 import io.github.mangis14.rjchecker.core.RjClient
 import io.github.mangis14.rjchecker.core.SeatChange
@@ -51,6 +52,7 @@ class WatchWorker(context: Context, params: WorkerParameters) : CoroutineWorker(
         val now = System.currentTimeMillis() / 60_000
         var anyFailed = false
 
+        val due = mutableListOf<WatchedTrip>()
         for (trip in trips) {
             when (
                 WatchSchedule.decide(
@@ -60,23 +62,53 @@ class WatchWorker(context: Context, params: WorkerParameters) : CoroutineWorker(
                 )
             ) {
                 // spoj uz odisiel - prestat ho sledovat, ale ostatne nechat bezat
-                WatchDecision.STOP -> {
-                    prefs.removeTrip(trip.id)
-                    continue
-                }
-                WatchDecision.SKIP -> continue
-                WatchDecision.CHECK -> Unit
+                WatchDecision.STOP -> prefs.removeTrip(trip.id)
+                WatchDecision.SKIP -> Unit
+                WatchDecision.CHECK -> due.add(trip)
             }
-            if (!checkTrip(prefs, trip)) anyFailed = true
+        }
+
+        // Spoje na tom istom vlaku a useku citaju uplne rovnake data, takze sa
+        // nacitaju raz a vyhodnotia sa nad nimi vsetky. Sledovanie miesta aj
+        // triedy v jednom vlaku tak stoji jedno stiahnutie, nie dve.
+        for ((_, group) in due.groupBy { JourneyKey(it.routeId, it.fromId, it.toId, it.date, it.departure) }) {
+            val journey = try {
+                withContext(Dispatchers.IO) {
+                    val client = RjClient(layoutStore = FileLayoutStore(applicationContext))
+                    JourneyLoader(client).load(
+                        routeId = group.first().routeId,
+                        fromStationId = group.first().fromId,
+                        toStationId = group.first().toId,
+                        date = group.first().date,
+                        departure = group.first().departure,
+                        firstStopOnly = true,
+                    )
+                }
+            } catch (e: Exception) {
+                anyFailed = true
+                continue
+            }
+            for (trip in group) {
+                val ok = withContext(Dispatchers.IO) {
+                    if (trip.isClassWatch) checkClass(prefs, trip, journey)
+                    else checkSeat(prefs, trip, journey)
+                }
+                if (!ok) anyFailed = true
+            }
         }
 
         if (prefs.trips().isEmpty()) cancel(applicationContext)
         return if (anyFailed) Result.retry() else Result.success()
     }
 
-    /** @return false ak sa kontrola nepodarila a ma sa zopakovat */
-    private suspend fun checkTrip(prefs: TripPrefs, trip: WatchedTrip): Boolean =
-        if (trip.isClassWatch) checkClass(prefs, trip) else checkSeat(prefs, trip)
+    /** Spoje s rovnakym klucom citaju rovnake data - staci ich nacitat raz. */
+    private data class JourneyKey(
+        val routeId: String,
+        val fromId: Long,
+        val toId: Long,
+        val date: String,
+        val departure: String,
+    )
 
     /**
      * Sledovanie celej triedy - "daj vediet, ked sa uvolni hocijaky Relax".
@@ -84,18 +116,10 @@ class WatchWorker(context: Context, params: WorkerParameters) : CoroutineWorker(
      * Pozera cely vlak, nie jeden vozen, takze snapshot drzi dvojice
      * vozen-miesto.
      */
-    private suspend fun checkClass(prefs: TripPrefs, trip: WatchedTrip): Boolean {
+    private fun checkClass(prefs: TripPrefs, trip: WatchedTrip, journey: Journey): Boolean {
         val seatClass = trip.seatClass ?: return true
         val free = try {
-            withContext(Dispatchers.IO) {
-                val client = RjClient(layoutStore = FileLayoutStore(applicationContext))
-                JourneyLoader(client).load(
-                    routeId = trip.routeId,
-                    fromStationId = trip.fromId, toStationId = trip.toId,
-                    date = trip.date, departure = trip.departure,
-                    firstStopOnly = true,
-                ).freeSeatsInClass(seatClass, trip.onlyComfortable)
-            }
+            journey.freeSeatsInClass(seatClass, trip.onlyComfortable)
         } catch (e: Exception) {
             return false
         }
@@ -130,28 +154,13 @@ class WatchWorker(context: Context, params: WorkerParameters) : CoroutineWorker(
     }
 
     /** @return false ak sa kontrola nepodarila a ma sa zopakovat */
-    private suspend fun checkSeat(prefs: TripPrefs, trip: WatchedTrip): Boolean {
+    private fun checkSeat(prefs: TripPrefs, trip: WatchedTrip, journey: Journey): Boolean {
         val loaded = try {
-            withContext(Dispatchers.IO) {
-                val client = RjClient(layoutStore = FileLayoutStore(applicationContext))
-                // Na upozornenie staci obsadenost pre usek z nastupnej stanice do
-                // ciela - jedno volanie. Plny prechod zastavkami by kazdych 15
-                // minut znamenal cca 30 volani a odpoved na otazku "kde presne
-                // ten clovek vystupuje", ktoru notifikacia nepotrebuje.
-                val journey = JourneyLoader(client).load(
-                    routeId = trip.routeId,
-                    fromStationId = trip.fromId,
-                    toStationId = trip.toId,
-                    date = trip.date,
-                    departure = trip.departure,
-                    firstStopOnly = true,
-                )
-                val analysis = journey.analyseSeat(trip.coach, trip.seat)
-                val coachFree = journey.stops.firstOrNull()
-                    ?.section?.vehicle(trip.coach)?.decks?.firstOrNull()
-                    ?.freeSeats?.toSet() ?: emptySet()
-                analysis?.let { Triple(it, coachFree, journey.emptyBaysInCoach(trip.coach)) }
-            }
+            val analysis = journey.analyseSeat(trip.coach, trip.seat)
+            val coachFree = journey.stops.firstOrNull()
+                ?.section?.vehicle(trip.coach)?.decks?.firstOrNull()
+                ?.freeSeats?.toSet() ?: emptySet()
+            analysis?.let { Triple(it, coachFree, journey.emptyBaysInCoach(trip.coach)) }
         } catch (e: Exception) {
             return false
         } ?: return true
