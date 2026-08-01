@@ -126,6 +126,15 @@ Priorita je: **celý uvoľnený oddiel** (najsilnejší signál — dá sa presu
 a cestovať sám), potom zmena na **susedných** miestach, až potom ostatné miesta
 vo vozni.
 
+Sledovať sa dá aj **celá trieda v spoji** namiesto konkrétneho miesta — „daj
+vedieť, keď sa uvoľní hocijaký Relax". Zapína sa tlačidlom pri triede v zozname
+spojov, netreba na to vyberať vozeň ani miesto.
+
+Pri sledovaní triedy sa hlásia len miesta, kde je **voľné aj miesto vedľa**.
+Jedno voľné miesto medzi dvoma obsadenými je síce voľné, ale pokoj neprinesie —
+a o pokoj v tejto appke ide. Kde sa topológia nedá prečítať spoľahlivo, miesto sa
+zaradí (radšej upozorniť navyše než zamlčať).
+
 Sledovať sa dá **viac spojov naraz** — cesta tam aj späť, alebo dva kandidátske
 vlaky. Každý má vlastný snapshot, takže sa zmeny hlásia nezávisle a prvé kolo
 daného spoja nehlási nič. Notifikácie majú vlastné ID podľa spoja, takže si

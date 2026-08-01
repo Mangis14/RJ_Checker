@@ -350,6 +350,35 @@ class SeatViewModel(app: Application) : AndroidViewModel(app) {
         _state.update { it.copy(watchedTrips = prefs.trips(), watching = isCurrentWatched()) }
     }
 
+    /**
+     * Zapne sledovanie celej triedy v danom spoji - "daj vediet, ked sa uvolni
+     * hocijaky Relax". Netreba na to vybrany vozen ani miesto.
+     */
+    fun toggleClassWatch(train: TrainOption, seatClass: String, onlyComfortable: Boolean) {
+        val s = _state.value
+        val from = s.from ?: return
+        val to = s.to ?: return
+        val app = getApplication<Application>()
+        val trip = WatchedTrip(
+            date = s.date, fromId = from.id, toId = to.id,
+            fromName = from.name, toName = to.name,
+            routeId = train.routeId, departure = train.departure,
+            coach = 0, seat = 0,
+            seatClass = seatClass, onlyComfortable = onlyComfortable,
+        )
+        if (prefs.isWatching(trip.id)) {
+            prefs.removeTrip(trip.id)
+            if (prefs.trips().isEmpty()) WatchWorker.cancel(app)
+        } else {
+            prefs.addTrip(trip)
+            WatchWorker.schedule(app)
+        }
+        _state.update { it.copy(watchedTrips = prefs.trips()) }
+    }
+
+    fun isClassWatched(routeId: String, seatClass: String): Boolean =
+        _state.value.watchedTrips.any { it.routeId == routeId && it.seatClass == seatClass }
+
     /** Odobranie spoja zo zoznamu sledovanych. */
     fun stopWatching(tripId: String) {
         prefs.removeTrip(tripId)

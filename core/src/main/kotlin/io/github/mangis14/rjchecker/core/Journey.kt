@@ -164,6 +164,36 @@ class Journey(val stops: List<JourneyStop>) {
     override fun toString(): String = "Journey(${stops.size} zastavok)"
 
     /**
+     * Volne miesta danej triedy v celom vlaku, ako dvojice (vozen, miesto).
+     *
+     * @param onlyComfortable hlasit len miesta, kde je volne aj miesto vedla.
+     *   Jedno volne miesto medzi dvoma obsadenymi je sice volne, ale pokoj
+     *   neprinesie - a prave o pokoj v tejto appke ide. Kde sa topologia necita
+     *   spolahlivo, miesto sa zaradi (radsej upozornit navyse ako zamlcat).
+     */
+    fun freeSeatsInClass(seatClass: String, onlyComfortable: Boolean = false): List<Pair<Int, Int>> {
+        val start = firstStop() ?: return emptyList()
+        val out = mutableListOf<Pair<Int, Int>>()
+        for (vehicle in start.section.vehicles) {
+            if (seatClass !in vehicle.seatClasses) continue
+            val deck = vehicle.decks.firstOrNull() ?: continue
+            val layout = if (onlyComfortable) layoutOf(deck) else null
+            for (seat in deck.seats.filter { it.free }) {
+                if (onlyComfortable && layout != null) {
+                    val n = layout.neighboursOrNull(seat.index)
+                    // bez suseda (samostatne miesto) je pokoj automaticky
+                    val comfortable = n == null ||
+                        n.nextTo.isEmpty() ||
+                        n.nextTo.any { deck.seat(it)?.free == true }
+                    if (!comfortable) continue
+                }
+                out.add(vehicle.number to seat.index)
+            }
+        }
+        return out.sortedWith(compareBy({ it.first }, { it.second }))
+    }
+
+    /**
      * Oddiely vo vozni, v ktorych je volne kazde miesto.
      *
      * Kazdy oddiel je zapisany ako cisla miest oddelene ciarkou, aby sa dal

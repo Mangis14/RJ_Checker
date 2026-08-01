@@ -468,7 +468,7 @@ private fun PickTrain(state: UiState, vm: SeatViewModel) {
                     Spacer(Modifier.height(10.dp))
                     HorizontalDivider(color = MaterialTheme.colorScheme.outline.copy(alpha = 0.3f))
                     Spacer(Modifier.height(10.dp))
-                    ComfortRow(state.comfort[train.routeId], state.comfortLoading, state.seatClassTitles)
+                    ComfortRow(state.comfort[train.routeId], state.comfortLoading, state, train, vm)
                 }
             }
         }
@@ -480,7 +480,9 @@ private fun PickTrain(state: UiState, vm: SeatViewModel) {
 private fun ComfortRow(
     comfort: ComfortSummary?,
     loading: Boolean,
-    classTitles: Map<String, String>,
+    state: UiState,
+    train: io.github.mangis14.rjchecker.core.TrainOption,
+    vm: SeatViewModel,
 ) {
     if (comfort == null) {
         Row(verticalAlignment = Alignment.CenterVertically) {
@@ -508,21 +510,43 @@ private fun ComfortRow(
                 Badge("nikde celý oddiel voľný", RjSeatTaken)
             }
         }
-        // Rozpad volnych miest po triedach a typoch sedadiel - "Relax 12 (4
-        // samostatné, 8 dvojica)" povie viac ako samotne cislo.
+        // Rozpad volnych miest po triedach ako farebne tagy - trieda sa da
+        // rovno zacat sledovat, bez vyberu vozna a miesta.
         if (comfort.byClass.isNotEmpty()) {
-            Spacer(Modifier.height(8.dp))
+            Spacer(Modifier.height(10.dp))
             comfort.byClass.forEach { row ->
+                val style = classStyle(row.seatClass, state.seatClassTitles[row.seatClass])
                 val kinds = row.byKind.entries
                     .sortedByDescending { it.value }
                     .joinToString(", ") { "${it.value}× ${kindShort(it.key)}" }
-                Text(
-                    "${classTitles[row.seatClass] ?: row.seatClass}: ${row.freeSeats} voľných" +
-                        if (kinds.isNotEmpty()) "  ($kinds)" else "",
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    modifier = Modifier.padding(top = 1.dp),
-                )
+                val watched = state.watchedTrips.any {
+                    it.routeId == train.routeId && it.seatClass == row.seatClass
+                }
+                Row(
+                    Modifier.fillMaxWidth().padding(vertical = 3.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    ClassTag(style)
+                    Spacer(Modifier.width(8.dp))
+                    Column(Modifier.weight(1f)) {
+                        Text(
+                            "${row.freeSeats} voľných",
+                            style = MaterialTheme.typography.bodySmall,
+                            fontWeight = FontWeight.Medium,
+                        )
+                        if (kinds.isNotEmpty()) {
+                            Text(
+                                kinds,
+                                style = MaterialTheme.typography.bodySmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            )
+                        }
+                    }
+                    TextButton(
+                        onClick = { vm.toggleClassWatch(train, row.seatClass, onlyComfortable = true) },
+                        modifier = Modifier.heightIn(min = TapTarget),
+                    ) { Text(if (watched) "Sledujem" else "Sledovať", fontSize = 13.sp) }
+                }
             }
         }
         comfort.best?.let { best ->
@@ -591,16 +615,16 @@ private fun PickSeat(state: UiState, vm: SeatViewModel) {
                         }
                         Spacer(Modifier.width(14.dp))
                         Column(Modifier.weight(1f)) {
-                            Text(
-                                vehicle.seatClasses.joinToString(", ") {
-                                    state.seatClassTitles[it] ?: it
-                                },
-                                style = MaterialTheme.typography.titleMedium,
-                            )
+                            Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                                vehicle.seatClasses.forEach { key ->
+                                    ClassTag(classStyle(key, state.seatClassTitles[key]))
+                                }
+                            }
                             Text(
                                 deck.name,
                                 style = MaterialTheme.typography.bodySmall,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                modifier = Modifier.padding(top = 4.dp),
                             )
                         }
                         Text(
@@ -873,6 +897,20 @@ private fun seatKindLabel(kind: SeatKind, confidence: Confidence): String {
         SeatKind.COMPARTMENT -> "kupé "
         SeatKind.UNKNOWN -> "miesta "
     }
+}
+
+/** Farebny tag triedy - vyrazny a citatelny na prvy pohlad. */
+@Composable
+private fun ClassTag(style: ClassStyle) {
+    Text(
+        style.label,
+        style = MaterialTheme.typography.bodySmall,
+        fontWeight = FontWeight.SemiBold,
+        color = style.foreground,
+        modifier = Modifier
+            .background(style.background, RoundedCornerShape(6.dp))
+            .padding(horizontal = 8.dp, vertical = 4.dp),
+    )
 }
 
 private fun kindShort(kind: SeatKind): String = when (kind) {

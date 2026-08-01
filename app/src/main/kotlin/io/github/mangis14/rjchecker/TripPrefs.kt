@@ -62,6 +62,7 @@ class TripPrefs(context: Context) {
                 snapshot.freeInCoach.toString(),
                 snapshot.coachFreeSeats.sorted().joinToString(","),
                 snapshot.emptyBays.joinToString(";"),
+                snapshot.classFreeSeats.joinToString(";"),
             ).joinToString("|"),
         ).apply()
     }
@@ -79,6 +80,8 @@ class TripPrefs(context: Context) {
             freeInCoach = parts[1].toIntOrNull() ?: 0,
             coachFreeSeats = parts[2].split(",").mapNotNull { it.trim().toIntOrNull() }.toSet(),
             emptyBays = parts[3].split(";").filter { it.isNotBlank() }.toSet(),
+            classFreeSeats = parts.getOrNull(4)
+                ?.split(";")?.filter { it.isNotBlank() }?.toSet() ?: emptySet(),
         )
     }
 

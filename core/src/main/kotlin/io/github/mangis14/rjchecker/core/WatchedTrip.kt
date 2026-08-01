@@ -14,13 +14,31 @@ data class WatchedTrip(
     val toName: String,
     val routeId: String,
     val departure: String,
+    /** 0 pri sledovani celej triedy */
     val coach: Int,
+    /** 0 pri sledovani celej triedy */
     val seat: Int,
+    /**
+     * Ked je vyplnene, nesleduje sa konkretne miesto, ale cela trieda v spoji -
+     * "daj vediet, ked sa uvolni hocijaky Relax".
+     */
+    val seatClass: String? = null,
+    /**
+     * Pri sledovani triedy hlasit len miesta, ktore stoja za presun, teda kde je
+     * volne aj miesto vedla. Jedno volne miesto medzi dvoma obsadenymi je sice
+     * volne, ale pokoj neprinesie.
+     */
+    val onlyComfortable: Boolean = false,
 ) {
-    /** Stabilny kluc spoja - podla neho sa uklada snapshot a rusi sledovanie. */
-    val id: String get() = "$routeId-$coach-$seat"
+    /** true = sleduje sa cela trieda, nie konkretne miesto */
+    val isClassWatch: Boolean get() = seatClass != null
 
-    val label: String get() = "vozeň $coach, miesto $seat"
+    /** Stabilny kluc - podla neho sa uklada snapshot a rusi sledovanie. */
+    val id: String get() =
+        if (isClassWatch) "$routeId-class-$seatClass" else "$routeId-$coach-$seat"
+
+    val label: String get() =
+        if (isClassWatch) "trieda $seatClass" else "vozeň $coach, miesto $seat"
 }
 
 /**
@@ -54,9 +72,14 @@ object WatchedTripCodec {
             t.date, t.fromId.toString(), t.toId.toString(),
             esc(t.fromName), esc(t.toName), t.routeId, t.departure,
             t.coach.toString(), t.seat.toString(),
+            t.seatClass.orEmpty(), if (t.onlyComfortable) "1" else "0",
         ).joinToString(FIELD)
     }
 
+    /**
+     * Starsie zaznamy maju len 9 poli (bez triedy) - nacitaju sa ako sledovanie
+     * konkretneho miesta, aby uzivatel po aktualizacii neprisiel o sledovanie.
+     */
     fun decode(raw: String?): List<WatchedTrip> {
         if (raw.isNullOrBlank()) return emptyList()
         return raw.split(RECORD).mapNotNull { record ->
@@ -73,6 +96,8 @@ object WatchedTripCodec {
                 departure = f[6],
                 coach = f[7].toIntOrNull() ?: return@mapNotNull null,
                 seat = f[8].toIntOrNull() ?: return@mapNotNull null,
+                seatClass = f.getOrNull(9)?.takeIf { it.isNotBlank() },
+                onlyComfortable = f.getOrNull(10) == "1",
             )
         }
     }

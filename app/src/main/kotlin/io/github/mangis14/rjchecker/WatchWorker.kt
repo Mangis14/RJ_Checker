@@ -75,7 +75,54 @@ class WatchWorker(context: Context, params: WorkerParameters) : CoroutineWorker(
     }
 
     /** @return false ak sa kontrola nepodarila a ma sa zopakovat */
-    private suspend fun checkTrip(prefs: TripPrefs, trip: WatchedTrip): Boolean {
+    private suspend fun checkTrip(prefs: TripPrefs, trip: WatchedTrip): Boolean =
+        if (trip.isClassWatch) checkClass(prefs, trip) else checkSeat(prefs, trip)
+
+    /**
+     * Sledovanie celej triedy - "daj vediet, ked sa uvolni hocijaky Relax".
+     *
+     * Pozera cely vlak, nie jeden vozen, takze snapshot drzi dvojice
+     * vozen-miesto.
+     */
+    private suspend fun checkClass(prefs: TripPrefs, trip: WatchedTrip): Boolean {
+        val seatClass = trip.seatClass ?: return true
+        val free = try {
+            withContext(Dispatchers.IO) {
+                val client = RjClient(layoutStore = FileLayoutStore(applicationContext))
+                JourneyLoader(client).load(
+                    routeId = trip.routeId,
+                    fromStationId = trip.fromId, toStationId = trip.toId,
+                    date = trip.date, departure = trip.departure,
+                    firstStopOnly = true,
+                ).freeSeatsInClass(seatClass, trip.onlyComfortable)
+            }
+        } catch (e: Exception) {
+            return false
+        }
+
+        val current = SeatSnapshot(
+            seats = emptyMap(),
+            freeInCoach = free.size,
+            classFreeSeats = free.map { "${it.first}-${it.second}" }.toSet(),
+        )
+        val previous = prefs.loadSnapshot(trip.id)
+        val freed = SeatWatcher.classSeatsFreed(previous, current)
+
+        if (freed.isNotEmpty()) {
+            val what = if (trip.onlyComfortable) " s voľným miestom vedľa" else ""
+            notify(
+                trip = trip,
+                title = "Uvoľnil sa ${classLabel(seatClass)}$what",
+                text = SeatWatcher.describeClassSeats(freed) +
+                    " (v triede spolu ${free.size} voľných). Klepni pre analýzu.",
+            )
+        }
+        prefs.saveSnapshot(trip.id, current)
+        return true
+    }
+
+    /** @return false ak sa kontrola nepodarila a ma sa zopakovat */
+    private suspend fun checkSeat(prefs: TripPrefs, trip: WatchedTrip): Boolean {
         val loaded = try {
             withContext(Dispatchers.IO) {
                 val client = RjClient(layoutStore = FileLayoutStore(applicationContext))
@@ -187,6 +234,18 @@ class WatchWorker(context: Context, params: WorkerParameters) : CoroutineWorker(
             .setAutoCancel(true)
             .build()
         NotificationManagerCompat.from(applicationContext).notify(requestCode, notification)
+    }
+
+    /**
+     * Nazov triedy do notifikacie. Kluce z API su technicke (C0, C1), takze sa
+     * prekladaju - "Uvolnil sa Relax" povie viac ako "Uvolnil sa C1".
+     */
+    private fun classLabel(key: String): String = when (key) {
+        "C0", "TRAIN_STANDARD_PL", "TRAIN_R23_STANDARD", "TRAIN_R8_STANDARD" -> "Standard"
+        "C1", "TRAIN_R23_RELAX" -> "Relax"
+        "C2", "TRAIN_1ST_CLASS", "TRAIN_R23_BUSINESS" -> "Business"
+        "TRAIN_LOW_COST", "TRAIN_2ND_CLASS", "TRAIN_R23_LOW_COST" -> "Low cost"
+        else -> if (key.startsWith("TRAIN_COUCHETTE")) "lôžko/ležadlo" else key
     }
 
     companion object {
