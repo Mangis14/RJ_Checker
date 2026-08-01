@@ -36,12 +36,12 @@ class ClassWatchTest {
         assertTrue(seats.isNotEmpty(), "trieda $cls ma mat volne miesta")
 
         val section = j.stops.first().section
-        for ((coach, seat) in seats) {
-            val vehicle = assertNotNull(section.vehicle(coach), "vozen $coach")
-            assertTrue(cls in vehicle.seatClasses, "vozen $coach nie je trieda $cls")
+        for (s in seats) {
+            val vehicle = assertNotNull(section.vehicle(s.coach), "vozen ${s.coach}")
+            assertTrue(cls in vehicle.seatClasses, "vozen ${s.coach} nie je trieda $cls")
             assertTrue(
-                assertNotNull(vehicle.decks.first().seat(seat)).free,
-                "miesto $coach-$seat nie je volne",
+                assertNotNull(vehicle.decks.first().seat(s.seat)).free,
+                "miesto ${s.coach}-${s.seat} nie je volne",
             )
         }
     }
@@ -62,6 +62,54 @@ class ClassWatchTest {
         val comfy = j.freeSeatsInClass(cls, onlyComfortable = true)
         assertTrue(comfy.size <= all.size, "filter nemoze pridavat miesta")
         assertTrue(all.containsAll(comfy), "filtrovane miesta musia byt podmnozinou")
+    }
+
+    @Test
+    fun `vypredana trieda je v zozname s nulou`() {
+        // Bez toho by sa vypredana trieda nedala sledovat - a prave tu to ma
+        // najvacsi zmysel. Trieda s volnymi miestami sa da jednoducho kupit.
+        val j = journey()
+        val section = j.stops.first().section
+        val allClasses = section.vehicles.flatMap { it.seatClasses }.toSet()
+        val reported = j.availabilityByClass().map { it.seatClass }.toSet()
+        assertEquals(allClasses, reported, "kazda trieda vo vlaku musi mat riadok")
+
+        val soldOut = section.vehicles
+            .filter { v -> v.decks.first().seats.none { it.free } }
+            .flatMap { it.seatClasses }
+            .filter { cls ->
+                section.vehicles.filter { cls in it.seatClasses }
+                    .all { v -> v.decks.first().seats.none { it.free } }
+            }
+        for (cls in soldOut) {
+            val row = assertNotNull(j.availabilityByClass().firstOrNull { it.seatClass == cls })
+            assertEquals(0, row.freeSeats)
+            assertTrue(row.soldOut, "$cls ma byt oznacena ako vypredana")
+        }
+    }
+
+    @Test
+    fun `pohodlie sa oznacuje a nefiltruje`() {
+        val j = journey()
+        val cls = anyClassWithFreeSeats(j)
+        val all = j.freeSeatsInClass(cls)
+        // ziadne miesto sa nezahodi, len sa oznaci
+        assertEquals(
+            j.availabilityByClass().first { it.seatClass == cls }.freeSeats,
+            all.size,
+            "bez filtra sa nesmie ziadne miesto stratit",
+        )
+        assertTrue(all.any { it.comfortable } || all.none { it.comfortable })
+    }
+
+    @Test
+    fun `text notifikacie oznaci pohodlne miesto`() {
+        val text = SeatWatcher.describeClassSeats(
+            listOf("5-32", "5-33"),
+            comfortable = setOf("5-32"),
+        )
+        assertTrue(text.contains("vozeň 5, miesto 32 (aj vedľa voľné)"), text)
+        assertTrue(text.contains("vozeň 5, miesto 33;") || text.endsWith("miesto 33"), text)
     }
 
     @Test

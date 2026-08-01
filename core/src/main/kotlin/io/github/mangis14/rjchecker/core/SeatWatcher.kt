@@ -96,13 +96,23 @@ object SeatWatcher {
         )
     }
 
-    /** "5-32" -> "vozeň 5, miesto 32" */
-    fun describeClassSeats(keys: List<String>, max: Int = 4): String {
+    /**
+     * "5-32" -> "vozeň 5, miesto 32", pripadne s poznamkou o volnom susedovi.
+     *
+     * Pohodlie sa oznacuje, NEfiltruje: pri vypredanej triede clovek potrebuje
+     * vediet o kazdom uvolnenom mieste, aj keby vedla neho niekto sedel.
+     */
+    fun describeClassSeats(
+        keys: List<String>,
+        max: Int = 4,
+        comfortable: Set<String> = emptySet(),
+    ): String {
         if (keys.isEmpty()) return ""
         val shown = keys.take(max).joinToString("; ") { key ->
             val coach = key.substringBefore('-')
             val seat = key.substringAfter('-')
-            "vozeň $coach, miesto $seat"
+            val note = if (key in comfortable) " (aj vedľa voľné)" else ""
+            "vozeň $coach, miesto $seat$note"
         }
         return if (keys.size <= max) shown else "$shown +${keys.size - max} ďalších"
     }

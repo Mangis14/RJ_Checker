@@ -73,7 +73,19 @@ data class ClassAvailability(
     val seatClass: String,
     val freeSeats: Int,
     val byKind: Map<SeatKind, Int>,
-)
+) {
+    /** Vypredana trieda - prave tu ma zmysel sledovat. */
+    val soldOut: Boolean get() = freeSeats == 0
+}
+
+/**
+ * Volne miesto danej triedy.
+ *
+ * @param comfortable je volne aj miesto vedla. Neslúzi na filtrovanie
+ *   upozorneni (pri vypredanej triede clovek chce vediet o kazdom mieste), ale
+ *   na to, aby sa v texte dalo rozlisit, ktore z uvolnenych stoji za presun.
+ */
+data class FreeClassSeat(val coach: Int, val seat: Int, val comfortable: Boolean)
 
 /**
  * Cesta = zastavky v geografickom poradi, kazda s obsadenostou pre usek do ciela.
@@ -99,6 +111,13 @@ class Journey(val stops: List<JourneyStop>) {
         val start = firstStop() ?: return emptyList()
         val free = HashMap<String, Int>()
         val kinds = HashMap<String, MutableMap<SeatKind, Int>>()
+
+        // Vsetky triedy vo vlaku sa zavedu s nulou, aj ked su vypredane.
+        // Prave vypredanu triedu ma zmysel sledovat - tu, kde je volno, si
+        // clovek jednoducho kupi.
+        for (vehicle in start.section.vehicles) {
+            vehicle.seatClasses.forEach { free.putIfAbsent(it, 0) }
+        }
 
         for (vehicle in start.section.vehicles) {
             val deck = vehicle.decks.firstOrNull() ?: continue
@@ -171,26 +190,26 @@ class Journey(val stops: List<JourneyStop>) {
      *   neprinesie - a prave o pokoj v tejto appke ide. Kde sa topologia necita
      *   spolahlivo, miesto sa zaradi (radsej upozornit navyse ako zamlcat).
      */
-    fun freeSeatsInClass(seatClass: String, onlyComfortable: Boolean = false): List<Pair<Int, Int>> {
+    fun freeSeatsInClass(seatClass: String, onlyComfortable: Boolean = false): List<FreeClassSeat> {
         val start = firstStop() ?: return emptyList()
-        val out = mutableListOf<Pair<Int, Int>>()
+        val out = mutableListOf<FreeClassSeat>()
         for (vehicle in start.section.vehicles) {
             if (seatClass !in vehicle.seatClasses) continue
             val deck = vehicle.decks.firstOrNull() ?: continue
-            val layout = if (onlyComfortable) layoutOf(deck) else null
+            val layout = layoutOf(deck)
             for (seat in deck.seats.filter { it.free }) {
-                if (onlyComfortable && layout != null) {
-                    val n = layout.neighboursOrNull(seat.index)
-                    // bez suseda (samostatne miesto) je pokoj automaticky
-                    val comfortable = n == null ||
-                        n.nextTo.isEmpty() ||
-                        n.nextTo.any { deck.seat(it)?.free == true }
-                    if (!comfortable) continue
-                }
-                out.add(vehicle.number to seat.index)
+                val n = layout?.neighboursOrNull(seat.index)
+                // bez suseda (samostatne miesto) je pokoj automaticky; ked sa
+                // topologia necita, berie sa ako pohodlne - radsej upozornit
+                // navyse ako zamlcat
+                val comfortable = n == null ||
+                    n.nextTo.isEmpty() ||
+                    n.nextTo.any { deck.seat(it)?.free == true }
+                if (onlyComfortable && !comfortable) continue
+                out.add(FreeClassSeat(vehicle.number, seat.index, comfortable))
             }
         }
-        return out.sortedWith(compareBy({ it.first }, { it.second }))
+        return out.sortedWith(compareBy({ it.coach }, { it.seat }))
     }
 
     /**

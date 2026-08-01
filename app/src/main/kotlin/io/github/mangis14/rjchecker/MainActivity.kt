@@ -530,9 +530,10 @@ private fun ComfortRow(
                     Spacer(Modifier.width(8.dp))
                     Column(Modifier.weight(1f)) {
                         Text(
-                            "${row.freeSeats} voľných",
+                            if (row.soldOut) "Vypredané" else "${row.freeSeats} voľných",
                             style = MaterialTheme.typography.bodySmall,
                             fontWeight = FontWeight.Medium,
+                            color = if (row.soldOut) RjSeatMine else MaterialTheme.colorScheme.onSurface,
                         )
                         if (kinds.isNotEmpty()) {
                             Text(
@@ -543,9 +544,19 @@ private fun ComfortRow(
                         }
                     }
                     TextButton(
-                        onClick = { vm.toggleClassWatch(train, row.seatClass, onlyComfortable = true) },
+                        onClick = { vm.toggleClassWatch(train, row.seatClass, onlyComfortable = false) },
                         modifier = Modifier.heightIn(min = TapTarget),
-                    ) { Text(if (watched) "Sledujem" else "Sledovať", fontSize = 13.sp) }
+                    ) {
+                        Text(
+                            when {
+                                watched -> "Sledujem"
+                                row.soldOut -> "Strážiť"
+                                else -> "Sledovať"
+                            },
+                            fontSize = 13.sp,
+                            fontWeight = if (row.soldOut && !watched) FontWeight.SemiBold else FontWeight.Normal,
+                        )
+                    }
                 }
             }
         }

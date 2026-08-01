@@ -103,17 +103,25 @@ class WatchWorker(context: Context, params: WorkerParameters) : CoroutineWorker(
         val current = SeatSnapshot(
             seats = emptyMap(),
             freeInCoach = free.size,
-            classFreeSeats = free.map { "${it.first}-${it.second}" }.toSet(),
+            classFreeSeats = free.map { "${it.coach}-${it.seat}" }.toSet(),
         )
         val previous = prefs.loadSnapshot(trip.id)
         val freed = SeatWatcher.classSeatsFreed(previous, current)
 
         if (freed.isNotEmpty()) {
-            val what = if (trip.onlyComfortable) " s voľným miestom vedľa" else ""
+            // Pohodlie sa oznacuje, nefiltruje: pri vypredanej triede clovek
+            // potrebuje vediet o kazdom uvolnenom mieste.
+            val comfy = free.filter { it.comfortable }
+                .map { "${it.coach}-${it.seat}" }.toSet()
+            val wasSoldOut = previous != null && previous.classFreeSeats.isEmpty()
             notify(
                 trip = trip,
-                title = "Uvoľnil sa ${classLabel(seatClass)}$what",
-                text = SeatWatcher.describeClassSeats(freed) +
+                title = if (wasSoldOut) {
+                    "${classLabel(seatClass)} sa uvoľnil"
+                } else {
+                    "Uvoľnil sa ${classLabel(seatClass)}"
+                },
+                text = SeatWatcher.describeClassSeats(freed, comfortable = comfy) +
                     " (v triede spolu ${free.size} voľných). Klepni pre analýzu.",
             )
         }
