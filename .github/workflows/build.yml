@@ -10,6 +10,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    # Tajomstva su tu, aby sa v kroku nizsie dali testovat cez `env`. Ak nie su
+    # nastavene, su prazdne a nahravanie na Drive sa preskoci.
+    env:
+      RCLONE_CONFIG_BASE64: ${{ secrets.RCLONE_CONFIG_BASE64 }}
+      DRIVE_FOLDER_ID: ${{ secrets.DRIVE_FOLDER_ID }}
+
     steps:
       - uses: actions/checkout@v4
 
@@ -49,3 +55,22 @@ jobs:
           name: rjseat-debug-apk
           path: app/build/outputs/apk/debug/*.apk
           if-no-files-found: error
+
+      # Nahratie do Google Drive bezi len ak su nastavene tajomstva. Bez nich sa
+      # krok ticho preskoci, takze build funguje aj bez Drive.
+      #
+      # Rclone zamerne namiesto service accountu: service account ma nulovu
+      # uloznu kvotu a nahratie do zlozky v osobnom Disku zlyha na
+      # "storageQuotaExceeded". Rclone je autorizovany vlastnym uctom.
+      # Podmienka cez env, nie priamo cez secrets: kontext `secrets` sa v
+      # step-level `if` sprava nespolahlivo, kym `env` funguje vzdy.
+      - name: Copy APK to Google Drive
+        if: env.RCLONE_CONFIG_BASE64 != '' && env.DRIVE_FOLDER_ID != ''
+        run: |
+          curl -fsSL https://rclone.org/install.sh | sudo bash
+          mkdir -p ~/.config/rclone
+          echo "$RCLONE_CONFIG_BASE64" | base64 -d > ~/.config/rclone/rclone.conf
+          NAME="rjseat-$(date +%Y-%m-%d-%H%M)-$(git rev-parse --short HEAD).apk"
+          rclone copyto app/build/outputs/apk/debug/app-debug.apk "gdrive:$NAME" \
+            --drive-root-folder-id "$DRIVE_FOLDER_ID"
+          echo "Nahrate ako $NAME"

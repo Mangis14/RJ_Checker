@@ -9,7 +9,10 @@
 #>
 param(
     [string]$Task = ":app:assembleDebug",
-    [switch]$Rebuild
+    [switch]$Rebuild,
+    # Po uspesnom builde nahra APK do Google Drive (potrebuje nakonfigurovany
+    # rclone a RJSEAT_DRIVE_FOLDER - viz README).
+    [switch]$Upload
 )
 
 $ErrorActionPreference = 'Stop'
@@ -37,4 +40,8 @@ docker run --rm `
     $image `
     sh ./gradlew $Task.Split(' ') --no-daemon --console=plain
 
-exit $LASTEXITCODE
+$buildExit = $LASTEXITCODE
+if ($buildExit -eq 0 -and $Upload) {
+    & "$PSScriptRoot\upload-apk.ps1"
+}
+exit $buildExit

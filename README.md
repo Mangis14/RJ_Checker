@@ -151,6 +151,49 @@ APK stavia aj CI ([.github/workflows/build.yml](.github/workflows/build.yml)):
 testy `core` gatujú build, potom sa postaví debug APK a nahrá ako artefakt —
 Actions → príslušný beh → `rjseat-debug-apk`.
 
+### Automatické odosielanie APK na Google Drive
+
+Voliteľné. Bez nastavenia sa oba kroky ticho preskočia, takže build funguje aj bez toho.
+
+**Prečo rclone a nie service account:** service account má **nulovú úložnú kvótu**,
+takže nahrávanie do zložky v osobnom Disku zlyhá na `storageQuotaExceeded`.
+Rclone sa autorizuje tvojím vlastným účtom, takže funguje pre osobný aj zdieľaný
+Disk. Prihlasovacie údaje pritom drží rclone — cez skripty neprechádzajú.
+
+Jednorazové nastavenie:
+
+```bash
+winget install Rclone.Rclone
+rclone config
+```
+
+V configu zvoľ `n` (new remote), názov **`gdrive`**, typ **`drive`**, `scope` = `1`
+(full access), zvyšok default a na konci potvrď autorizáciu v prehliadači.
+
+Potom nastav ID cieľovej zložky (posledná časť URL zložky na Disku) a stavaj
+s prepínačom:
+
+```powershell
+$env:RJSEAT_DRIVE_FOLDER = "<id-zlozky>"
+.\docker\build.ps1 -Upload
+```
+
+APK sa nahrá pod menom `rjseat-<dátum>-<commit>.apk`, takže sa buildy v zložke
+hromadia a vždy vieš, z čoho ktorý vznikol.
+
+ID zložky **nie je v repozitári** zámerne: je to verejný repozitár a keby si
+zložku niekedy prepol na „ktokoľvek s odkazom", ID by sa stalo prístupovým
+kľúčom. Preto je v premennej prostredia, respektíve v CI v tajomstve.
+
+Pre CI pridaj v GitHube dve tajomstvá (Settings → Secrets → Actions):
+
+| tajomstvo | obsah |
+|---|---|
+| `RCLONE_CONFIG_BASE64` | `base64 -w0 ~/.config/rclone/rclone.conf` (na Windows `%APPDATA%\rclone\rclone.conf`) |
+| `DRIVE_FOLDER_ID` | ID cieľovej zložky |
+
+Potom sa APK nahrá na Disk pri každom pushi do `main`.
+
 ## Kotlin core (základ Android appky)
 
 Modul [core/](core) je **čistý Kotlin/JVM bez Android závislostí** — celá logika
