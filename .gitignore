@@ -7,3 +7,9 @@ local.properties
 __pycache__/
 *.pyc
 out.json
+
+# Podpisovaci kluc - podpisuje appku na telefone, do verejneho repozitara nepatri.
+# Ak sa strati, dalsia verzia sa uz neda nainstalovat cez existujucu (iny podpis).
+keystore/
+*.jks
+*.keystore

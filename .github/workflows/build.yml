@@ -15,6 +15,7 @@ jobs:
     env:
       RCLONE_CONFIG_BASE64: ${{ secrets.RCLONE_CONFIG_BASE64 }}
       DRIVE_FOLDER_ID: ${{ secrets.DRIVE_FOLDER_ID }}
+      KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
 
     steps:
       - uses: actions/checkout@v4
@@ -45,6 +46,16 @@ jobs:
             core/build/reports/tests/test
             core/build/test-results/test
           if-no-files-found: warn
+
+      # Bez klucа by CI podpisalo APK nahodnym debug klucom a taku verziu by sa
+      # nedalo nainstalovat cez lokalne postavenu (iny podpis = ziadny update).
+      - name: Restore signing key
+        if: env.KEYSTORE_BASE64 != ''
+        env:
+          KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
+        run: |
+          mkdir -p keystore
+          echo "$KEYSTORE_BASE64" | base64 -d > keystore/rjseat.jks
 
       - name: Build debug APK
         run: ./gradlew :app:assembleDebug --no-daemon

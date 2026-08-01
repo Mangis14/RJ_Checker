@@ -151,6 +151,37 @@ APK stavia aj CI ([.github/workflows/build.yml](.github/workflows/build.yml)):
 testy `core` gatujú build, potom sa postaví debug APK a nahrá ako artefakt —
 Actions → príslušný beh → `rjseat-debug-apk`.
 
+### Podpisovací kľúč — prečo bez neho nefungujú aktualizácie
+
+Android dovolí nainštalovať novú verziu cez starú, len **ak majú rovnaký podpis**.
+Bez vlastného kľúča si Gradle vygeneruje debug keystore do domovského adresára —
+lenže v Docker kontajneri (`--rm`, `/root` nie je mountovaný) po každom builde
+zanikne. Každé APK bolo teda podpísané **iným** kľúčom a aktualizácia zlyhala;
+appku bolo treba zakaždým odinštalovať.
+
+Preto je v `keystore/rjseat.jks` stabilný kľúč. Je **mimo gitu** — podpisuje
+aplikáciu nainštalovanú na telefóne, takže do verejného repozitára nepatrí.
+
+Dôsledky:
+
+- **Kľúč nestrať.** Bez neho sa ďalšia verzia už nedá nainštalovať cez existujúcu.
+  Zálohuj si `keystore/rjseat.jks`.
+- Ak chceš, aby aj APK z CI šlo nainštalovať cez lokálne postavené, pridaj
+  tajomstvo `KEYSTORE_BASE64` (`base64 -w0 keystore/rjseat.jks`). Bez neho si CI
+  podpíše APK náhodným kľúčom.
+- Heslo je `rjseat`, dá sa prebiť premennými `RJSEAT_KEYSTORE_PASSWORD`
+  a `RJSEAT_KEY_PASSWORD`.
+
+### Varovanie Google Play Protect
+
+Pri inštalácii sa ukáže „Play Protect hasn't seen an app from this developer
+before". Je to normálne pre každú sideloadovanú aplikáciu od neznámeho vydavateľa
+a **stabilný kľúč to neodstráni** — Play Protect nepozná ani ten. Odstránilo by to
+len vydanie cez Google Play.
+
+Prakticky to prestane prekážať samo: keď aktualizácie fungujú, inštaluje sa
+zriedka. Kto chce úplne bez dialógu, môže použiť `adb install -r <apk>`.
+
 ### Automatické odosielanie APK na Google Drive
 
 Voliteľné. Bez nastavenia sa oba kroky ticho preskočia, takže build funguje aj bez toho.
