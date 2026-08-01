@@ -3,6 +3,10 @@
 Zistí, kto sedí okolo teba v RegioJete, od ktorej stanice sa susedné miesto uvoľní,
 a navrhne pokojnejšie miesto vo vlaku.
 
+> **[docs/FEATURES.md](docs/FEATURES.md)** — detailná dokumentácia všetkých funkcií:
+> čo robia, ako sa rozhodujú, kde sú hranice a kde v kóde žijú.
+> Toto README je o inštalácii, builde a technických rozhodnutiach.
+
 ## Čo to vie
 
 ```bash

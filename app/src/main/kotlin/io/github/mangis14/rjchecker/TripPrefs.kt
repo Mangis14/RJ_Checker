@@ -39,6 +39,7 @@ class TripPrefs(context: Context) {
         prefs.edit().putString(KEY_TRIPS, WatchedTripCodec.encode(updated)).apply()
     }
 
+    /** Odoberie spoj aj jeho ulozeny stav. */
     fun removeTrip(id: String) {
         val remaining = trips().filter { it.id != id }
         prefs.edit()
@@ -47,8 +48,10 @@ class TripPrefs(context: Context) {
             .apply()
     }
 
+    /** Sleduje sa uz tento spoj a miesto (resp. trieda)? */
     fun isWatching(id: String): Boolean = trips().any { it.id == id }
 
+    /** Zmaze vsetko vratane ulozenych stavov. */
     fun clearAll() = prefs.edit().clear().apply()
 
     // --- posledny znamy stav pre jeden spoj -----------------------------
@@ -67,6 +70,7 @@ class TripPrefs(context: Context) {
         ).apply()
     }
 
+    /** Posledny ulozeny stav spoja, alebo null ak sa este nekontroloval. */
     fun loadSnapshot(tripId: String): SeatSnapshot? {
         val raw = prefs.getString(snapshotKey(tripId), null) ?: return null
         val parts = raw.split("|")

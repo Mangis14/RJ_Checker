@@ -1,5 +1,6 @@
 package io.github.mangis14.rjchecker.core
 
+/** Co sa ma stat pri tomto prebudeni workera. */
 enum class WatchDecision {
     /** siahnut na siet a porovnat stav */
     CHECK,

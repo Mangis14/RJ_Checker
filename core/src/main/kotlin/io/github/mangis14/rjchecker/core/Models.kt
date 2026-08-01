@@ -16,17 +16,31 @@ data class Seat(
     val flags: Set<SeatFlag> = emptySet(),
 )
 
+/**
+ * Podlazie vozna. Vacsina voznov ma jedno; poschodove autobusy mavaju dve.
+ *
+ * @param layoutUrl SVG s rozlozenim miest. Bez neho sa neda urcit, ktore miesta
+ *   su vedla seba - API ziadne suradnice neposiela.
+ */
 data class Deck(
     val number: Int,
     val name: String,
     val layoutUrl: String?,
     val seats: List<Seat>,
 ) {
+    /** Cisla volnych miest na tomto podlazi. */
     val freeSeats: List<Int> get() = seats.filter { it.free }.map { it.index }
 
+    /** Miesto podla cisla, alebo null ak vo vozni nie je. */
     fun seat(index: Int): Seat? = seats.firstOrNull { it.index == index }
 }
 
+/**
+ * Vozen supravy.
+ *
+ * @param number cislo vozna tak, ako je napisane na vozni
+ * @param seatClasses triedy v tomto vozni; vacsinou jedna, vozen A (48) ich ma dve
+ */
 data class Vehicle(
     val number: Int,
     val standard: String?,
@@ -39,6 +53,7 @@ data class FreeSeatsSection(
     val sectionId: Long,
     val vehicles: List<Vehicle>,
 ) {
+    /** Vozen podla cisla napisaneho na vozni, alebo null ak taky v suprave nie je. */
     fun vehicle(number: Int): Vehicle? = vehicles.firstOrNull { it.number == number }
 }
 

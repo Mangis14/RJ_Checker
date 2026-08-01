@@ -9,6 +9,15 @@ data class JourneyStop(
     val section: FreeSeatsSection,
 )
 
+/**
+ * Jeden sused sledovaneho miesta.
+ *
+ * @param relation "vedla", "oproti" alebo "v oddiele"
+ * @param freeWholeWay volne po celu cestu - obsadenost plati pre usek, takze
+ *   miesto volne z vychodzej stanice uz nikto neobsadi
+ * @param freesAt prva zastavka, od ktorej je miesto volne; null ak je volne od
+ *   zaciatku alebo obsadene po celej trase
+ */
 data class NeighbourInfo(
     val seat: Int,
     val relation: String,
@@ -17,6 +26,13 @@ data class NeighbourInfo(
     val flags: Set<SeatFlag> = emptySet(),
 )
 
+/**
+ * Vysledok analyzy jedneho miesta: kto sedi okolo a odkial sa uvolni.
+ *
+ * @param bay cely oddiel vratane sledovaneho miesta
+ * @param confidence UNCERTAIN znamena, ze layout vozna sa necita spolahlivo
+ *   a susedstvo je len odhad
+ */
 data class SeatAnalysis(
     val coach: Int,
     val coachName: String,
@@ -29,6 +45,13 @@ data class SeatAnalysis(
     val coachTotal: Int,
 )
 
+/**
+ * Navrh pokojnejsieho miesta.
+ *
+ * @param score vyssie je lepsie; zloziek je viac, viz [Journey.recommend]
+ * @param emptyFrom zastavka, od ktorej je cely oddiel prazdny; null ak sa
+ *   nevyprazdni vobec alebo je prazdny uz od zaciatku
+ */
 data class SeatPick(
     val coach: Int,
     val coachName: String,
@@ -232,10 +255,19 @@ class Journey(val stops: List<JourneyStop>) {
         return out
     }
 
+    /** Prva zastavka, od ktorej je miesto volne az do ciela; null ak nikdy. */
     fun freesAt(coach: Int, seat: Int): JourneyStop? =
         stops.sortedBy { it.order }
             .firstOrNull { it.section.vehicle(coach)?.decks?.firstOrNull()?.seat(seat)?.free == true }
 
+    /**
+     * Kto sedi okolo daneho miesta a od ktorej stanice sa ktore uvolni.
+     *
+     * Funguje aj pre OBSADENE miesto - vlastne zakupene miesto je z pohladu API
+     * obsadene, takze bez toho by sa hlavny scenar appky nedal spustit.
+     *
+     * @return null ak vo vlaku taky vozen alebo miesto nie je
+     */
     fun analyseSeat(coach: Int, seat: Int): SeatAnalysis? {
         val start = firstStop() ?: return null
         val vehicle = start.section.vehicle(coach) ?: return null

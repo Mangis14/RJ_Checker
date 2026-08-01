@@ -37,6 +37,7 @@ data class WatchedTrip(
     val id: String get() =
         if (isClassWatch) "$routeId-class-$seatClass" else "$routeId-$coach-$seat"
 
+    /** Kratky popis pre zoznam sledovanych a pre notifikaciu. */
     val label: String get() =
         if (isClassWatch) "trieda $seatClass" else "vozeň $coach, miesto $seat"
 }
@@ -67,6 +68,7 @@ object WatchedTripCodec {
         .replace(ESCAPED_FIELD, FIELD)
         .replace(ESCAPED_PERCENT, "%")
 
+    /** Zoznam spojov do jedneho retazca pre SharedPreferences. */
     fun encode(trips: List<WatchedTrip>): String = trips.joinToString(RECORD) { t ->
         listOf(
             t.date, t.fromId.toString(), t.toId.toString(),

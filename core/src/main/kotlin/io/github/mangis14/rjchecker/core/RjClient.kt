@@ -11,8 +11,13 @@ import kotlinx.serialization.json.JsonPrimitive
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 
+/**
+ * Chyba z API. [status] je HTTP kod, ak nejaky prisiel - podla neho sa rozlisi
+ * chyba poziadavky (4xx, opakovanie nepomoze) od vypadku.
+ */
 class RjApiException(message: String, val status: Int? = null) : IOException(message)
 
+/** Jeden priamy spoj z vyhladavania. */
 data class TrainOption(
     val routeId: String,
     val departure: String,        // HH:mm
@@ -21,6 +26,7 @@ data class TrainOption(
     val freeSeats: Int,
 )
 
+/** Stanica - id pre API, nazov pre uzivatela. */
 data class StationRef(val id: Long, val name: String)
 
 /**
@@ -31,7 +37,10 @@ data class StationRef(val id: Long, val name: String)
  * volajuci (core modul sa nedotyka suboroveho systemu Androidu).
  */
 interface LayoutStore {
+    /** Vrati ulozeny layout, alebo null ak sa este nestahoval. */
     fun get(url: String): String?
+
+    /** Ulozi stiahnuty layout pre dalsie pouzitie. */
     fun put(url: String, svg: String)
 }
 
@@ -154,6 +163,7 @@ class RjClient(
         return out.sortedBy { it.name }
     }
 
+    /** Kluc triedy -> nazov pre uzivatela, napr. C1 -> "Relax (2. tr.)". */
     fun seatClassTitles(): Map<String, String> {
         val root = json.parseToJsonElement(request("GET", "/consts/seatClasses")).jsonArray
         return root.mapNotNull {
@@ -214,6 +224,7 @@ class RjClient(
             ),
         )
 
+    /** Zakladny cestovny poriadok vsetkych liniek. Velky, preto sa cachuje. */
     fun timetables(): JsonArray = json.parseToJsonElement(request("GET", "/consts/timetables")).jsonArray
 
     /**

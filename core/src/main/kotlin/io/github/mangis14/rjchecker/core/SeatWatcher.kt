@@ -1,7 +1,9 @@
 package io.github.mangis14.rjchecker.core
 
+/** Smer zmeny obsadenosti miesta medzi dvoma kolami sledovania. */
 enum class SeatChange { FREED, TAKEN }
 
+/** Jedna ohlasitelna zmena: ktore miesto a ktorym smerom. */
 data class SeatAlert(val seat: Int, val change: SeatChange)
 
 /**
@@ -43,6 +45,13 @@ data class SeatSnapshot(
  */
 object SeatWatcher {
 
+    /**
+     * Zmeny na sledovanych susednych miestach.
+     *
+     * Miesto, ktore v predchadzajucom stave nebolo, sa neberie ako zmena -
+     * vozen sa mohol vymenit alebo API vratilo iny rozsah miest, a to nie je
+     * udalost, kvoli ktorej ma zmysel budit uzivatela.
+     */
     fun diff(previous: SeatSnapshot?, current: SeatSnapshot): List<SeatAlert> {
         if (previous == null) return emptyList()
         return current.seats.mapNotNull { (seat, free) ->

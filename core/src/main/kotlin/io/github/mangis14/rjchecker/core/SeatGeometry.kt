@@ -20,6 +20,7 @@ class CoachLayout internal constructor(
     internal val seatColumn: Map<Int, Int>,
     internal val lengthAxisIsY: Boolean,
 ) {
+    /** Je toto miesto v layoute? Miesta mimo neho nemaju susedstvo. */
     fun contains(seat: Int): Boolean = seat in positions
 
     private fun cross(seat: Int): Double =
@@ -63,19 +64,16 @@ class CoachLayout internal constructor(
     fun bay(seat: Int): List<Int> =
         seatBay[seat] ?: (listOf(seat) + nextTo(seat)).sorted()
 
+    /** Susedstvo miesta; hodi vynimku ak miesto vo vozni nie je. */
     fun neighbours(seat: Int): Neighbours =
         neighboursOrNull(seat) ?: error("miesto $seat nie je vo vozni")
 
+    /** Susedstvo miesta, alebo null ak vo vozni nie je. */
     fun neighboursOrNull(seat: Int): Neighbours? {
         if (seat !in positions) return null
         return Neighbours(seat = seat, bay = bay(seat), nextTo = nextTo(seat), facing = facing(seat))
     }
 
-    /**
-     * Radove sedenie bez najdenej ulicky znamena, ze layout sa neda precitat
-     * spolahlivo. Vtedy je lepsie priznat viac kandidatov ako tvrdit jedno
-     * nespravne miesto.
-     */
     /**
      * S kolkymi miestami dane sedadlo delis priestor.
      *
@@ -94,6 +92,13 @@ class CoachLayout internal constructor(
         }
     }
 
+    /**
+     * Nakolko sa da susedstvo tohto miesta brat ako iste.
+     *
+     * Radove sedenie bez najdenej ulicky znamena, ze layout sa neda precitat
+     * spolahlivo - vtedy je lepsie priznat viac kandidatov ako tvrdit jedno
+     * nespravne miesto.
+     */
     fun confidence(seat: Int): Confidence = when {
         seatBay[seat] != null -> Confidence.CERTAIN
         aisleAfterColumn == null && nextTo(seat).size > 1 -> Confidence.UNCERTAIN
@@ -101,6 +106,12 @@ class CoachLayout internal constructor(
     }
 }
 
+/**
+ * Citanie topologie vozna z SVG layoutu.
+ *
+ * API o miestach neposiela ziadne suradnice, takze "vedla" a "oproti" sa daju
+ * ziskat jedine odtialto. Postup a jeho hranice popisuje docs/FEATURES.md.
+ */
 object SeatGeometry {
 
     private const val MIN_OVERLAP = 0.80
@@ -259,6 +270,13 @@ object SeatGeometry {
         return bays
     }
 
+    /**
+     * Odvodi topologiu vozna zo SVG.
+     *
+     * @param apiSeats cisla miest, ktore pre vozen hlasi API - podla nich sa
+     *   vyberie spravna skupina prvkov v SVG
+     * @return null ak sa layout neda precitat (pokrytie pod [MIN_OVERLAP])
+     */
     fun parse(svg: String, apiSeats: List<Int>): CoachLayout? {
         val wanted = apiSeats.toSet()
         if (wanted.isEmpty()) return null
